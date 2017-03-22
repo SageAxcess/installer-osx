@@ -207,7 +207,7 @@
 											<key>GID</key>
 											<integer>80</integer>
 											<key>Path</key>
-											<string>../vm/Library-LaunchDaemons/aegis.plist</string>
+											<string>aegis.plist</string>
 											<key>Path Type</key>
 											<integer>2</integer>
 											<key>Privileges</key>
