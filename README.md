@@ -36,9 +36,17 @@ To setup autostart plist files put them to /Library/LaunchDaemons/
 
 You may need to create LaunchDaemons folder.
 
-Go to Plugins menu and add "Advanced.bundle" file to the list. Remove file "aegis.conf" from "/usr/local/Cellar/aegis/2.4.1/conf/" directory in the Files menu.
+Go to Plugins menu and add "Advanced.bundle" file to the list.
 
 ![alt text](PluginsMenu.png)
+
+Go to Scripts menu. 
+
+Select "postflight" checkbox in the "Installation Scripts" submenu.
+
+Click "Choose..." button and add "Advanced.sh" file to the list.
+
+![alt text](ScriptsMenu.png)
 
 After all files will be placed go to Iceberg main menu Build -> Build
 
