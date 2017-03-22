@@ -1,0 +1,17 @@
+@load ./bro.bif.bro 
+@load ./event.bif.bro 
+@load ./const.bif.bro 
+@load ./types.bif.bro 
+@load ./strings.bif.bro 
+@load ./reporter.bif.bro 
+@load ./analyzer.bif.bro 
+@load ./broxygen.bif.bro 
+@load ./input.bif.bro 
+@load ./functions.bif.bro 
+@load ./const.bif.bro 
+@load ./logging.bif.bro 
+@load ./comm.bif.bro 
+@load ./data.bif.bro 
+@load ./messaging.bif.bro 
+@load ./store.bif.bro 
+@load ./zmq.bif.bro
