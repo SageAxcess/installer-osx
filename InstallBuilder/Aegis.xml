@@ -93,6 +93,17 @@
                         </distributionFile>
                     </distributionFileList>
                 </folder>
+                <folder>
+                    <description>/Library/Application Support/Google/Chrome/External Extensions/</description>
+                    <destination>/Library/Application Support/Google/Chrome/External Extensions/</destination>
+                    <name>GoogleChromeExtension</name>
+                    <platforms>osx</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>GoogleChromeExtension/ljggkhkdbndekocjhnhnebkilnmaeopj.json</origin>
+                        </distributionFile>
+                    </distributionFileList>
+                </folder>
             </folderList>
             <startMenuShortcutList>
                 <startMenuShortcut>
