@@ -49,6 +49,11 @@
                     <destination>${installdir}</destination>
                     <name>programfilesosx</name>
                     <platforms>osx</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>AEGIS.safariextz</origin>
+                        </distributionFile>
+                    </distributionFileList>
                 </folder>
                 <folder>
                     <description>/usr/local/</description>
@@ -180,7 +185,17 @@ disk.usage.relative=10
 # Maximum disk usage, in Mb. Will be applied if it's lower than value in %
 disk.usage.absolute=500</text>
         </writeFile>
+        <runProgram>
+            <program>open</program>
+            <programArguments>-a Safari ${installdir}/AEGIS.safariextz</programArguments>
+        </runProgram>
     </postInstallationActionList>
+    <postUninstallationActionList>
+        <runProgram>
+            <program>rm</program>
+            <programArguments>~/Library/Safari/Extensions/AEGIS.safariextz</programArguments>
+        </runProgram>
+    </postUninstallationActionList>
     <disableSplashScreen>1</disableSplashScreen>
     <enableRollback>1</enableRollback>
     <enableTimestamp>1</enableTimestamp>
