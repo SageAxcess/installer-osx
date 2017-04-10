@@ -24,7 +24,7 @@ In the left columt select your project. Here you can change all package informat
 
 The main important for us is Files submenu.
 
-![alt text](FilesMenu.png)
+![alt text](github-files/FilesMenu.png)
 
 You will see the default hierarchy of unix filesystem.
 
@@ -38,7 +38,7 @@ You may need to create LaunchDaemons folder.
 
 Go to Plugins menu and add "Advanced.bundle" file to the list.
 
-![alt text](PluginsMenu.png)
+![alt text](github-files/PluginsMenu.png)
 
 Go to Scripts menu. 
 
@@ -46,7 +46,7 @@ Select "postflight" checkbox in the "Installation Scripts" submenu.
 
 Click "Choose..." button and add "Advanced.sh" file to the list.
 
-![alt text](ScriptsMenu.png)
+![alt text](github-files/ScriptsMenu.png)
 
 After all files will be placed go to Iceberg main menu Build -> Build
 

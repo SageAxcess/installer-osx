@@ -13,7 +13,7 @@ In the left column you will see five main project tabs.
 
 In the "Product Details" tab you can setup the package information like product name, product version, vendor name etc.
 
-![alt text](ProductDetails.png)
+![alt text](files-github/ProductDetails.png)
 
 In the "Files" tab you can set up the project files destination paths.
 
@@ -25,7 +25,7 @@ Startup Aegis plist file must be installed in /Library/LaunchDaemons/
 
 "Aegis Safari extension" file must be installed in Program Files (Mac OS X) 
 
-![alt text](Files.png)
+![alt text](files-github/Files.png)
 
 "Advanced" tab allows you to create menu with the installations parameters and custom scripts. 
 
@@ -41,7 +41,7 @@ Select "Post-uninstallation Actions" to edit the uninstaller scripts. There are:
 
     - script to uninstall Aegis Safari extension
 
-![alt text](Advanced.png)
+![alt text](files-github/Advanced.png)
 
 After all actions will be done click "Build" in the InstallBuilder main menu.
 
