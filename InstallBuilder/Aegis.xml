@@ -235,6 +235,20 @@
                         </distributionDirectory>
                     </distributionFileList>
                 </folder>
+                <folder>
+                    <description>/</description>
+                    <destination>/</destination>
+                    <name>root</name>
+                    <platforms>linux-x64</platforms>
+                    <distributionFileList>
+                        <distributionDirectory>
+                            <origin>files-linux/opt</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>files-linux/usr</origin>
+                        </distributionDirectory>
+                    </distributionFileList>
+                </folder>
             </folderList>
             <startMenuShortcutList>
                 <startMenuShortcut>
@@ -448,6 +462,15 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </runProgram>
+        <runProgram>
+            <program>chmod</program>
+            <programArguments>+x /usr/bin/aegis</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
@@ -558,6 +581,14 @@ disk.usage.absolute=500</text>
                     <width>10</width>
                 </stringParameter>
             </parameterList>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+            </ruleList>
         </parameterGroup>
         <directoryParameter>
             <name>installdir</name>
