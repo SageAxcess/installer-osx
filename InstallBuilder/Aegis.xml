@@ -138,9 +138,6 @@
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/extensions</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/logs</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
                         </distributionDirectory>
                     </distributionFileList>
@@ -454,8 +451,10 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>sc</program>
             <programArguments>start Aegis</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
