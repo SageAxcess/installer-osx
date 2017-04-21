@@ -471,6 +471,28 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </runProgram>
+        <createSymLink>
+            <abortOnError>0</abortOnError>
+            <linkName>/usr/lib64/libcurl-gnutls.so.4</linkName>
+            <showMessageOnError>0</showMessageOnError>
+            <target>/usr/lib64/libcurl.so.4</target>
+            <ruleList>
+                <fileExists>
+                    <path>/usr/lib64/libcurl.so.4</path>
+                </fileExists>
+            </ruleList>
+        </createSymLink>
+        <createSymLink>
+            <abortOnError>0</abortOnError>
+            <linkName>/usr/lib64/libbz2.so.1.0</linkName>
+            <showMessageOnError>0</showMessageOnError>
+            <target>/usr/lib64/libbz2.so.1</target>
+            <ruleList>
+                <fileExists>
+                    <path>/usr/lib64/libbz2.so.1</path>
+                </fileExists>
+            </ruleList>
+        </createSymLink>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
