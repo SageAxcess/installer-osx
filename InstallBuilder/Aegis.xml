@@ -140,6 +140,9 @@
                         <distributionDirectory>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
                         </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/ie</origin>
+                        </distributionDirectory>
                     </distributionFileList>
                 </folder>
                 <folder>
@@ -230,6 +233,9 @@
                         <distributionDirectory>
                             <origin>files-win/Program Files/Win10Pcap</origin>
                         </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>files-win/Program Files/Mozilla Firefox</origin>
+                        </distributionDirectory>
                     </distributionFileList>
                 </folder>
                 <folder>
@@ -245,6 +251,22 @@
                             <origin>files-linux/usr</origin>
                         </distributionDirectory>
                     </distributionFileList>
+                </folder>
+                <folder>
+                    <description>FirefoxExtension</description>
+                    <destination>/Applications/Firefox.app/Contents/Resources/browser/extensions/</destination>
+                    <name>FirefoxExtension</name>
+                    <platforms>osx</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>files-mac/Firefox Extension/sageaxcess@sageaxcess.com.xpi</origin>
+                        </distributionFile>
+                    </distributionFileList>
+                    <ruleList>
+                        <fileExists>
+                            <path>/Applications/Firefox.app/Contents/Resources/browser</path>
+                        </fileExists>
+                    </ruleList>
                 </folder>
             </folderList>
             <startMenuShortcutList>
@@ -404,28 +426,34 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <explanation>Add Aegis Extension to Google Chrome x32</explanation>
             <program>reg</program>
             <programArguments>add HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
-                    <type>windows-x86</type>
+                    <type>windows</type>
                 </platformTest>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <explanation>Add Aegis Extension to Google Chrome x64</explanation>
             <program>reg</program>
             <programArguments>add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
-                    <type>windows-x64</type>
+                    <type>windows</type>
                 </platformTest>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>sc</program>
             <programArguments>create Aegis displayname= "AEGIS service" binPath= "${installdir}\aegis.exe" start= auto</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -433,8 +461,10 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>sc</program>
             <programArguments>description Aegis "Collects and analyzes network packets, transmits data to the cloud"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -442,8 +472,10 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>sc</program>
             <programArguments>failure Aegis reset= 86400 actions= restart/1000</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -462,8 +494,10 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>chmod</program>
             <programArguments>+x /usr/bin/aegis</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>linux-x64</type>
@@ -492,6 +526,18 @@ disk.usage.absolute=500</text>
                 </fileExists>
             </ruleList>
         </createSymLink>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>regsvr32</program>
+            <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>regsvr32</program>
+            <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
+        </runProgram>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
@@ -501,8 +547,10 @@ disk.usage.absolute=500</text>
     </preUninstallationActionList>
     <postUninstallationActionList>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>rm</program>
             <programArguments>~/Library/Safari/Extensions/AEGIS.safariextz</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -510,8 +558,10 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>reg</program>
             <programArguments>delete HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /f</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>windows-x86</type>
@@ -519,13 +569,27 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
             <program>reg</program>
             <programArguments>delete HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /f</programArguments>
+            <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
                     <type>windows-x64</type>
                 </platformTest>
             </ruleList>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>regsvr32</program>
+            <programArguments>/s /u "${installdir}/ie/CommonInterface.dll"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>regsvr32</program>
+            <programArguments>/s /u "${installdir}/ie/Content.dll"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
         </runProgram>
     </postUninstallationActionList>
     <disableSplashScreen>1</disableSplashScreen>
@@ -604,10 +668,8 @@ disk.usage.absolute=500</text>
             </parameterList>
             <ruleList>
                 <platformTest>
-                    <type>osx</type>
-                </platformTest>
-                <platformTest>
-                    <type>windows</type>
+                    <negate>1</negate>
+                    <type>linux-x64</type>
                 </platformTest>
             </ruleList>
         </parameterGroup>

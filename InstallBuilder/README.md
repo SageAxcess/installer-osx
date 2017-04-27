@@ -27,15 +27,21 @@ OS X:
 
     "Aegis Safari extension" file must be installed in Program Files (Mac OS X)
 
+    "Aegis Mozilla Firefox extension" file must be installed in /Applications/Firefox.app/Contents/Resources/browser/extensions/
+
 WINDOWS:
 
     Aegis files must be installed in "Program Files (Windows)" and "ProgramData (Windows)"
+
+    "Aegis Mozilla Firefox extension" file must be installed in /Program Files/Mozilla Firefox/browser/extensions
 
 LINUX:
     
     Aegis files must be installed in the root of filesystem (/usr directory)
 
     "Aegis Google Chrome extension" json file must be installed in the root of filesystem (/opt directory)
+
+    "Aegis Mozilla Firefox extension" file must be installed in /usr/lib/firefox-addons/extensions
 
 ![alt text](files-github/Files.png)
 
@@ -49,6 +55,8 @@ Select "Post-installation Actions" to edit the installer scripts. There are:
 
     - script to install Aegis Google Chrome extension (Windows)
 
+    - script to install Aegis Internet Explorer extension (Windows)    
+
     - script to create and run Aegis service (Windows)
 
     - script to make aegis file executable (Lunix)
@@ -58,6 +66,8 @@ Select "Post-uninstallation Actions" to edit the uninstaller scripts. There are:
     - script to uninstall Aegis Safari extension (OS X)
 
     - script to uninstall Aegis Google Chrome extension (Windows)
+
+    - script to uninstall Aegis Internet Explorer extension (Windows)
 
 Select "Advanced" in the "Parameters" folder to edit Aegis configuration menu.
 
