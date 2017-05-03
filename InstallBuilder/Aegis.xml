@@ -195,7 +195,7 @@
                     <platforms>osx</platforms>
                     <distributionFileList>
                         <distributionFile>
-                            <origin>files-mac/Library.LaunchDaemons/aegis.plist</origin>
+                            <origin>files-mac/Library.LaunchDaemons/com.sageaxcess.aegis.plist</origin>
                         </distributionFile>
                     </distributionFileList>
                 </folder>
@@ -538,6 +538,19 @@ disk.usage.absolute=500</text>
             <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
             <showMessageOnError>0</showMessageOnError>
         </runProgram>
+        <createOSXService>
+            <abandonProcessGroup>0</abandonProcessGroup>
+            <groupname>SageAxcess</groupname>
+            <keepAlive>1</keepAlive>
+            <program>/usr/local/Cellar/aegis/2.4.1/bin/aegis</program>
+            <programArguments></programArguments>
+            <scope>system</scope>
+            <serviceName>com.sageaxcess.aegis</serviceName>
+            <username>SageAxcess</username>
+        </createOSXService>
+        <startOSXService>
+            <serviceName>com.sageaxcess.aegis</serviceName>
+        </startOSXService>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
