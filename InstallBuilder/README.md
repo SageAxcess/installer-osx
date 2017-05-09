@@ -19,13 +19,11 @@ In the "Files" tab you can set up the project files destination paths.
 
 OS X:
 
-    Aegis files must be installed in /usr/local/
-
-    Startup Aegis plist file must be installed in /Library/LaunchDaemons/
-
-    "Aegis Google Chrome extension" json file must be installed in /Library/Application Support/Google/Chrome/External Extensions/
+    Aegis files (usr-local.zip) must be installed in Program Files (Mac OS X). It's archive of /usr/local/ directory, which will be unzipped in Post-installation Actions
 
     "Aegis Safari extension" file must be installed in Program Files (Mac OS X)
+
+    "Aegis Google Chrome extension" json file must be installed in /Library/Application Support/Google/Chrome/External Extensions/
 
     "Aegis Mozilla Firefox extension" file must be installed in /Applications/Firefox.app/Contents/Resources/browser/extensions/
 
@@ -49,7 +47,11 @@ LINUX:
 
 Select "Post-installation Actions" to edit the installer scripts. There are:
 
+    - script to unzip Aegis files (usr-local.zip) to /usr/local (OS X)
+
     - scripts to update Aegis config file (Windows and OS X)
+
+    - script to create and run Aegis service (OS X)
 
     - script to install Aegis Safari extension (OS X)
 
@@ -62,6 +64,10 @@ Select "Post-installation Actions" to edit the installer scripts. There are:
     - script to make aegis file executable (Lunix)
 
 Select "Post-uninstallation Actions" to edit the uninstaller scripts. There are:
+
+    - scripts to stop and remove Aegis service (OS X)
+
+    - scripts to uninstall Aegis files (OS X)
 
     - script to uninstall Aegis Safari extension (OS X)
 

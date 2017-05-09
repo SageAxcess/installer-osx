@@ -154,48 +154,8 @@
                         <distributionFile>
                             <origin>files-mac/Safari Extension/AEGIS.safariextz</origin>
                         </distributionFile>
-                    </distributionFileList>
-                </folder>
-                <folder>
-                    <description>/usr/local/</description>
-                    <destination>/usr/local/</destination>
-                    <name>usrlocal</name>
-                    <platforms>osx</platforms>
-                    <distributionFileList>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/bin</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/Cellar</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/etc</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/include</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/lib</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/opt</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/share</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-mac/usr.local/var</origin>
-                        </distributionDirectory>
-                    </distributionFileList>
-                </folder>
-                <folder>
-                    <description>/Library/LaunchDaemons/</description>
-                    <destination>/Library/LaunchDaemons/</destination>
-                    <name>LibraryLaunchDaemons</name>
-                    <platforms>osx</platforms>
-                    <distributionFileList>
                         <distributionFile>
-                            <origin>files-mac/Library.LaunchDaemons/com.sageaxcess.aegis.plist</origin>
+                            <origin>files-mac/usr-local.zip</origin>
                         </distributionFile>
                     </distributionFileList>
                 </folder>
@@ -253,7 +213,7 @@
                     </distributionFileList>
                 </folder>
                 <folder>
-                    <description>FirefoxExtension</description>
+                    <description>Firefox Extension</description>
                     <destination>/Applications/Firefox.app/Contents/Resources/browser/extensions/</destination>
                     <name>FirefoxExtension</name>
                     <platforms>osx</platforms>
@@ -284,6 +244,34 @@
         </component>
     </componentList>
     <postInstallationActionList>
+        <unzip>
+            <destinationDirectory>/usr/local/</destinationDirectory>
+            <zipFile>${installdir}/usr-local.zip</zipFile>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </unzip>
+        <deleteFile>
+            <path>${installdir}/usr-local.zip</path>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <path>/usr/local/__MACOSX</path>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <fileExists>
+                    <path>/usr/local/__MACOSX</path>
+                </fileExists>
+            </ruleList>
+        </deleteFile>
         <writeFile>
             <encoding>utf-8</encoding>
             <explanation>Update Aegis configuration file</explanation>
@@ -350,6 +338,46 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </writeFile>
+        <runProgram>
+            <explanation>Install Safari Extension</explanation>
+            <program>open</program>
+            <programArguments>-a Safari ${installdir}/AEGIS.safariextz</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>cp</program>
+            <programArguments>-fv /usr/local/opt/aegis/*.plist /Library/LaunchDaemons</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>chown</program>
+            <programArguments>root /Library/LaunchDaemons/homebrew.mxcl.aegis.plist</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>launchctl</program>
+            <programArguments>load /Library/LaunchDaemons/homebrew.mxcl.aegis.plist</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
         <writeFile>
             <explanation>Update Aegis configuration file</explanation>
             <path>${installdir}/aegis.conf</path>
@@ -415,16 +443,6 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </writeFile>
-        <runProgram>
-            <explanation>Install Safari Extension</explanation>
-            <program>open</program>
-            <programArguments>-a Safari ${installdir}/AEGIS.safariextz</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
         <runProgram>
             <abortOnError>0</abortOnError>
             <explanation>Add Aegis Extension to Google Chrome x32</explanation>
@@ -495,6 +513,18 @@ disk.usage.absolute=500</text>
         </runProgram>
         <runProgram>
             <abortOnError>0</abortOnError>
+            <program>regsvr32</program>
+            <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>regsvr32</program>
+            <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
+            <showMessageOnError>0</showMessageOnError>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
             <program>chmod</program>
             <programArguments>+x /usr/bin/aegis</programArguments>
             <showMessageOnError>0</showMessageOnError>
@@ -526,31 +556,6 @@ disk.usage.absolute=500</text>
                 </fileExists>
             </ruleList>
         </createSymLink>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>regsvr32</program>
-            <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>regsvr32</program>
-            <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-        </runProgram>
-        <createOSXService>
-            <abandonProcessGroup>0</abandonProcessGroup>
-            <groupname>SageAxcess</groupname>
-            <keepAlive>1</keepAlive>
-            <program>/usr/local/Cellar/aegis/2.4.1/bin/aegis</program>
-            <programArguments></programArguments>
-            <scope>system</scope>
-            <serviceName>com.sageaxcess.aegis</serviceName>
-            <username>SageAxcess</username>
-        </createOSXService>
-        <startOSXService>
-            <serviceName>com.sageaxcess.aegis</serviceName>
-        </startOSXService>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
@@ -561,8 +566,8 @@ disk.usage.absolute=500</text>
     <postUninstallationActionList>
         <runProgram>
             <abortOnError>0</abortOnError>
-            <program>rm</program>
-            <programArguments>~/Library/Safari/Extensions/AEGIS.safariextz</programArguments>
+            <program>launchctl</program>
+            <programArguments>unload /Library/LaunchDaemons/homebrew.mxcl.aegis.plist</programArguments>
             <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
@@ -570,6 +575,76 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </runProgram>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>/Library/LaunchDaemons/homebrew.mxcl.aegis.plist</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>~/Library/Safari/Extensions/AEGIS.safariextz</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>/usr/local/bin/aegis</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>/usr/local/Cellar/aegis</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>/usr/local/Cellar/aegis-plugins</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>/usr/local/opt/aegis</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
+        <deleteFile>
+            <abortOnError>0</abortOnError>
+            <path>/usr/local/opt/aegis-plugins</path>
+            <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </deleteFile>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>reg</program>
