@@ -6,7 +6,7 @@ module KRB;
 @load ./consts
 
 export {
-	redef enum Log::ID += { LOG };
+	redef enum Log::ID += { LOG, Z_LOG };
 
 	type Info: record {
 		## Timestamp for when the event happened.
@@ -43,6 +43,10 @@ export {
 		## Renewable ticket requested
 		renewable:		bool &log &optional;
 
+		## Additional process information
+                local_user:		string	   &log &default="<unknown>";
+                process:		string	   &log &default="";
+
 		## We've already logged this
 		logged: 		bool &default=F;
 	};
@@ -69,15 +73,38 @@ redef record connection += {
 	krb: Info &optional;
 };
 
+redef record LogZMQ::Info += {
+	krb: Info &log &optional;
+};
+
 const tcp_ports = { 88/tcp };
 const udp_ports = { 88/udp };
 redef likely_server_ports += { tcp_ports, udp_ports };
+
+function write_log(info: Info)
+	{
+        Log::write(KRB::LOG, info);
+
+#	when ( local src_host = lookup_addr(info$id$orig_h) )
+#		{
+		local s: LogZMQ::Info = [$ptype="krb", $is_proto=T, $ts=info$ts, $uid=info$uid, $username=info$local_user, $process=info$process];
+		s$krb = info;
+
+		Log::write(KRB::Z_LOG, s);
+#		}
+	}
+
 
 event bro_init() &priority=5
 	{
 	Analyzer::register_for_ports(Analyzer::ANALYZER_KRB, udp_ports);
 	Analyzer::register_for_ports(Analyzer::ANALYZER_KRB_TCP, tcp_ports);
 	Log::create_stream(KRB::LOG, [$columns=Info, $ev=log_krb, $path="kerberos"]);
+
+	Log::create_stream(KRB::Z_LOG, [$columns=LogZMQ::Info, $path="z-krb"]);
+        Log::remove_default_filter(KRB::Z_LOG);
+	local filter: Log::Filter = [$name="zmq", $writer=Log::WRITER_ZMQ];
+	Log::add_filter(KRB::Z_LOG, filter);
 	}
 
 event krb_error(c: connection, msg: Error_Msg) &priority=5
@@ -122,7 +149,7 @@ event krb_error(c: connection, msg: Error_Msg) &priority=-5
 	{
 	if ( c?$krb )
 		{
-		Log::write(KRB::LOG, c$krb);
+		write_log(c$krb);
 		c$krb$logged = T;
 		}
 	}
@@ -207,7 +234,7 @@ event krb_as_response(c: connection, msg: KDC_Response) &priority=5
 
 event krb_as_response(c: connection, msg: KDC_Response) &priority=-5
 	{
-	Log::write(KRB::LOG, c$krb);
+	write_log(c$krb);
 	c$krb$logged = T;
 	}
 
@@ -240,12 +267,12 @@ event krb_tgs_response(c: connection, msg: KDC_Response) &priority=5
 
 event krb_tgs_response(c: connection, msg: KDC_Response) &priority=-5
 	{
-	Log::write(KRB::LOG, c$krb);
+	write_log(c$krb);
 	c$krb$logged = T;
 	}
 
 event connection_state_remove(c: connection) &priority=-5
 	{
 	if ( c?$krb && ! c$krb$logged )
-		Log::write(KRB::LOG, c$krb);
+		write_log(c$krb);
 	}

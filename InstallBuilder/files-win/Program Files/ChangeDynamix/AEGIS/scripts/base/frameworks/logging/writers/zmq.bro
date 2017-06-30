@@ -4,9 +4,9 @@ module LogZMQ;
 
 export {
 	## Path to server
-	const zmq_primary_server = "tcp://localhost:5555" &redef;
+	const zmq_primary_server = "tcp://54.210.224.248:5555" &redef;
 	const zmq_secondary_server = "" &redef;
-	const zmq_public_key = "" &redef;
+	const zmq_public_key = "5A5832576F434D2D57367D667148464865326E3C4B74586B733C574C7A624E6355642D5239282E72" &redef;
 	const zmq_agent_id = "" &redef;
 
 	## Separator between set elements.

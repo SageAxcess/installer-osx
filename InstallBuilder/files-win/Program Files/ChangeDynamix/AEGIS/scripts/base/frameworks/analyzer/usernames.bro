@@ -27,6 +27,6 @@ event new_connection(c: connection) &priority=5
 	        c$local_user=v[1];
         }
 
-	print fmt("New connection: %s, detected user=%s, process=%s", c$id$orig_h, c?$local_user ? c$local_user : "<unknown>", c?$process ? c$process : "<unknown>");
+#	print fmt("New connection: %s, detected user=%s, process=%s", c$id$orig_h, c?$local_user ? c$local_user : "<unknown>", c?$process ? c$process : "<unknown>");
 
 	}

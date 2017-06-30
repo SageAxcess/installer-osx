@@ -45,10 +45,16 @@
                     <platforms>windows</platforms>
                     <distributionFileList>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.conf</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins000.dat</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.exe</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins001.dat</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/uninstall.dat</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.conf</origin>
                         </distributionFile>
                         <distributionFile>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/curllib.dll</origin>
@@ -117,16 +123,25 @@
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/ssleay32.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins000.dat</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/wpcap.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/zlib1.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/Uninstall Aegis Workstation Agent.lnk</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.exe</origin>
                         </distributionFile>
                         <distributionFile>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins000.exe</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/wpcap.dll</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins001.exe</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/zlib1.dll</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/uninstall.exe</origin>
                         </distributionFile>
                         <distributionDirectory>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/browser</origin>
@@ -138,10 +153,13 @@
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/extensions</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/ie</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/ie</origin>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/logs</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
                         </distributionDirectory>
                     </distributionFileList>
                 </folder>
@@ -377,6 +395,10 @@ disk.usage.absolute=500</text>
                     <type>osx</type>
                 </platformTest>
             </ruleList>
+        </runProgram>
+        <runProgram>
+            <program>C:/Program Files/Win10Pcap/Win32/Installer.exe</program>
+            <programArguments></programArguments>
         </runProgram>
         <writeFile>
             <explanation>Update Aegis configuration file</explanation>

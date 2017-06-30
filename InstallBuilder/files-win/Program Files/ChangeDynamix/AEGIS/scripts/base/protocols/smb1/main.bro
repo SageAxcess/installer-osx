@@ -31,6 +31,9 @@ export {
 
 		local_user: string	&log &default="";
 		process   : string	&log &default="";
+
+		userSet: bool &default=F;
+		sessionId : string &log;
 	};
 
         type SmbFile: record {
@@ -58,6 +61,10 @@ redef record LogZMQ::Info += {
 
 #TODO: hashmap for files by fileid
 global smb_files: table[string] of SmbFile &read_expire=5mins;
+# Hash of usernames by session id
+global smb_sessions: table[string] of string &read_expire=5mins;
+# Hash of Kerberos authentications by host_host pair
+global krb_sessions: table[string] of string &read_expire=5mins;
 
 function write_log(info: Info)
 	{
@@ -133,9 +140,53 @@ event smb1_unknown(c: connection, is_orig: bool, msg: string)
 	{
 	}
 
-event smb2_message(c: connection, is_orig: bool, cmd: count)
+event ntlm_authenticate(c: connection, request: NTLM::Authenticate) &priority=5
 	{
+	if ( c?$smb1 )
+		{
+			local u: string;
+			u = "";
+			if ( request?$domain_name )
+				u = u + "\\\\" + request$domain_name + "\\";
+			if ( request?$user_name )
+				u = u + request$user_name;
+			else
+				u = request$workstation + "$";
 
+			print fmt("ntlm authentication detected, username=%s, session=%s", u, c$smb1?$sessionId ? c$smb1$sessionId : "unknown");
+
+			c$smb1$user = u;
+			c$smb1$userSet = T;
+
+			if(c$smb1?$sessionId)
+				smb_sessions[c$smb1$sessionId]=u;
+		}
+	}
+
+event krb_as_request(c: connection, msg: KRB::KDC_Request) &priority=5
+	{
+	local key: string;
+	local u: string;
+	u = fmt("%s/%s", msg$client_name, msg$service_realm);
+	key = fmt("%s_%s", c$id$orig_h, c$id$resp_h);
+
+#	print fmt("krb authentication detected, username=%s, src=%s, key=%s", u, c$uid, key);
+
+	krb_sessions[key] = u;
+
+	if ( c?$smb1 )
+		{
+		c$smb1$user = u;
+		c$smb1$userSet = T;
+
+		if(c$smb1?$sessionId)
+			smb_sessions[c$smb1$sessionId]=u;
+		}
+	}
+
+
+event smb2_message(c: connection, sessionId: string, is_orig: bool, cmd: count)
+	{
 	if ( ! c?$smb1 )
 		{
 		        if( !c?$conn ) {
@@ -147,18 +198,54 @@ event smb2_message(c: connection, is_orig: bool, cmd: count)
 			local s: Info;
 			c$smb1 = s;
 
+			c$smb1$userSet = F;
 			c$smb1$local_user=c?$local_user ? c$local_user : "";
 			c$smb1$process=c?$process ? c$process : "";
 		}
+
+		local key: string;
+		key = fmt("%s_%s", c$id$orig_h, c$id$resp_h);
+		if(key in krb_sessions)
+		{
+			c$smb1$userSet = T;
+			c$smb1$user = krb_sessions[key];
+		}
+
+		if(sessionId != "")
+		{
+			if(! c$smb1?$sessionId)
+				c$smb1$sessionId = sessionId;
+
+			if(! c$smb1$userSet)
+			{
+				if (sessionId in smb_sessions)
+				{
+					c$smb1$user=smb_sessions[sessionId];
+					if (c$smb1?$user)
+						c$smb1$userSet = T;
+				} else {
+				}
+			}
+			else
+			{
+				smb_sessions[sessionId]=c$smb1$user;
+			}
+		}
 	}
 
-event smb2_tree_connect(c: connection, is_orig: bool, path: string)
+event smb2_tree_connect(c: connection, sessionId: string, is_orig: bool, path: string)
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		c$smb1$share = path; #TODO: store treeId and path to hash
 	}
 
-event smb2_create(c: connection, is_orig: bool, name: string )
+event smb2_create(c: connection, sessionId: string, is_orig: bool, name: string )
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		c$smb1$ts=network_time();
 		c$smb1$uid=c$uid;
 		c$smb1$id=c$id;
@@ -166,8 +253,11 @@ event smb2_create(c: connection, is_orig: bool, name: string )
 		c$smb1$filename = name; #TODO: store mid and path to hash
 	}
 
-event smb2_create_resp(c: connection, is_orig: bool, size: count, fileid: string )
+event smb2_create_resp(c: connection, sessionId: string, is_orig: bool, status: count, size: count, fileid: string )
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		c$smb1$filesize = size; #TODO: use mid
 
 		if ( ! c$smb1?$filename ) {
@@ -177,29 +267,39 @@ event smb2_create_resp(c: connection, is_orig: bool, size: count, fileid: string
 		if(|c$smb1$filename|==0) {
 			return;
 		}
-#		write_log(c$smb1);
-		
-		local s: SMB1::SmbFile;
 
-		s$fileId = fileid;
-		s$filename = c$smb1$filename;
-		s$filesize = size;
-		s$operation = "";
-		s$op_bytes = 0;
+		if(status==0) {
+			local s: SMB1::SmbFile;
 
-		smb_files[fileid] = s;
+			s$fileId = fileid;
+			s$filename = c$smb1$filename;
+			s$filesize = size;
+			s$operation = "";
+			s$op_bytes = 0;
+
+			smb_files[fileid] = s;
+		} else {
+			c$smb1$action = fmt("open failed 0x%x08x", status);
+			write_log(c$smb1);
+		}
 	}
 
-event smb2_set_info(c: connection, file_id: string, info_type: count, info_class: count)
+event smb2_set_info(c: connection, sessionId: string, file_id: string, info_type: count, info_class: count)
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		if( file_id in smb_files && info_type==1 && info_class==13 )
 		{
 			smb_files[file_id]$operation = "delete";
 		}
 	}
 
-event smb2_read(c: connection, file_id: string, length: count)
+event smb2_read(c: connection, sessionId: string, file_id: string, length: count)
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		if( file_id in smb_files )
 		{
 			smb_files[file_id]$operation = "read";
@@ -207,8 +307,11 @@ event smb2_read(c: connection, file_id: string, length: count)
 		}
 	}
 
-event smb2_write(c: connection, file_id: string, length: count)
+event smb2_write(c: connection, sessionId: string, file_id: string, length: count)
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		if( file_id in smb_files )
 		{
 			smb_files[file_id]$operation = "write";
@@ -216,16 +319,22 @@ event smb2_write(c: connection, file_id: string, length: count)
 		}
 	}
 
-event smb2_find(c: connection, file_id: string)
+event smb2_find(c: connection, sessionId: string, file_id: string)
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		if( file_id in smb_files )
 		{
 			smb_files[file_id]$operation = "list";
 		}
 	}
 
-event smb2_close(c: connection, file_id: string)
+event smb2_close(c: connection, sessionId: string, file_id: string)
 	{
+		if(! c$smb1?$sessionId && sessionId != "")
+			c$smb1$sessionId = sessionId;
+
 		if( file_id in smb_files )
 		{
 			c$smb1$action = smb_files[file_id]$operation;
@@ -238,6 +347,6 @@ event smb2_close(c: connection, file_id: string)
 	}
 
 
-event smb2_unknown(c: connection, is_orig: bool, msg: string )
+event smb2_unknown(c: connection, sessionId: string, is_orig: bool, msg: string )
 	{
 	}
