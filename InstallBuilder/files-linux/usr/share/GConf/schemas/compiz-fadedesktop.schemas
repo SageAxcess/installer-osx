@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/fadedesktop/screen0/options/fadetime</key>
+      <applyto>/apps/compiz-1/plugins/fadedesktop/screen0/options/fadetime</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>500</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fade Time</short>
+        <long>Fade time (in ms) (1 - 5000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/fadedesktop/screen0/options/window_match</key>
+      <applyto>/apps/compiz-1/plugins/fadedesktop/screen0/options/window_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Toolbar | Utility | Dialog | Normal | Unknown</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>Windows that should be faded to desktop (match)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

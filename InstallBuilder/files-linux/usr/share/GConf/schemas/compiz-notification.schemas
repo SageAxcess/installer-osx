@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/notification/screen0/options/timeout</key>
+      <applyto>/apps/compiz-1/plugins/notification/screen0/options/timeout</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>-1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Hide Timeout</short>
+        <long>Timeout (in seconds) before hiding the notification, set to -1 for system default and 0 for indefinite (-1 - 30)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/notification/screen0/options/max_log_level</key>
+      <applyto>/apps/compiz-1/plugins/notification/screen0/options/max_log_level</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximum Log Level</short>
+        <long>The maximum log level to display (0 = Fatal, 1 = Error, 2 = Warning, 3 = Info, 4 = Debug)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

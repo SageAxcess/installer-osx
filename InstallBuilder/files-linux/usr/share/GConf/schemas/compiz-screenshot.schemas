@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/screenshot/screen0/options/initiate_button</key>
+      <applyto>/apps/compiz-1/plugins/screenshot/screen0/options/initiate_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;Button1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate</short>
+        <long>Initiate the capture, release the button to take the shot.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/screenshot/screen0/options/draw_selection_indicator</key>
+      <applyto>/apps/compiz-1/plugins/screenshot/screen0/options/draw_selection_indicator</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Draw Screenshot Selection Indicator</short>
+        <long>Draw a rectangle outline indicating the screenshot selection.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/screenshot/screen0/options/selection_outline_color</key>
+      <applyto>/apps/compiz-1/plugins/screenshot/screen0/options/selection_outline_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#2f2f4f9f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Selection Indicator Outline Color</short>
+        <long>Color and opacity of the screenshot selection rectangle outline.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/screenshot/screen0/options/selection_fill_color</key>
+      <applyto>/apps/compiz-1/plugins/screenshot/screen0/options/selection_fill_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#2f2f4f4f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Selection Indicator Fill Color</short>
+        <long>Fill color and opacity of the screenshot selection rectangle.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/screenshot/screen0/options/directory</key>
+      <applyto>/apps/compiz-1/plugins/screenshot/screen0/options/directory</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Save Directory</short>
+        <long>Save screenshot images in this directory. If empty, the desktop directory will be used.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/screenshot/screen0/options/launch_app</key>
+      <applyto>/apps/compiz-1/plugins/screenshot/screen0/options/launch_app</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Launch Application</short>
+        <long>Automatically open the screenshot in this application.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

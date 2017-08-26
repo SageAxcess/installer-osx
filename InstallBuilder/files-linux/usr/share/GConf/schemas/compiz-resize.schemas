@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/initiate_button</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/initiate_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Button2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Resize</short>
+        <long>Start resizing window</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F8</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Resize</short>
+        <long>Start resizing window</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/mode</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Default Resize Mode</short>
+        <long>Default mode used for window resizing (0 = Normal, 1 = Outline, 2 = Rectangle, 3 = Stretch)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/resize_from_center</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/resize_from_center</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Resize From Center</short>
+        <long>Same as setting 'any' for resize_from_center_match</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/maximize_vertically</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/maximize_vertically</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximize Vertically if screen edge hit</short>
+        <long>Maximizes the window vertically if the top or bottom screen edge is hit while resizing</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/border_color</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/border_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#fb8b009f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Border Color</short>
+        <long>Border color used for outline and rectangle resize modes</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/fill_color</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/fill_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#fb8b0019</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fill Color</short>
+        <long>Fill color used for rectangle resize mode</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/normal_match</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/normal_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Normal Resize Windows</short>
+        <long>Windows that normal resize should be used for (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/outline_match</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/outline_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Outline Resize Windows</short>
+        <long>Windows that outline resize should be used for (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/rectangle_match</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/rectangle_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rectangle Resize Windows</short>
+        <long>Windows that rectangle resize should be used for (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/stretch_match</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/stretch_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Stretch Resize Windows</short>
+        <long>Windows that stretch resize should be used for (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/resize_from_center_match</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/resize_from_center_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Resize From Center Windows</short>
+        <long>Windows that should be resized from center (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/outline_modifier</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/outline_modifier</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Outline Modifier</short>
+        <long>Use these bindings to resize with an outline.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/rectangle_modifier</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/rectangle_modifier</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rectangle Modifier</short>
+        <long>Use these bindings to resize with an rectangle.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/stretch_modifier</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/stretch_modifier</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Stretch Modifier</short>
+        <long>Use these bindings to resize by stretching.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resize/screen0/options/centered_modifier</key>
+      <applyto>/apps/compiz-1/plugins/resize/screen0/options/centered_modifier</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[0]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Centered Modifier</short>
+        <long>Use these bindings to resize from the center.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

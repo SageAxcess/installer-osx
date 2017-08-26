@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/next_key</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/next_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;Tab</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Window Key</short>
+        <long>Reveals the ring and selects the next window on the current workspace.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/next_button</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/next_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Window Button</short>
+        <long>Reveals the ring and selects the next window on the current workspace.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/prev_key</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/prev_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;Tab</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Window Key</short>
+        <long>Reveals the ring and selects the previous window on the current workspace.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/prev_button</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/prev_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Window Button</short>
+        <long>Reveals the ring and selects the previous window on the current workspace.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/next_all_key</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/next_all_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Alt&gt;Tab</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Window Key (All Workspaces)</short>
+        <long>Reveals the ring and selects the next window, taking into account all workspaces.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/next_all_button</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/next_all_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Window Button (All Workspaces)</short>
+        <long>Reveals the ring and selects the next window, taking into account all workspaces.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/prev_all_key</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/prev_all_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Tab</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Window Key (All Workspaces)</short>
+        <long>Reveals the ring and selects the previous window, taking into account all workspaces.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/prev_all_button</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/prev_all_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Window Button (All Workspaces)</short>
+        <long>Reveals the ring and selects the previous window, taking into account all workspaces.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/next_group_key</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/next_group_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Window Key (Group)</short>
+        <long>Reveals the ring and selects the next window of the currently focused application.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/next_group_button</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/next_group_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Window Button (Group)</short>
+        <long>Reveals the ring and selects the next window of the currently focuse application.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/prev_group_key</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/prev_group_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Window Key (Group)</short>
+        <long>Reveals the ring and selects the previous window of the currently focused application.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/prev_group_button</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/prev_group_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Window Button (Group)</short>
+        <long>Reveals the ring and selects the previous window of the currently focused application.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/window_match</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/window_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Normal | Dialog | ModalDialog | Utility | Unknown</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ring Windows</short>
+        <long>Windows that should be shown in the ring. (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/overlay_icon</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/overlay_icon</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Overlay Icon</short>
+        <long>Which type of icon overlay to draw on windows in the ring. (0 = None, 1 = Emblem, 2 = Big)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/speed</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Speed</short>
+        <long>The ring movement speed. (0.1 - 50.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/timestep</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/timestep</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Timestep</short>
+        <long>Ring switcher timestep. (0.1 - 50.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/inactive_opacity</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/inactive_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Inactive Window Opacity</short>
+        <long>Opacity (in percent) of unselected windows in the ring. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/darken_back</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/darken_back</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Darken Background</short>
+        <long>Darken background when showing the ring.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/minimized</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/minimized</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Minimized</short>
+        <long>Show windows that are minimized, shaded or in show-desktop mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/select_with_mouse</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/select_with_mouse</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Allow Mouse Selection</short>
+        <long>Allow the selection of windows by just clicking on them while the switcher is active.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/ring_clockwise</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/ring_clockwise</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Ring Clockwise On Next</short>
+        <long>Rotate the ring clockwise for the next window instead of counterclockwise.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/ring_width</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/ring_width</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>70</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ring Width</short>
+        <long>Ring width (in percent of the screen width). (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/ring_height</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/ring_height</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>60</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ring Height</short>
+        <long>Ring height (in percent of the screen height). (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/thumb_width</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/thumb_width</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>350</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Thumbnail Width</short>
+        <long>Maximum horizontal size of a thumbnail in the ring. (10 - 1024)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/thumb_height</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/thumb_height</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>250</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Thumbnail Height</short>
+        <long>Maximum vertical size of a thumbnail in the ring. (10 - 1024)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/min_brightness</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/min_brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Minimum Brightness Factor</short>
+        <long>Changes the minimum brightness factor for windows in the ring. The further away windows are, the less bright they are. (0.1 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/min_scale</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/min_scale</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Minimum Scale Factor</short>
+        <long>Changes the minimum scale factor for windows in the ring. The further away the windows are, the smaller they are. (0.1 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/window_title</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/window_title</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Window Title</short>
+        <long>Show the window title of the currently selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/title_font_bold</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/title_font_bold</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bold Font</short>
+        <long>Render the window title using a bold font.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/title_font_size</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/title_font_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>16</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Size</short>
+        <long>Font size of the window title text (in pixels). (6 - 96)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/title_back_color</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/title_back_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000099</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Background Color</short>
+        <long>Color and opacity of the window title background.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/title_font_color</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/title_font_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffffffff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Color</short>
+        <long>Font color and opacity of the window title.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/title_text_placement</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/title_text_placement</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Text Placement</short>
+        <long>Selects where to place the window title. (0 = Centered on screen, 1 = Top of screen minus offset, 2 = Bottom of screen plus offset)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/ring/screen0/options/vertical_offset</key>
+      <applyto>/apps/compiz-1/plugins/ring/screen0/options/vertical_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>50</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Vertical Offset</short>
+        <long>Vertical offset from top or bottom of the screen (in pixels). (0 - 500)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

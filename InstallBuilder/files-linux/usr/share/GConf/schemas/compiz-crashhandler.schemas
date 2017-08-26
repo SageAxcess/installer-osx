@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/crashhandler/screen0/options/enabled</key>
+      <applyto>/apps/compiz-1/plugins/crashhandler/screen0/options/enabled</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Enable Crash Handler</short>
+        <long>Activate Crash Handler.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/crashhandler/screen0/options/directory</key>
+      <applyto>/apps/compiz-1/plugins/crashhandler/screen0/options/directory</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>/tmp</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Crash Dump Directory</short>
+        <long>Directory to dump the crash logs to.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/crashhandler/screen0/options/start_wm</key>
+      <applyto>/apps/compiz-1/plugins/crashhandler/screen0/options/start_wm</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Start Other Window Manager</short>
+        <long>Start other window manager on Crash.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/crashhandler/screen0/options/wm_cmd</key>
+      <applyto>/apps/compiz-1/plugins/crashhandler/screen0/options/wm_cmd</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Manager Command Line</short>
+        <long>Window manager command line. DO NOT ENTER COMPIZ HERE!!!</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

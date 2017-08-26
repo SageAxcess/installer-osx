@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/texture_filter</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/texture_filter</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Texture Filter</short>
+        <long>Texture filtering (0 = Fast, 1 = Good, 2 = Best)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/lighting</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/lighting</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Lighting</short>
+        <long>Use diffuse light when screen is transformed</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/sync_to_vblank</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/sync_to_vblank</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Sync To VBlank</short>
+        <long>Only perform screen updates during vertical blanking period</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/texture_compression</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/texture_compression</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Texture Compression</short>
+        <long>If available use compression for textures converted from images</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/framebuffer_object</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/framebuffer_object</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Framebuffer object</short>
+        <long>Render all frames indirectly using framebuffer objects (GL_EXT_framebuffer_object), if supported by the driver. Pros: Might be faster than the default buffer swapping method in some cases. Cons: This will come at the cost of (1) usually reduced graphics benchmark performance; (2) increased GPU resource consumption; and (3) possibly higher visible lag. Note: This feature is always on in OpenGL|ES builds such as ARM platforms.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/vertex_buffer_object</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/vertex_buffer_object</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Vertex buffer object</short>
+        <long>Render all graphics primitives using vertex buffer objects (GL_ARB_vertex_buffer_object), if supported by the driver. Pros: This provides higher graphics performance for some drivers. Cons: This is a new feature and may cause graphical problems. Note: This feature is always on in OpenGL|ES builds such as ARM platforms.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/always_swap_buffers</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/always_swap_buffers</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Always use buffer swapping</short>
+        <long>Use glXSwapBuffers to display every frame. This eliminates visible tearing with most drivers and dramatically improves visual smoothness. Automatically enabled when framebuffer_object is on.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/enable_x11_sync</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/enable_x11_sync</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>X11 Sync objects</short>
+        <long>Use X11 Sync fences to synchronize rendering between X11 and OpenGL (GL_EXT_x11_sync_object). Without this, the contents of windows may not be completely redrawn.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/opengl/screen0/options/unredirect_driver_blacklist</key>
+      <applyto>/apps/compiz-1/plugins/opengl/screen0/options/unredirect_driver_blacklist</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>(nouveau|Intel).*Mesa 8.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Unredirect Driver Blacklist</short>
+        <long>If non-empty, specifies a POSIX (extended) regular expression to match against the OpenGL driver strings (newline separated): "GL_VENDOR\nGL_RENDERER\nGL_VERSION". If the regular expression matches a substring of that concatenation then no windows will ever be unredirected while using that particular graphics driver.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

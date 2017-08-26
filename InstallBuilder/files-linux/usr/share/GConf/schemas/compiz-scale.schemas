@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/spacing</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/spacing</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>20</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Spacing</short>
+        <long>Space between windows (0 - 250)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/x_offset</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/x_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>X Offset</short>
+        <long>Horizontal offset (in pixels). (0 - )</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/y_offset</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/y_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Y Offset</short>
+        <long>Vertical offset (in pixels). (0 - )</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/speed</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>5.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Speed</short>
+        <long>Scale speed (0.1 - 50)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/timestep</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/timestep</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Timestep</short>
+        <long>Scale timestep (0.1 - 50)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/darken_back</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/darken_back</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Darken Background</short>
+        <long>Darken background when scaling windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/opacity</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Opacity</short>
+        <long>Amount of opacity in percent (0 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/overlay_icon</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/overlay_icon</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Overlay Icon</short>
+        <long>Overlay an icon on windows once they are scaled (0 = None, 1 = Emblem, 2 = Big)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/window_match</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/window_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Toolbar | Utility | Dialog | Normal | Unknown</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Windows</short>
+        <long>Windows that should be scaled in scale mode (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/hover_time</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/hover_time</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>750</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Drag and Drop Hover Timeout</short>
+        <long>Time (in ms) before scale mode is terminated when hovering over a window dragging and dropping an item (50 - 10000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/dnd_distance</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/dnd_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>6</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Drag and Drop Distance</short>
+        <long>The minimum distance (in px) beyond which the timeout is reset. (0 - 250)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/dnd_timeout_spinner</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/dnd_timeout_spinner</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show a spinner during th Drag and Drop timeout</short>
+        <long>Whether to show a spinner over the windows during dnd Timeout.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/dnd_timeout_spinner_speed</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/dnd_timeout_spinner_speed</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>The speed of the DnD timeout spinner</short>
+        <long>The animation speed (in ms) of the Drag and Drop spinner. (50 - 250)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/multioutput_mode</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/multioutput_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Multi Output Mode</short>
+        <long>Selects where windows are scaled if multiple output devices are used. (0 = On current output device, 1 = On all output devices)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/key_bindings_toggle</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/key_bindings_toggle</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Key Bindings Toggle Scale Mode</short>
+        <long>Key bindings toggle scale mode instead of enabling it when pressed and disabling it when released.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/button_bindings_toggle</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/button_bindings_toggle</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Button Bindings Toggle Scale Mode</short>
+        <long>Button bindings toggle scale mode instead of enabling it when pressed and disabling it when released.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_edge</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker</short>
+        <long>Layout and start transforming windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;w</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker</short>
+        <long>Layout and start transforming windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_button</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker</short>
+        <long>Layout and start transforming windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_all_edge</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_all_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For All Windows</short>
+        <long>Layout and start transforming all windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_all_button</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_all_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For All Windows</short>
+        <long>Layout and start transforming all windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_all_key</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_all_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;w</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For All Windows</short>
+        <long>Layout and start transforming all windows</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_group_edge</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_group_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For Window Group</short>
+        <long>Layout and start transforming window group</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_group_button</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_group_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For Window Group</short>
+        <long>Layout and start transforming window group</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_group_key</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_group_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For Window Group</short>
+        <long>Layout and start transforming window group</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_output_edge</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_output_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For Windows on Current Output</short>
+        <long>Layout and start transforming windows on current output</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_output_button</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_output_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For Windows on Current Output</short>
+        <long>Layout and start transforming windows on current output</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/initiate_output_key</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/initiate_output_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Picker For Windows on Current Output</short>
+        <long>Layout and start transforming windows on current output</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scale/screen0/options/click_on_desktop</key>
+      <applyto>/apps/compiz-1/plugins/scale/screen0/options/click_on_desktop</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Click on empty area</short>
+        <long>Action to perform on click on empty area (0 = None, 1 = Show desktop, 2 = Terminate scale)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

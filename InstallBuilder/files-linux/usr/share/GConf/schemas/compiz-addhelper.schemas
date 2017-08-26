@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/addhelper/screen0/options/toggle_key</key>
+      <applyto>/apps/compiz-1/plugins/addhelper/screen0/options/toggle_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;p</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle AddHelper</short>
+        <long>Use this to enable/disable AddHelper on the fly.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/addhelper/screen0/options/window_types</key>
+      <applyto>/apps/compiz-1/plugins/addhelper/screen0/options/window_types</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Toolbar | Utility | Dialog | ModalDialog | Fullscreen | Normal</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Types</short>
+        <long>Window types that should be Opacified. (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/addhelper/screen0/options/ononinit</key>
+      <applyto>/apps/compiz-1/plugins/addhelper/screen0/options/ononinit</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Enable ADD Helper on start</short>
+        <long>Enables ADD helper when it is first loaded.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/addhelper/screen0/options/brightness</key>
+      <applyto>/apps/compiz-1/plugins/addhelper/screen0/options/brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>30</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Brightness</short>
+        <long>Brightness of faded windows (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/addhelper/screen0/options/saturation</key>
+      <applyto>/apps/compiz-1/plugins/addhelper/screen0/options/saturation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>50</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Saturation</short>
+        <long>Saturation of faded windows (0 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/addhelper/screen0/options/opacity</key>
+      <applyto>/apps/compiz-1/plugins/addhelper/screen0/options/opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Opacity</short>
+        <long>Opacity of faded windows (1 - 100)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

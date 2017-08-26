@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/window_match</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/window_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Toolbar | Utility | Dialog | Normal | Unknown</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>Windows that should be handled by 3D (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/min_cube_size</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/min_cube_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>60</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Minimum Cube Size</short>
+        <long>Minimum cube size (in percent). (10 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/max_window_space</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/max_window_space</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>10</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Space</short>
+        <long>Change the amount of space between the windows (in percent of the cube size). (0 - 50)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/manual_only</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/manual_only</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>3D Only On Mouse Rotate</short>
+        <long>Initiates the 3D display only if rotate is mouse driven. (Ex. You rotate the cube via the mouse)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/width</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/width</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Depth</short>
+        <long>Window depth (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/bevel</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/bevel</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bevel Corners</short>
+        <long>Roundoff corners for consistency with rounded decorations (0 - 20)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/width_color</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/width_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#333333ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Color (Active)</short>
+        <long>Color of the active window's depth</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/width_color_inactive</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/width_color_inactive</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#333333ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Color (Inactive)</short>
+        <long>Color of an inactive window's depth</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/bevel_topleft</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/bevel_topleft</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bevel Top Left</short>
+        <long>Bevel top left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/bevel_topright</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/bevel_topright</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bevel Top Right</short>
+        <long>Bevel top right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/bevel_bottomleft</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/bevel_bottomleft</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bevel Bottom Left</short>
+        <long>Bevel bottom left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/td/screen0/options/bevel_bottomright</key>
+      <applyto>/apps/compiz-1/plugins/td/screen0/options/bevel_bottomright</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bevel Bottom Right</short>
+        <long>Bevel bottom right corner</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

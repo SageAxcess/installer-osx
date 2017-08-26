@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Super&gt;</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate</short>
+        <long>Enable pointer water effects</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/toggle_rain_key</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/toggle_rain_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Shift&gt;F9</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle rain</short>
+        <long>Toggle rain effect</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/toggle_wiper_key</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/toggle_wiper_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Shift&gt;F8</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle wiper</short>
+        <long>Toggle wiper effect</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/offset_scale</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/offset_scale</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>10</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Offset Scale</short>
+        <long>Water offset scale (0 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/rain_delay</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/rain_delay</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>250</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rain Delay</short>
+        <long>Delay (in ms) between each rain-drop (1 - 3600000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/light_vec_x</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/light_vec_x</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>-1.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>lightVec X</short>
+        <long>Light vector X coordinate (-1 - 1)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/light_vec_y</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/light_vec_y</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>lightVec Y</short>
+        <long>Light vector Y coordinate (-1 - 1)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/light_vec_z</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/light_vec_z</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>lightVec Z</short>
+        <long>Light vector Z coordinate (-1 - 1)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/water/screen0/options/title_wave</key>
+      <applyto>/apps/compiz-1/plugins/water/screen0/options/title_wave</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Title wave</short>
+        <long>Wave effect from window title</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/initiate</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/initiate</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;m</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate</short>
+        <long>Zoom In</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/zoom_in_button</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/zoom_in_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;Button4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Zoom In</short>
+        <long>Zoom In</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/zoom_out_button</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/zoom_out_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;Button5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Zoom Out</short>
+        <long>Zoom Out</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/mode</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Mode</short>
+        <long>Mode. (0 = Simple, 1 = Image overlay, 2 = Fisheye)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/zoom_factor</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/zoom_factor</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>2.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Zoom</short>
+        <long>Zoom factor for keyboard initiated magnifier. (1.1 - 32.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/speed</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Speed</short>
+        <long>Zoom Speed (0.1 - 50)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/timestep</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/timestep</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Timestep</short>
+        <long>Zoom Timestep (0.1 - 50)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/keep_screen</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/keep_screen</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Keep fully on screen</short>
+        <long>Keep fully on screen.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/box_width</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/box_width</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>300</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Width</short>
+        <long>Box width. (20 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/box_height</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/box_height</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>200</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Height</short>
+        <long>Box height. (20 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/border</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/border</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Border width</short>
+        <long>Border widtht. (0 - 20)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/box_color</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/box_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#000000ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Border color</short>
+        <long>Border color</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/overlay</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/overlay</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Gnome/overlay.png</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Magnifier image</short>
+        <long>Magnifier image.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/mask</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/mask</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Gnome/mask.png</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Clip mask</short>
+        <long>Clip mask.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/x_offset</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/x_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>155</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>X offset of the cursor</short>
+        <long>X offset of the cursor. (0 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/y_offset</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/y_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>155</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Y offset of the cursor</short>
+        <long>Y offset of the cursor. (0 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mag/screen0/options/radius</key>
+      <applyto>/apps/compiz-1/plugins/mag/screen0/options/radius</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>200</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Radius</short>
+        <long>Radius of the magnification area. (10 - 1000)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

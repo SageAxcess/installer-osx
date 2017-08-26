@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/extrawm/screen0/options/toggle_redirect_key</key>
+      <applyto>/apps/compiz-1/plugins/extrawm/screen0/options/toggle_redirect_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Redirect</short>
+        <long>Toggle window redirect</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/extrawm/screen0/options/toggle_fullscreen_key</key>
+      <applyto>/apps/compiz-1/plugins/extrawm/screen0/options/toggle_fullscreen_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Fullscreen</short>
+        <long>Toggle window fullscreen</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/extrawm/screen0/options/toggle_always_on_top_key</key>
+      <applyto>/apps/compiz-1/plugins/extrawm/screen0/options/toggle_always_on_top_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Always-On-Top</short>
+        <long>Toggle always on top for the active window</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/extrawm/screen0/options/toggle_sticky_key</key>
+      <applyto>/apps/compiz-1/plugins/extrawm/screen0/options/toggle_sticky_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Sticky</short>
+        <long>Toggle window stickyness</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/extrawm/screen0/options/activate_demands_attention_key</key>
+      <applyto>/apps/compiz-1/plugins/extrawm/screen0/options/activate_demands_attention_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Activate Demanding Attention Window</short>
+        <long>Activate next window which has the "demands attention" flag set.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

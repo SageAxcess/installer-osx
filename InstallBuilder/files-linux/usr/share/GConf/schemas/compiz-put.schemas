@@ -1,0 +1,902 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_1_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_1_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 1</short>
+        <long>Move window to viewport 1</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_2_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_2_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 2</short>
+        <long>Move window to viewport 2</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_3_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_3_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 3</short>
+        <long>Move window to viewport 3</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_4_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_4_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 4</short>
+        <long>Move window to viewport 4</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_5_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_5_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 5</short>
+        <long>Move window to viewport 5</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_6_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_6_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 6</short>
+        <long>Move window to viewport 6</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_7_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_7_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 7</short>
+        <long>Move window to viewport 7</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_8_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_8_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 8</short>
+        <long>Move window to viewport 8</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_9_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_9_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 9</short>
+        <long>Move window to viewport 9</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_10_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_10_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 10</short>
+        <long>Move window to viewport 10</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_11_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_11_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 11</short>
+        <long>Move window to viewport 11</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_12_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_12_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put On Viewport 12</short>
+        <long>Move window to viewport 12</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_left_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_left_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Viewport Left</short>
+        <long>Move window to the viewport on the left</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_right_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_right_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Viewport Right</short>
+        <long>Move window to the viewport on the right</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_up_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_up_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Viewport Top</short>
+        <long>Move window to the viewport on the top</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_viewport_down_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_viewport_down_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Viewport Bottom</short>
+        <long>Move window to the viewport on the bottom</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_center_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_center_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Begin</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Center</short>
+        <long>Move window to the center</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_center_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_center_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Center</short>
+        <long>Move window to the center</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_left_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_left_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Left</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Left</short>
+        <long>Move window to the left edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_left_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_left_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Left</short>
+        <long>Move window to the left edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_right_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_right_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Right</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Right</short>
+        <long>Move window to the right edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_right_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_right_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Right</short>
+        <long>Move window to the right edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_top_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_top_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Up</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top</short>
+        <long>Move window to the top edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_top_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_top_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top</short>
+        <long>Move window to the top edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_bottom_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_bottom_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Down</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom</short>
+        <long>Move window to the bottom edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_bottom_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_bottom_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Down</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom</short>
+        <long>Move window to the bottom edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_topleft_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_topleft_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Home</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Left</short>
+        <long>Move window to the top left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_topleft_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_topleft_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Left</short>
+        <long>Move window to the top left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_topright_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_topright_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Prior</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Right</short>
+        <long>Move window to the top right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_topright_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_topright_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Right</short>
+        <long>Move window to the top right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_bottomleft_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_bottomleft_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_End</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Left</short>
+        <long>Move window to the bottom left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_bottomleft_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_bottomleft_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Left</short>
+        <long>Move window to the bottom left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_bottomright_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_bottomright_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Next</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Right</short>
+        <long>Move window to the bottom right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_bottomright_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_bottomright_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Right</short>
+        <long>Move window to the bottom right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_center_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_center_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Center</short>
+        <long>Move window to the center</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_center_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_center_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Center</short>
+        <long>Move window to the center</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_left_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_left_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Left</short>
+        <long>Move window to the left edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_left_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_left_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Left</short>
+        <long>Move window to the left edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_right_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_right_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Right</short>
+        <long>Move window to the right edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_right_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_right_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Right</short>
+        <long>Move window to the right edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_top_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_top_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top</short>
+        <long>Move window to the top edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_top_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_top_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top</short>
+        <long>Move window to the top edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_bottom_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_bottom_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom</short>
+        <long>Move window to the bottom edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_bottom_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_bottom_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom</short>
+        <long>Move window to the bottom edge</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_topleft_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_topleft_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Left</short>
+        <long>Move window to the top left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_topleft_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_topleft_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Left</short>
+        <long>Move window to the top left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_topright_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_topright_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Right</short>
+        <long>Move window to the top right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_topright_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_topright_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Right</short>
+        <long>Move window to the top right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomleft_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomleft_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Left</short>
+        <long>Move window to the bottom left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomleft_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomleft_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Left</short>
+        <long>Move window to the bottom left corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomright_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomright_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Right</short>
+        <long>Move window to the bottom right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomright_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_empty_bottomright_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Right</short>
+        <long>Move window to the bottom right corner</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_restore_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_restore_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;KP_Insert</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Restore Position</short>
+        <long>Move window to the last position</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_restore_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_restore_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Restore Position</short>
+        <long>Move window to the last position</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_pointer_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_pointer_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;z</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Pointer</short>
+        <long>Move window to the pointer position</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_pointer_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_pointer_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Pointer</short>
+        <long>Move window to the pointer position</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_next_output_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_next_output_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put To Next Output</short>
+        <long>Move window to the next output device</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_next_output_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_next_output_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put To Next Output</short>
+        <long>Move window to the next output device</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_previous_output_key</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_previous_output_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put To Previous Output</short>
+        <long>Move window to the previous output device</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/put_previous_output_button</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/put_previous_output_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put To Previous Output</short>
+        <long>Move window to the previous output device</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/pad_left</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/pad_left</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Pad Left</short>
+        <long>Number of pixels from the left edge where the window will come to rest (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/pad_right</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/pad_right</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Pad Right</short>
+        <long>Number of pixels from the right edge where the window will come to rest (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/pad_top</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/pad_top</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Pad Top</short>
+        <long>Number of pixels from the top edge where the window will come to rest (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/pad_bottom</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/pad_bottom</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Pad Bottom</short>
+        <long>Number of pixels from the bottom edge where the window will come to rest (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/unfocus_window</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/unfocus_window</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Unfocus Window</short>
+        <long>Unfocus windows that are moved off the viewport</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/window_center</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/window_center</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Center</short>
+        <long>Put pointer uses the center of the window</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/avoid_offscreen</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/avoid_offscreen</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Avoid Offscreen</short>
+        <long>Avoids putting window borders offscreen</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/speed</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>2.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Speed</short>
+        <long>Animation speed (0.1 - 50.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/put/screen0/options/timestep</key>
+      <applyto>/apps/compiz-1/plugins/put/screen0/options/timestep</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Timestep</short>
+        <long>Animation timestep (0.1 - 50.0)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

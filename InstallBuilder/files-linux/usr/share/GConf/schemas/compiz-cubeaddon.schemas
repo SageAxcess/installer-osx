@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_next_key</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_next_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>space</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Top Image Key</short>
+        <long>Advance to the next image on the top face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_next_button</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_next_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Top Image Button</short>
+        <long>Advance to the next image on the top face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_prev_key</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_prev_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Backspace</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Top Image Key</short>
+        <long>Go back to the previous image on the top face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_prev_button</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_prev_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Top Image Button</short>
+        <long>Go back to the previous image on the top face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_next_key</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_next_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Bottom Image Key</short>
+        <long>Advance to the next image on the bottom face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_next_button</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_next_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Bottom Image Button</short>
+        <long>Advance to the next image on the bottom face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_prev_key</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_prev_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Bottom Image Key</short>
+        <long>Go back to the previous image on the bottom face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_prev_button</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_prev_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Bottom Image Button</short>
+        <long>Go back to the previous image on the bottom face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/reflection</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/reflection</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Enabled</short>
+        <long>Render a reflective ground below the desktop cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/ground_color1</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/ground_color1</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#b3b3b3cc</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ground Color (near)</short>
+        <long>Color of the ground (near).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/ground_color2</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/ground_color2</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#b3b3b300</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ground Color (far)</short>
+        <long>Color of the ground (far).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/ground_size</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/ground_size</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reflection Ground Size</short>
+        <long>Size of the ground the reflection is rendered on. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/intensity</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/intensity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Intensity</short>
+        <long>The intensity of the reflection. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/auto_zoom</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/auto_zoom</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Auto Zoom</short>
+        <long>Zoom out automatically to make the cube fit the screen.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/zoom_manual_only</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/zoom_manual_only</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Mouse Rotate Auto Zoom Only</short>
+        <long>Zoom out automatically on mouse rotate only.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/mode</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reflection Mode</short>
+        <long>The mode of the reflection. (0 = Jumpy, 1 = Jumpy reflection, 2 = Distance, 3 = Above)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/deformation</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/deformation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Deformation</short>
+        <long>The deformation mode. (0 = None, 1 = Cylinder, 2 = Sphere)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/unfold_deformation</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/unfold_deformation</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Unfold Cube Deformation</short>
+        <long>Apply the deformation in unfold cube mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/cylinder_manual_only</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/cylinder_manual_only</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Mouse Rotate Deformation Only</short>
+        <long>Initiates cube cylinder deformation only if rotation is mouse driven.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/deform_caps</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/deform_caps</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Deform Caps</short>
+        <long>Deform the cube caps also.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/sphere_aspect</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/sphere_aspect</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Aspect Ratio</short>
+        <long>The aspect ratio of the deformed cube. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/draw_top</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/draw_top</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Draw Top Face</short>
+        <long>Draw the top face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/draw_bottom</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/draw_bottom</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Draw Bottom Face</short>
+        <long>Draw the bottom face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/adjust_top</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/adjust_top</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Adjust Top Image</short>
+        <long>Adjust the top face image to the rotation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/adjust_bottom</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/adjust_bottom</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Adjust Bottom Image</short>
+        <long>Adjust the bottom face image to the rotation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_scale</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_scale</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Top Image</short>
+        <long>Scale the image to cover the top face of cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_scale</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_scale</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Bottom Image</short>
+        <long>Scale the image to cover the bottom face of cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_aspect</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_aspect</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maintain Top Image Aspect Ratio</short>
+        <long>Maintain top cap image aspect ratio.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_aspect</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_aspect</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maintain Bottom Image Aspect Ratio</short>
+        <long>Maintain bottom cap image aspect ratio.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_clamp</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_clamp</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Clamp Top Face Image To Border</short>
+        <long>Clamp the top face image to the border. This is often the best, if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_clamp</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_clamp</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Clamp bottom face image to border</short>
+        <long>Clamp the bottom face image to the border. This is often the best, if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/top_images</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/top_images</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[fusioncap.png]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Image files</short>
+        <long>List of .png and .svg files that should be rendered on the top face of the cube.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_images</key>
+      <applyto>/apps/compiz-1/plugins/cubeaddon/screen0/options/bottom_images</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[compizcap.png]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Image files</short>
+        <long>List of .png and .svg files that should be rendered on the bottom face of the cube.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

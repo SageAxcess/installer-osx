@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/initiate_button</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/initiate_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Button1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Move</short>
+        <long>Start moving window</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F7</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Window Move</short>
+        <long>Start moving window</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/opacity</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Moving Window Opacity</short>
+        <long>Opacity level of moving windows (in percent). (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/key_move_inc</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/key_move_inc</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>24</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Keyboard Move Increment</short>
+        <long>Move the window by this amount of pixels for every press on one of the cursor keys. (1 - 250)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/constrain_y</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/constrain_y</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Constrain Y</short>
+        <long>Constrain y-coordinate to workspace area.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/snapoff_semimaximized</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/snapoff_semimaximized</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snapoff Semimaximized Windows</short>
+        <long>Snapoff and auto-restore semimaximized windows when dragging them.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/snapoff_distance</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/snapoff_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snapoff Distance</short>
+        <long>Distance of pixels you have to drag a snapped semimaximized window to unsnap it. (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/snapback_semimaximized</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/snapback_semimaximized</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snapback Semimaximized Windows</short>
+        <long>Snapback and re-maximize semimaximized windows when dragging them back.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/snapback_distance</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/snapback_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>20</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snapback Distance</short>
+        <long>Number of pixels from top or sides to snap back semimaximized windows. (0 - 250)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/move/screen0/options/lazy_positioning</key>
+      <applyto>/apps/compiz-1/plugins/move/screen0/options/lazy_positioning</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Lazy Positioning</short>
+        <long>Do not update the server-side position of windows until finished moving.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

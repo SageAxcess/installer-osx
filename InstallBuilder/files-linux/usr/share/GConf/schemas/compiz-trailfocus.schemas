@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/window_match</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/window_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>(type=toolbar | type=utility | type=dialog | type=normal) &amp; !(state=skiptaskbar | state=skippager)</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Types</short>
+        <long>Window types that should be handled by Trailfocus (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/windows_count</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/windows_count</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Number of Windows to Track</short>
+        <long>Number of windows Trailfocus will keep track of. Windows that had focus this amount of windows ago or more will be considered completly unfocused. (1 - 150)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/windows_start</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/windows_start</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window to Start Fading</short>
+        <long>This defines when Trailfocus will start fading windows. This lets you set up trailfocus to treat the N first Windows as fully focused. (1 - 20)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/max_opacity</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/max_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Opacity Level of Focused Windows</short>
+        <long>Opacity of the currently focused window. Windows will get opacity levels between the focused and minimum. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/min_opacity</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/min_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>70</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Opacity Level of Unfocused Windows</short>
+        <long>Opacity of the least focused window. Windows will get opacity levels between the focused and minimum. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/max_brightness</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/max_brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Brightness Level of Focused Windows</short>
+        <long>Brightness of the currently focused window. Windows will get brightness levels between the focused and minimum. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/min_brightness</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/min_brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Brightness Level of Unfocused Windows</short>
+        <long>Brightness of the least focused window. Windows will get brightness levels between the focused and minimum. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/max_saturation</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/max_saturation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Saturation Level of Focused Windows</short>
+        <long>Saturation of the currently focused window. Windows will get saturation levels between the focused and minimum. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/trailfocus/screen0/options/min_saturation</key>
+      <applyto>/apps/compiz-1/plugins/trailfocus/screen0/options/min_saturation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Saturation Level of Unfocused Windows</short>
+        <long>Saturation of the least focused window. Windows will get saturation levels between the focused and minimum. (1 - 100)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

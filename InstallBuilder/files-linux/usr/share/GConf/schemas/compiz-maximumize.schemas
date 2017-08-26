@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/ignore_sticky</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/ignore_sticky</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ignore sticky windows in the calculations</short>
+        <long>Treat sticky windows as non-existant when calculating space to use for the maximumize window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/ignore_overlapping</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/ignore_overlapping</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ignore already overlapping windows in the calculations</short>
+        <long>Treat windows that are already overlapping with the current window as non-existant when calculating space to use for the maximumize window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/allow_shrink</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/allow_shrink</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Permit windows to shrink during maximumize</short>
+        <long>This allows a window to change it's shape to fit in an area even when the new shape might be smaller than it's current size with regards to area</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_left</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximumize to left.</short>
+        <long>When maximumizing, allow the window to grow to the left.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_right</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximumize to right.</short>
+        <long>When maximumizing, allow the window to grow to the right.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_up</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_up</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximumize to up.</short>
+        <long>When maximumizing, allow the window to grow upwards.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_down</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/maximumize_down</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximumize to down.</short>
+        <long>When maximumizing, allow the window to grow downwards.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_key</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;M</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximumize</short>
+        <long>Trigger a resize of the window currently focused so it fits as much of the available screenspae as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Left-only maximumize</short>
+        <long>Grow the window leftwards as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Right-only maximumize</short>
+        <long>Grow the window rightwards as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_up</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_up</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Up-only maximumize</short>
+        <long>Grow the window upwards as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_down</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_down</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Down-only maximumize</short>
+        <long>Grow the window downwards as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_horizontally</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_horizontally</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Horizontal-only maximumize</short>
+        <long>Grow the window horizontally as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_vertically</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_vertically</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Vertical-only maximumize</short>
+        <long>Grow the window vertically as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_up_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_up_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Top left maximumize</short>
+        <long>Grow upper left corner of a window as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_up_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_up_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Top right maximumize</short>
+        <long>Grow upper right corner of a window as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_down_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_down_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Lower left maximumize</short>
+        <long>Grow lower left corner of a window as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_down_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_max_down_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Lower right maximumize</short>
+        <long>Grow lower right corner of a window as much as possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_key</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;M</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Minimumize</short>
+        <long>Trigger a resize of the window currently focused so it resizes to 1/4 size.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Left-only minimumize</short>
+        <long>Shrink the window leftwards.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Right-only minimumize</short>
+        <long>Shrink the window rightwards.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_up</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_up</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Up-only minimumize</short>
+        <long>Shrink the window upwards.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_down</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_down</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Down-only minimumize</short>
+        <long>Shrink the window downwards.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_horizontally</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_horizontally</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Horizontal-only minimumize</short>
+        <long>Shrink the window horizontally.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_vertically</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_vertically</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Vertical-only minimumize</short>
+        <long>Shrink the window vertically.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_up_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_up_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Top left minimumize</short>
+        <long>Shrink upper left corner of a the window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_up_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_up_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Top right minimumize</short>
+        <long>Shrink upper right corner of a the window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_down_left</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_down_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Lower left minimumize</short>
+        <long>Shrink lower left corner of a the window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_down_right</key>
+      <applyto>/apps/compiz-1/plugins/maximumize/screen0/options/trigger_min_down_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Lower right minimumize</short>
+        <long>Shrink lower right corner of a the window.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

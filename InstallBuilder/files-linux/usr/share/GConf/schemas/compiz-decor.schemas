@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_radius</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/active_shadow_radius</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>8.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Radius</short>
+        <long>Drop shadow radius (0.1 - 18.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_opacity</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/active_shadow_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.8</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Opacity</short>
+        <long>Drop shadow opacity (0.01 - 6.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_color</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/active_shadow_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000080</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Color</short>
+        <long>Drop shadow color</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_x_offset</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/active_shadow_x_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Offset X</short>
+        <long>Drop shadow X offset (-16 - 16)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/active_shadow_y_offset</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/active_shadow_y_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Offset Y</short>
+        <long>Drop shadow Y offset (-16 - 16)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_radius</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_radius</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>5.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Radius</short>
+        <long>Drop shadow radius (0.1 - 13.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_opacity</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Opacity</short>
+        <long>Drop shadow opacity (0.01 - 6.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_color</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#000000ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Color</short>
+        <long>Drop shadow color</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_x_offset</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_x_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Offset X</short>
+        <long>Drop shadow X offset (-16 - 16)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_y_offset</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/inactive_shadow_y_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow Offset Y</short>
+        <long>Drop shadow Y offset (-16 - 16)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/command</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/command</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>/usr/bin/gtk-window-decorator</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command</short>
+        <long>Decorator command line that is executed if no decorator is already running.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/mipmap</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/mipmap</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Mipmap</short>
+        <long>Allow mipmaps to be generated for decoration textures</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/decoration_match</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/decoration_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>any</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decoration windows</short>
+        <long>Windows that should be decorated (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/decor/screen0/options/shadow_match</key>
+      <applyto>/apps/compiz-1/plugins/decor/screen0/options/shadow_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>any</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Shadow windows</short>
+        <long>Windows that should have a shadow (match)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

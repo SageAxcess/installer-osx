@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/fade_time</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/fade_time</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>500</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fade Time</short>
+        <long>Fade time (in ms) for the popup window. (10 - 5000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/always_show</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/always_show</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Resizeinfo For All Windows</short>
+        <long>Show resize info for all windows as opposed to just for text based windows like terminals.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/resizeinfo_font_bold</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/resizeinfo_font_bold</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bold Font</short>
+        <long>Render the resize info's size display with a bold font.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/resizeinfo_font_size</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/resizeinfo_font_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>12</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Size</short>
+        <long>Font size of the resize info's display. (10 - 14)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/text_color</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/text_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#000000ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Text Color</short>
+        <long>Color and opacity of the resize popup's text.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_1</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_1</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#cccce6cc</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Gradient Color 1</short>
+        <long>Color and opacity on the left side of the gradient background.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_2</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_2</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#f3f3f3cc</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Gradient Color 2</short>
+        <long>Color and opacity in the center of the gradient background.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_3</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/gradient_3</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#d9d9d9cc</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Gradient Color 3</short>
+        <long>Color and opacity on the right side of the gradient background.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/resizeinfo/screen0/options/outline_color</key>
+      <applyto>/apps/compiz-1/plugins/resizeinfo/screen0/options/outline_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#e6e6e6ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Outline Color</short>
+        <long>Color and opacity of the background's outline.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

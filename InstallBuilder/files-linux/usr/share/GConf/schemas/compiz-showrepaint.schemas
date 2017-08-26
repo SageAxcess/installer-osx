@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showrepaint/screen0/options/toggle_key</key>
+      <applyto>/apps/compiz-1/plugins/showrepaint/screen0/options/toggle_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Alt&gt;r</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle</short>
+        <long>Toggle showing of repainted regions.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showrepaint/screen0/options/intensity</key>
+      <applyto>/apps/compiz-1/plugins/showrepaint/screen0/options/intensity</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>20</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Intensity</short>
+        <long>Intensity. (0 - 100)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

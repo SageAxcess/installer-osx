@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/always_on_top</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/always_on_top</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Thumbnails Always On Top</short>
+        <long>Paint thumbnails always on top.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/thumb_size</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/thumb_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>200</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Thumbnail Window Size</short>
+        <long>Maximum horizontal size of the thumbnail (in pixel). (50 - 1500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/show_delay</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/show_delay</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Delay</short>
+        <long>Time before the thumbnail preview is faded in (in ms). (100 - 10000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/fade_speed</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/fade_speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fade In/Out Duration</short>
+        <long>Fade in/out duration (in seconds). (0.0 - 5.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/border</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/border</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>16</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Thumbnail Border Size</short>
+        <long>Size of thumbnail window preview border (in pixel). (1 - 32)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/thumb_color</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/thumb_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#0000007f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Thumbnail Border Glow Color</short>
+        <long>Border glow color and opacity or opacity of the window like black background.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/window_like</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/window_like</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Paint Window Like Background</short>
+        <long>Render a black, window-like background instead of the background glow.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/mipmap</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/mipmap</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Generate Mipmaps</short>
+        <long>Generate mipmaps for higher quality texture scaling, if possible.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/current_viewport</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/current_viewport</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Only Windows of Current Viewport</short>
+        <long>Enable this, if your dock, launcher or taskbar is set to show only windows of the current viewport.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/title_enabled</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/title_enabled</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Enable Titles</short>
+        <long>Render window title text below the thumbnail.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/font_bold</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/font_bold</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bold Font</short>
+        <long>Use a bold font to render the window title.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/text_distance</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/text_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>10</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Text Distance</short>
+        <long>The gap between the thumbnail and the window title text (in pixel). (0 - 32)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/font_size</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/font_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>12</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Size</short>
+        <long>The size of the window title (in pixel). (6 - 36)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/font_color</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/font_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffffffff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Color</short>
+        <long>Color and opacity of the window title font.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/thumbnail/screen0/options/font_background_color</key>
+      <applyto>/apps/compiz-1/plugins/thumbnail/screen0/options/font_background_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#0000007f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Background Color</short>
+        <long>Color and opacity of the filled rounded rectangle font background.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

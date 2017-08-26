@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/initiate_rotation_button</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/initiate_rotation_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Button1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Rotation Button</short>
+        <long>Mouse button to start free rotation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/initiate_scale_button</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/initiate_scale_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Button3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Scaling Button</short>
+        <long>Mouse button to start free scaling.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/reset_button</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/reset_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Button2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reset Transformation Button</short>
+        <long>Mouse button to reset the transformation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/reset_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/reset_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;r</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reset Transformation Key</short>
+        <long>Keyboard shortcut to reset the transformation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/toggle_axis_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/toggle_axis_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;h</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Axis Help Toggle</short>
+        <long>Keyboard shortcut to toggle the visibility of the axis selection helper.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/snap_mods</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/snap_mods</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snap Modifier</short>
+        <long>Use these bindings to enable/disable snapping.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/invert_mods</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/invert_mods</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Invert Modifier</short>
+        <long>Use these bindings to invert the rotation mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_up_button</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_up_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Button4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Up Button</short>
+        <long>Mouse button to scale the window up by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_down_button</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_down_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Button5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Down Button</short>
+        <long>Mouse button to scale the window down by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_up_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_up_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Page_Up</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Up Key</short>
+        <long>Keyboard shortcut to scale the window up by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_down_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_down_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;Page_Down</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Down Key</short>
+        <long>Keyboard shortcut to scale the window down by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_up_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_up_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;w</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Up Key</short>
+        <long>Keyboard shortcut to rotate the window up by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_down_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_down_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;s</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Down Key</short>
+        <long>Keyboard shortcut to rotate the window down by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_left_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_left_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;d</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Left Key</short>
+        <long>Keyboard shortcut to rotate the window left by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_right_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_right_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;a</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Right Key</short>
+        <long>Keyboard shortcut to rotate the window right by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_c_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_c_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;e</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Clockwise Key</short>
+        <long>Keyboard shortcut to rotate the window clockwise by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_cc_key</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_cc_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;q</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Counter-Clockwise Key</short>
+        <long>Keyboard shortcut to rotate the window counter-clockwise by one increment.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/snap</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/snap</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snap By Default</short>
+        <long>Snap to common points by default.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/snap_threshold</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/snap_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>50</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snap Threshold</short>
+        <long>Snap to every one of these angles. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/mouse_sensitivity</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/mouse_sensitivity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Mouse Sensitivity</short>
+        <long>Adjust how sensitive the mouse movement should be. (0.1 - 10.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_mode</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Mode</short>
+        <long>Select the method to scale windows. (0 = To Centre, 1 = To Opposite Corner)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/allow_negative</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/allow_negative</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Allow Negative</short>
+        <long>Allow negative scaling</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_uniform</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_uniform</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maintain Aspect Ratio</short>
+        <long>Keep the aspect ratio of the window constant when scaling.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/min_scale</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/min_scale</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Minimum scale</short>
+        <long>How small the scale is allowed to be when 'Allow Negative' is not activated. (0.01 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/z_axis_rotation</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/z_axis_rotation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotation Type</short>
+        <long>Choose the type of the rotation. (0 = Always 2D, 1 = Always 3D, 2 = Determine On Click, 3 = Interchangeable, 4 = Switch, 5 = Trackball)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotation_axis</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotation_axis</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotation Axis</short>
+        <long>How Freely Transformable Windows should determine the rotation axis. (0 = Always Centre, 1 = Click Point, 2 = Opposite to Click, 3 = Nearest Corner)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/TD_percent</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/TD_percent</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>35.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>3D Rotation Percentage</short>
+        <long>The percentage of the window area used for 3D rotation. (10.0 - 90.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/auto_zoom</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/auto_zoom</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Auto-Zoom</short>
+        <long>Auto-Zoom when rotating so that windows do not get too large.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/disable_on_transformed_screen</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/disable_on_transformed_screen</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Disable On Transformed Screen</short>
+        <long>Disable the rotation on a transformed screen. This prevents ugly looking clipped windows when the screen is transformed.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/speed</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>5.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Rotation Speed</short>
+        <long>How fast the window should rotate. (0.1 - 15.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/rotate_increment_amount</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/rotate_increment_amount</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>10.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotate Increment Amount</short>
+        <long>How far to rotate a window when rotating by an 'increment'. (1.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/scale_increment_amount</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/scale_increment_amount</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale Increment Amount</short>
+        <long>How much to scale a window by when scaling by an 'increment'. (0.01 - 0.5)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/shape_window_types</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/shape_window_types</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>(Toolbar | Utility | Dialog | ModalDialog | Normal)</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Prevented Input Window Types</short>
+        <long>Window types that should be shaped. Disable problematic windows here. (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/do_shape_input</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/do_shape_input</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Prevent Input</short>
+        <long>Prevent input for transformed windows.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/immediate_moves</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/immediate_moves</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Immediate Moves</short>
+        <long>Don't allow plugins like wobbly to manipulate the transformed window while it's being moved.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/circle_color</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/circle_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#54BEFB80</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Helper Circle Color</short>
+        <long>Color and opacity of the circle.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/line_color</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/line_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#1800FFFF</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Helper Line Color</short>
+        <long>Color and opacity of the helper line around the circle.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/cross_line_color</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/cross_line_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#1800FFFF</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Helper Cross Line Color</short>
+        <long>Color and opacity of the cross lines.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/show_circle</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/show_circle</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show 3D Rotation Circle</short>
+        <long>Show the click area for 3D rotation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/show_gizmo</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/show_gizmo</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Rotation Gizmo</short>
+        <long>Show the rotation axis info.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/show_cross</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/show_cross</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Crosshair</short>
+        <long>Show the crosshair for scaling click regions.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/freewins/screen0/options/show_region</key>
+      <applyto>/apps/compiz-1/plugins/freewins/screen0/options/show_region</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Input Regions</short>
+        <long>Show the input region rectangle.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

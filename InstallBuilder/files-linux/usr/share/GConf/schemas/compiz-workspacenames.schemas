@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/viewports</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/viewports</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[1,2,3,4]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Viewport</short>
+        <long>Number of viewport to be named.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/names</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/names</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[Viewport 1,Viewport 2,Viewport 3,Viewport 4]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Name</short>
+        <long>The name of the workspace.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/display_time</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/display_time</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Display Time</short>
+        <long>Timeout of the workspacename display (in seconds). (0.1 - 5.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/fade_time</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/fade_time</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.25</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fade Time</short>
+        <long>Time the workspacename display uses for the fade-out (in seconds). (0.0 - 5.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/bold_text</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/bold_text</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bold Font</short>
+        <long>Render the workspacename using a bold font.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/text_font_size</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/text_font_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>24</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Size</short>
+        <long>Font size for the text display (in pixels). (6 - 96)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/text_placement</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/text_placement</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Text Placement</short>
+        <long>Selects where to place the text. (0 = Centered on screen, 1 = Top of screen minus offset, 2 = Bottom of screen plus offset)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/vertical_offset</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/vertical_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>50</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Vertical Offset</short>
+        <long>Vertical offset from top or bottom of the screen (in pixels). (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/back_color</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/back_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000099</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Background Color</short>
+        <long>Background color and opacity of the workspacename display.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workspacenames/screen0/options/font_color</key>
+      <applyto>/apps/compiz-1/plugins/workspacenames/screen0/options/font_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffffffff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Color</short>
+        <long>Font color and opacity of the workspacename display.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

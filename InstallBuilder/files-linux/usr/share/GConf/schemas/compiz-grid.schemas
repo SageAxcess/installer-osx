@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_center_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_center_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Center Key</short>
+        <long>Move window to the center.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_left_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_left_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Left Key</short>
+        <long>Move window to the left edge.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_right_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_right_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_6</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Right Key</short>
+        <long>Move window to the right edge.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_top_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_top_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_8</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Key</short>
+        <long>Move window to the top edge.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_bottom_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_bottom_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Key</short>
+        <long>Move window to the bottom edge.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_topleft_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_topleft_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_7</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Left Key</short>
+        <long>Move window to the top left corner.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_topright_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_topright_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_9</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Top Right Key</short>
+        <long>Move window to the top right corner.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_bottomleft_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_bottomleft_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Left Key</short>
+        <long>Move window to the bottom left corner.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_bottomright_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_bottomright_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;KP_3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Put Bottom Right Key</short>
+        <long>Move window to the bottom right corner.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_maximize_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_maximize_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Super&gt;Up</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Maximize Key</short>
+        <long>Maximize window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/put_restore_key</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/put_restore_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Super&gt;Down</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Restore</short>
+        <long>Restore window to it's original size. Note: Use the same shortcut you are using to unmaximize a window to be able to restore grid-maximized windows.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/left_maximize</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/left_maximize</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Super&gt;Left</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Left Maximize</short>
+        <long>Left vertically maximize window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/right_maximize</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/right_maximize</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Super&gt;Right</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Right Maximize</short>
+        <long>Right vertically maximize window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/top_left_corner_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/top_left_corner_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Upper Left Corner</short>
+        <long>Action to be performed when window is dropped on the top left corner. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/top_edge_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/top_edge_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>10</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Top Edge</short>
+        <long>Action to be performed when window is dropped on the top edge. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/top_right_corner_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/top_right_corner_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>6</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Upper Right Corner</short>
+        <long>Action to be performed when window is dropped on the top right corner. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/left_edge_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/left_edge_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Left Edge</short>
+        <long>Action to be performed when window is dropped on the left edge. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/right_edge_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/right_edge_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>6</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Right Edge</short>
+        <long>Action to be performed when window is dropped on the right edge. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_left_corner_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/bottom_left_corner_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bottom Left Corner</short>
+        <long>Action to be performed when window is dropped on the bottom left corner. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_edge_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/bottom_edge_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bottom Edge</short>
+        <long>Action to be performed when window is dropped on the bottom edge. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_right_corner_action</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/bottom_right_corner_action</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>6</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bottom Right Corner</short>
+        <long>Action to be performed when window is dropped on the bottom right corner. (0 = None, 1 = Bottom Left Corner, 2 = Bottom Half, 3 = Bottom Right Corner, 4 = Left Half, 5 = Fill Screen, 6 = Right Half, 7 = Top Left Corner, 8 = Top Half, 9 = Top Right Corner, 10 = Maximize)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/snapback_windows</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/snapback_windows</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Snap Windows Back To Original Size</short>
+        <long>Snaps windows back to their original size if dragged away from their gridded position.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/cycle_sizes</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/cycle_sizes</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Cycle Through Multiple Sizes</short>
+        <long>Cycle through multiple different sizes by using the same keyboard shortcut multiple times in a row.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/left_edge_threshold</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/left_edge_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>15</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Left Edge</short>
+        <long>Maximum number of pixels from the left edge a window can be dropped. (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/right_edge_threshold</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/right_edge_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>15</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Right Edge</short>
+        <long>Maximum number of pixels from the right edge a window can be dropped. (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/top_edge_threshold</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/top_edge_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>20</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Top Edge</short>
+        <long>Maximum number of pixels from the top edge a window can be dropped. (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/bottom_edge_threshold</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/bottom_edge_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bottom Edge</short>
+        <long>Maximum number of pixels from the bottom edge a window can be dropped. (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/snapoff_threshold</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/snapoff_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>50</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>General Size</short>
+        <long>The pixels to drag until a grid-resized window snaps off. (0 - 500)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/draw_indicator</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/draw_indicator</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Preview Indicator</short>
+        <long>Draw a window resize indicator preview.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/draw_stretched_window</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/draw_stretched_window</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Stretched Live Window Preview</short>
+        <long>Draw a stretched live window content animation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/animation_duration</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/animation_duration</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>350</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Preview Animation Duration</short>
+        <long>Preview animation duration (in ms). (0 - )</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/outline_color</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/outline_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#fb8b009f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Preview Outline Color</short>
+        <long>Color and opacity of the resize indicator preview outline.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/grid/screen0/options/fill_color</key>
+      <applyto>/apps/compiz-1/plugins/grid/screen0/options/fill_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#fb8b004f</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Preview Fill Color</short>
+        <long>Fill color and opacity of the resize indicator preview.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

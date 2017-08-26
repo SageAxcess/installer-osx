@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Increase Opacity Key</short>
+        <long>Increase the opacity of the selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Button4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Increase Opacity Button</short>
+        <long>Increase the opacity of the window the pointer hovers.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decrease Opacity Key</short>
+        <long>Decrease the opacity of the selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Button5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decrease Opacity Button</short>
+        <long>Decrease the opacity of the window the pointer hovers.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_step</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Step Size</short>
+        <long>Opacity increment and decrement amount (in percent). (1 - 10)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_matches</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a specific default opacity.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_values</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[90]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window values</short>
+        <long>Opacity value for the windows (in percent).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Increase Brightness Key</short>
+        <long>Increase the brightness of the selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Increase Brightness Button</short>
+        <long>Increase the brightness of the window the pointer hovers.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decrease Brightness Key</short>
+        <long>Decrease the brightness of the selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decrease Brightness Button</short>
+        <long>Decrease the brightness of the window the pointer hovers.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_step</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Step Size</short>
+        <long>Brightness increment and decrement amount (in percent). (1 - 10)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_matches</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a specific default brightness.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_values</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[90]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window values</short>
+        <long>Brightness value for windows (in percent).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Increase Saturation Key</short>
+        <long>Increase the saturation of the selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Increase Saturation Button</short>
+        <long>Increase the saturation of the window the pointer hovers.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decrease Saturation Key</short>
+        <long>Decrease the saturation of the selected window.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Decrease Saturation Button</short>
+        <long>Decrease the saturation of the window the pointer hovers.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_step</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Step Size</short>
+        <long>Saturation increment and decrement amount (in percent). (1 - 10)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_matches</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a specific default saturation.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_values</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[90]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window values</short>
+        <long>Saturation value for the windows (in percent).</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

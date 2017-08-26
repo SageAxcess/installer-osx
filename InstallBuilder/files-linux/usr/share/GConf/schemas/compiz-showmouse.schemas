@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/initiate</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/initiate</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;k</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate</short>
+        <long>Toggle the mouse pointer trail.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/initiate_button</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/initiate_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate</short>
+        <long>Toggle the mouse pointer trail.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/initiate_edge</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/initiate_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate</short>
+        <long>Toggle the mouse pointer trail.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/rotation_speed</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/rotation_speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Rotation speed</short>
+        <long>Rotation speed. (0.1 - 10.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/radius</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/radius</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Radius</short>
+        <long>Ring radius (10 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/emitters</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/emitters</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Emitters</short>
+        <long>Number of particle emitters. (1 - 10)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/num_particles</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/num_particles</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>500</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Number Of Particles</short>
+        <long>Number of particles. (10 - 2000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/size</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/size</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>10.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Particle Size</short>
+        <long>Particle size. (0.1 - 20)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/slowdown</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/slowdown</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Particle Slowdown</short>
+        <long>Particle slowdown. (0.1 - 10)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/life</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/life</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.7</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Particle Life</short>
+        <long>Particle life. (0.1 - 0.9490)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/darken</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/darken</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.9</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Darken backgound</short>
+        <long>Darken background under particles (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/blend</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/blend</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Additive blending</short>
+        <long>Additive blending of particles</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/color</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffdf3fff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Particle Color</short>
+        <long>Particle color.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showmouse/screen0/options/random</key>
+      <applyto>/apps/compiz-1/plugins/showmouse/screen0/options/random</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Randomly Colored Particles</short>
+        <long>Have random colors for the particles</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

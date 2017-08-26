@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_key</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/expo_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;s</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Expo Key</short>
+        <long>Initiate or terminate Expo mode with this keyboard shortcut.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_button</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/expo_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Expo Button</short>
+        <long>Initiate or terminate Expo mode with this mousebutton shortcut.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_edge</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/expo_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Expo Corner/Edge</short>
+        <long>Initiate or terminate Expo mode by moving the pointer to this corner or edge of your screen(s).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/double_click_time</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/double_click_time</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>500</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Double-Click Time</short>
+        <long>Timeframe to execute a double-click (in ms). (50 - 2000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/dnd_button</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/dnd_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Button1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Drag &amp; Drop Button</short>
+        <long>Drag and drop windows in Expo with this mousebutton.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/exit_button</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/exit_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Button3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Exit Expo Button</short>
+        <long>End Expo mode with this mousebutton.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/next_vp_button</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/next_vp_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Button5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Next Viewport Button</short>
+        <long>Button binding to focus the next viewport in Expo mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/prev_vp_button</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/prev_vp_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Button4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Previous Viewport Button</short>
+        <long>Button binding to focus the previous viewport in Expo mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/zoom_time</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/zoom_time</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Animation Duration</short>
+        <long>Duration of the selected animation (in seconds). (0.1 - 5.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_immediate_move</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/expo_immediate_move</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Immediate Moves</short>
+        <long>Should window movements in Expo mode be immediate - this among other things disables wobbliness.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/expo_animation</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/expo_animation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Expo Animation</short>
+        <long>The animation used when initiating or leaving Expo. (0 = Zoom, 1 = Fade + Zoom, 2 = Vortex)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/deform</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/deform</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Deformation</short>
+        <long>The deformation of the Expo wall. (0 = None, 1 = Tilt, 2 = Curve)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/curve</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/curve</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.50</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Curve Strength</short>
+        <long>Strength of the deformation in curve mode. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/x_offset</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/x_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>64</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>X Offset</short>
+        <long>Horizontal offset (in pixels). ( - )</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/y_offset</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/y_offset</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>24</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Y Offset</short>
+        <long>Vertical offset (in pixels). ( - )</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/distance</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/distance</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Camera Distance</short>
+        <long>The distance between the camera and the exposed viewports. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/vp_distance</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/vp_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Viewport Distance</short>
+        <long>The distance between viewports in Expo mode. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/aspect_ratio</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/aspect_ratio</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Aspect Ratio</short>
+        <long>The relation of the viewports' width to height in Expo mode. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/hide_docks</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/hide_docks</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Hide Panels/Docks</short>
+        <long>Hide panels and docks in Expo mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/mipmaps</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/mipmaps</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Mipmaps</short>
+        <long>Generate mipmaps for higher quality textures in Expo mode.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/multioutput_mode</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/multioutput_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Multi Output Mode</short>
+        <long>How the Expo wall should be displayed, if multiple output devices are used. (0 = One big wall, 1 = One wall per output)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/vp_brightness</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/vp_brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>40.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Brightness</short>
+        <long>The brightness of unfocused viewports (in percent). (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/vp_saturation</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/vp_saturation</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>100.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Saturation</short>
+        <long>The saturation of unfocused viewports (in percent). (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/selected_color</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/selected_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#fb8b00ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Selection Glow Color</short>
+        <long>Color and opacity of the glow texture that highlights the selected viewport.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/reflection</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/reflection</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reflection</short>
+        <long>Render a realtime reflection of the viewports on the ground.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/ground_color1</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/ground_color1</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#b3b3b3cc</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ground Color (near)</short>
+        <long>Color and opacity of the ground (near).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/ground_color2</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/ground_color2</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#b3b3b300</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Ground Color (far)</short>
+        <long>Color and opacity of the ground (far).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/ground_size</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/ground_size</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reflection Ground Size</short>
+        <long>Size of the ground the reflection is rendered on. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/expo/screen0/options/scale_factor</key>
+      <applyto>/apps/compiz-1/plugins/expo/screen0/options/scale_factor</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.75</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reflection Scale</short>
+        <long>The vertical scale factor of the ground reflection. (0.0 - 2.0)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

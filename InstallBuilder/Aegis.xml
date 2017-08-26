@@ -223,10 +223,16 @@
                     <platforms>linux-x64</platforms>
                     <distributionFileList>
                         <distributionDirectory>
+                            <origin>files-linux/etc</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
                             <origin>files-linux/opt</origin>
                         </distributionDirectory>
                         <distributionDirectory>
                             <origin>files-linux/usr</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>files-linux/var</origin>
                         </distributionDirectory>
                     </distributionFileList>
                 </folder>
@@ -399,6 +405,11 @@ disk.usage.absolute=500</text>
         <runProgram>
             <program>C:/Program Files/Win10Pcap/Win32/Installer.exe</program>
             <programArguments></programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+            </ruleList>
         </runProgram>
         <writeFile>
             <explanation>Update Aegis configuration file</explanation>
@@ -538,46 +549,139 @@ disk.usage.absolute=500</text>
             <program>regsvr32</program>
             <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
             <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+            </ruleList>
         </runProgram>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>regsvr32</program>
             <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
             <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+            </ruleList>
         </runProgram>
+        <writeFile>
+            <abortOnError>0</abortOnError>
+            <explanation>Update Aegis configuration file</explanation>
+            <path>/usr/local/aegis/conf/aegis.conf</path>
+            <text>############################
+# Aegis config file
+############################
+
+# Aegis settings
+
+# Specify interface name to listen on. For Windows - it will be something like \Device\NPF_{F53438F5-79C7-4A78-8254-B10D3CA50225}
+# For Linux/OSX - en0 or eth0
+# Use aegis --print-interfaces to see all available interfaces.
+# Value of "*" means listen on all interfaces.
+listen.interface=${ListenOn}
+# Default policy to use. Cannot be applied without service restart. Defines scripts/features to be loaded.
+default.policy=local
+
+# Aggregator settings
+
+# Main aggregator address. You can omit tcp:// and :port if it is default (5555)
+zmq.server=tcp://${AggregatorHost}:${AggregatorPort}
+# Comma-separated list of secondary aggregators. You can omit tcp:// and :port if it is default (5555)
+#zmq.server.secondary=localhost,tcp://192.168.1.15:5556,tcp://data.sageaxcess.com
+# Aggregator public key
+zmq.public_key=${PublicKey}
+
+# Local agent settings
+
+# Plain http port
+agent.port=${ExtensionPort}
+# Https port
+agent.port.ssl=8112
+
+# Updater settings
+
+# Automatic updates enabled/disabled flag. If enabled, updater will periodically check if there's a new version available
+updates.enabled=${EnableAutomaticUpdates}
+# Interval for automatic updates check, in minutes
+updates.interval=60
+# Remote control enabled/disabled flag. If enabled, plugin will query aggregator for a list of available commands each 1 minute.
+remote.control=true
+# Base url for remote updates
+updater.url=http://build.sageaxcess.com
+
+# Remote input
+#remote.input.interface=en0
+#remote.input.key_file=
+#remote.input.hostname=192.168.1.1
+#remote.input.username=root
+#remote.input.exec=tcpdump
+
+# usage limits
+
+# Process priority. 0 = normal, -20 = highest, 19 = lowest. Use any values in between
+process.priority=0
+# Maximum disk usage, percent. Will be applied if it's lower than value in Mb.
+disk.usage.relative=10
+# Maximum disk usage, in Mb. Will be applied if it's lower than value in %
+disk.usage.absolute=500</text>
+            <ruleList>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
+            </ruleList>
+        </writeFile>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>chmod</program>
-            <programArguments>+x /usr/bin/aegis</programArguments>
-            <showMessageOnError>0</showMessageOnError>
+            <programArguments>-R 775 /usr/local/aegis</programArguments>
             <ruleList>
                 <platformTest>
                     <type>linux-x64</type>
                 </platformTest>
             </ruleList>
         </runProgram>
-        <createSymLink>
+        <runProgram>
             <abortOnError>0</abortOnError>
-            <linkName>/usr/lib64/libcurl-gnutls.so.4</linkName>
-            <showMessageOnError>0</showMessageOnError>
-            <target>/usr/lib64/libcurl.so.4</target>
+            <program>cp</program>
+            <programArguments>/usr/local/aegis/conf/init-script /etc/init.d/aegis</programArguments>
             <ruleList>
-                <fileExists>
-                    <path>/usr/lib64/libcurl.so.4</path>
-                </fileExists>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
             </ruleList>
-        </createSymLink>
-        <createSymLink>
+        </runProgram>
+        <runProgram>
             <abortOnError>0</abortOnError>
-            <linkName>/usr/lib64/libbz2.so.1.0</linkName>
-            <showMessageOnError>0</showMessageOnError>
-            <target>/usr/lib64/libbz2.so.1</target>
+            <program>chmod</program>
+            <programArguments>+x /etc/init.d/aegis</programArguments>
             <ruleList>
-                <fileExists>
-                    <path>/usr/lib64/libbz2.so.1</path>
-                </fileExists>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
             </ruleList>
-        </createSymLink>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>sysv-rc-conf</program>
+            <programArguments>aegis on</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
+        <runProgram>
+            <abortOnError>0</abortOnError>
+            <program>service</program>
+            <programArguments>aegis start</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
@@ -694,12 +798,22 @@ disk.usage.absolute=500</text>
             <program>regsvr32</program>
             <programArguments>/s /u "${installdir}/ie/CommonInterface.dll"</programArguments>
             <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+            </ruleList>
         </runProgram>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>regsvr32</program>
             <programArguments>/s /u "${installdir}/ie/Content.dll"</programArguments>
             <showMessageOnError>0</showMessageOnError>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+            </ruleList>
         </runProgram>
     </postUninstallationActionList>
     <disableSplashScreen>1</disableSplashScreen>
@@ -776,12 +890,6 @@ disk.usage.absolute=500</text>
                     <width>10</width>
                 </stringParameter>
             </parameterList>
-            <ruleList>
-                <platformTest>
-                    <negate>1</negate>
-                    <type>linux-x64</type>
-                </platformTest>
-            </ruleList>
         </parameterGroup>
         <directoryParameter>
             <name>installdir</name>
@@ -795,6 +903,12 @@ disk.usage.absolute=500</text>
             <mustBeWritable>yes</mustBeWritable>
             <mustExist>0</mustExist>
             <width>50</width>
+            <ruleList>
+                <platformTest>
+                    <negate>1</negate>
+                    <type>linux-x64</type>
+                </platformTest>
+            </ruleList>
         </directoryParameter>
     </parameterList>
 </project>

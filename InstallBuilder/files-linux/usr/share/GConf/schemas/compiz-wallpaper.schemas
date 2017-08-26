@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/bg_image</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/bg_image</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Image</short>
+        <long>The image file used.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/bg_image_pos</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/bg_image_pos</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Positioning</short>
+        <long>The image positioning if defined above.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/bg_fill_type</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/bg_fill_type</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Background Fill Type</short>
+        <long>The background fill type used if no image file is defined.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/bg_color1</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/bg_color1</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Color 1</short>
+        <long>Fill or first gradient color.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/bg_color2</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/bg_color2</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Color 2</short>
+        <long>Second gradient color.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/cycle_wallpapers</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/cycle_wallpapers</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Cycle Wallpapers</short>
+        <long>Cycle through wallpapers if more than one is defined.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/cycle_timeout</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/cycle_timeout</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>10.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Cycle Timeout (min)</short>
+        <long>Timeout before cycling to the next wallpaper (in minutes). (0.15 - 1440.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wallpaper/screen0/options/fade_duration</key>
+      <applyto>/apps/compiz-1/plugins/wallpaper/screen0/options/fade_duration</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>2.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fade Duration (sec)</short>
+        <long>Duration of the fade from one wallpaper to the next (in seconds). (0.05 - 10.0)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

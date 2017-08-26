@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Key</short>
+        <long>Key shortcut to initiate fire drawing.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/initiate_button</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/initiate_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;Button1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Button</short>
+        <long>Mouse button shortcut to initiate fire drawing.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/clear_key</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/clear_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;&lt;Shift&gt;c</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Clear Key</short>
+        <long>Key shortcut to remove all fire particles.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/clear_button</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/clear_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Clear Button</short>
+        <long>Mouse button shortcut to remove all fire particles.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/bg_brightness</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/bg_brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>50.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Background Brightness</short>
+        <long>The brightness of the background during Firepaint (in percent). (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/num_Particles</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/num_Particles</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>3000</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fire Particle Number</short>
+        <long>Maximum number of active particles. (100 - 20000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/fire_size</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/fire_size</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>15.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fire Particle Size</short>
+        <long>The size of the individual particles. (0.1 - 40)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/fire_slowdown</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/fire_slowdown</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fire Particle Slowdown</short>
+        <long>The slowdown of the fire particles. (0.1 - 10)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/fire_life</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/fire_life</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.7</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fire Particle Life</short>
+        <long>The lifespan of the fire particles. (0.1 - 0.95)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/fire_color</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/fire_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ff3305ff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fire Particle Color</short>
+        <long>The color and opacity of the fire particles.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/firepaint/screen0/options/fire_mystical</key>
+      <applyto>/apps/compiz-1/plugins/firepaint/screen0/options/fire_mystical</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Randomly Colored Fire</short>
+        <long>Have random colors for the fire effect, also known as Mystical Fire.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showdesktop/screen0/options/speed</key>
+      <applyto>/apps/compiz-1/plugins/showdesktop/screen0/options/speed</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.2</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Speed</short>
+        <long>The speed of the window movement. (0.1 - 50.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showdesktop/screen0/options/timestep</key>
+      <applyto>/apps/compiz-1/plugins/showdesktop/screen0/options/timestep</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.1</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Timestep</short>
+        <long>The timestep of the window movement. (0.1 - 50.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showdesktop/screen0/options/direction</key>
+      <applyto>/apps/compiz-1/plugins/showdesktop/screen0/options/direction</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>10</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Movement Direction</short>
+        <long>The direction in which the windows move. (0 = Up, 1 = Down, 2 = Left, 3 = Right, 4 = Top Left Corner, 5 = Bottom Left Corner, 6 = Top Right Corner, 7 = Bottom Right Corner, 8 = Up/Down, 9 = Left/Right, 10 = To Corners, 11 = Intelligent Random, 12 = Fully Random)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showdesktop/screen0/options/window_match</key>
+      <applyto>/apps/compiz-1/plugins/showdesktop/screen0/options/window_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>type=toolbar | type=utility | type=dialog | type=normal</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Types</short>
+        <long>Window types that should be moved out of sight when entering showdesktop-mode. (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showdesktop/screen0/options/window_opacity</key>
+      <applyto>/apps/compiz-1/plugins/showdesktop/screen0/options/window_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.3</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Opacity</short>
+        <long>Windows will fade to this opacity when showdesktop'd. (0.1 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/showdesktop/screen0/options/window_part_size</key>
+      <applyto>/apps/compiz-1/plugins/showdesktop/screen0/options/window_part_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>20</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Window Part Size</short>
+        <long>The size of the window part that will remain on screen when showdesktop'd (in pixels). (0 - 300)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

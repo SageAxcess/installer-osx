@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;F11</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Initiate Splash</short>
+        <long>Start Splash.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/firststart</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/firststart</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show on first start</short>
+        <long>Show splash on first start.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/background</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/background</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>splash_background.png</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Background File</short>
+        <long>Background image File.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/logo</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/logo</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>splash_logo.png</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Logo File</short>
+        <long>Logo image File.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/fade_time</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/fade_time</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Fade Time</short>
+        <long>Fade In/Out Time. (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/display_time</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/display_time</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>2.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Display Time</short>
+        <long>Display In/Out Time. (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/saturation</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/saturation</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>50.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Saturation</short>
+        <long>Background saturation. (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/splash/screen0/options/brightness</key>
+      <applyto>/apps/compiz-1/plugins/splash/screen0/options/brightness</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>50.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Brightness</short>
+        <long>Background brightness. (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

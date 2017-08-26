@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/neg/screen0/options/window_toggle_key</key>
+      <applyto>/apps/compiz-1/plugins/neg/screen0/options/window_toggle_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;n</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Window Negative</short>
+        <long>Toggle active window negative</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/neg/screen0/options/screen_toggle_key</key>
+      <applyto>/apps/compiz-1/plugins/neg/screen0/options/screen_toggle_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;m</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Screen Negative</short>
+        <long>Toggle screen negative</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/neg/screen0/options/neg_match</key>
+      <applyto>/apps/compiz-1/plugins/neg/screen0/options/neg_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>any</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Neg Windows</short>
+        <long>Windows to be negative by default (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/neg/screen0/options/exclude_match</key>
+      <applyto>/apps/compiz-1/plugins/neg/screen0/options/exclude_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>type=Desktop</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Exclude Windows</short>
+        <long>Windows to exclude from negating (match)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/neg/screen0/options/neg_decorations</key>
+      <applyto>/apps/compiz-1/plugins/neg/screen0/options/neg_decorations</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Negate Decorations</short>
+        <long>Also negate window decorations, not only the window contents.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/trigger_key</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/trigger_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;l</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Trigger scale down</short>
+        <long>Scale a window down to a portion of it's size.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/reset_key</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/reset_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Reset the window to original size</short>
+        <long>Resets the currently focused window to original size</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/triggerscreen_key</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/triggerscreen_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;p</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Trigger scale down to screen</short>
+        <long>Scale a window down to a ration of the screen size. Respectively half, a third or a sixth of the screen.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/dec_button</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/dec_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;&lt;Super&gt;Button4</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Make the window smaller</short>
+        <long>Reduces the scale factor making the window smaller.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/inc_button</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/inc_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;&lt;Super&gt;Button5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Make the window bigger</short>
+        <long>Increase the scale factor making the window bigger.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/animtime</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/animtime</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>150</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Animation duration</short>
+        <long>Duration of the animation in milliseconds. (1 - 10000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/shelf/screen0/options/interval</key>
+      <applyto>/apps/compiz-1/plugins/shelf/screen0/options/interval</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.9</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Scale interval</short>
+        <long>The number to divide the scale factor by or multiply it with when (respectively) increasing and decreasing the scale level manually. Higher number means finer changes. (0.100 - 0.999)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

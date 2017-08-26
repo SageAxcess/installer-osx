@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/timeout</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/timeout</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Filter Type Timeout</short>
+        <long>Time (in ms) after which the filter typing is automatically ended (0 - 10000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/filter_case_insensitive</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/filter_case_insensitive</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Filter Case Insensitive</short>
+        <long>Use case insensitive string matching when filtering.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/filter_display</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/filter_display</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Show Filter Text</short>
+        <long>Show filter text.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/font_bold</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/font_bold</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Bold Font</short>
+        <long>Use bold font for window title display</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/font_size</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/font_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>24</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Size</short>
+        <long>Font size for window title display (6 - 48)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/border_size</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/border_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Title Border Size</short>
+        <long>Size of the border around the window title (1 - 20)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/font_color</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/font_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffffffff</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Font Color</short>
+        <long>Font color of the window title</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/scalefilter/screen0/options/back_color</key>
+      <applyto>/apps/compiz-1/plugins/scalefilter/screen0/options/back_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000099</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Background Color</short>
+        <long>Background color of the window title</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

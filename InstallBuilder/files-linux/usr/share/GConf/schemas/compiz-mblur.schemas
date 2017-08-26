@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mblur/screen0/options/initiate_key</key>
+      <applyto>/apps/compiz-1/plugins/mblur/screen0/options/initiate_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;F12</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Toggle Motion Blur</short>
+        <long>Toggle motion Blur effect.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mblur/screen0/options/mode</key>
+      <applyto>/apps/compiz-1/plugins/mblur/screen0/options/mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Motion Blur mode</short>
+        <long>Motion Blur render mode. (0 = Texture Copy, 1 = Accumulation buffer)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mblur/screen0/options/strength</key>
+      <applyto>/apps/compiz-1/plugins/mblur/screen0/options/strength</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>20.0</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Motion Blur Strength</short>
+        <long>Motion Blur strength. (0.0 - 100.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/mblur/screen0/options/on_transformed_screen</key>
+      <applyto>/apps/compiz-1/plugins/mblur/screen0/options/on_transformed_screen</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Motion Blur on Transformed Screen</short>
+        <long>Execute Motion Blur if the screen is transformed.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

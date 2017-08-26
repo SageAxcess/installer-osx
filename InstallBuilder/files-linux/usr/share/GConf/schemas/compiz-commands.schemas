@@ -1,0 +1,1097 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command0</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command0</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 0</short>
+        <long>Command line to be executed in shell when run_command0 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command1</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command1</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 1</short>
+        <long>Command line to be executed in shell when run_command1 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command2</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command2</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 2</short>
+        <long>Command line to be executed in shell when run_command2 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command3</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command3</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 3</short>
+        <long>Command line to be executed in shell when run_command3 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command4</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command4</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 4</short>
+        <long>Command line to be executed in shell when run_command4 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command5</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command5</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 5</short>
+        <long>Command line to be executed in shell when run_command5 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command6</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command6</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 6</short>
+        <long>Command line to be executed in shell when run_command6 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command7</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command7</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 7</short>
+        <long>Command line to be executed in shell when run_command7 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command8</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command8</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 8</short>
+        <long>Command line to be executed in shell when run_command8 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command9</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command9</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 9</short>
+        <long>Command line to be executed in shell when run_command9 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command10</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command10</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 10</short>
+        <long>Command line to be executed in shell when run_command10 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command11</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command11</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 11</short>
+        <long>Command line to be executed in shell when run_command11 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command12</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command12</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 12</short>
+        <long>Command line to be executed in shell when run_command12 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command13</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command13</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 13</short>
+        <long>Command line to be executed in shell when run_command13 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command14</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command14</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 14</short>
+        <long>Command line to be executed in shell when run_command14 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command15</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command15</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 15</short>
+        <long>Command line to be executed in shell when run_command15 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command16</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command16</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 16</short>
+        <long>Command line to be executed in shell when run_command16 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command17</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command17</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 17</short>
+        <long>Command line to be executed in shell when run_command17 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command18</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command18</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 18</short>
+        <long>Command line to be executed in shell when run_command18 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command19</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command19</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 19</short>
+        <long>Command line to be executed in shell when run_command19 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/command20</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/command20</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>/usr/bin/gnome-system-monitor -p</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Command line 20</short>
+        <long>Command line to be executed in shell when run_command20 is invoked</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command0_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command0_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 0</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command0</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command1_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command1_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 1</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command1</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command2_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command2_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 2</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command2</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command3_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command3_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 3</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command3</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command4_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command4_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 4</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command4</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command5_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command5_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 5</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command5</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command6_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command6_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 6</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command6</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command7_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command7_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 7</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command7</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command8_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command8_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 8</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command8</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command9_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command9_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 9</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command9</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command10_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command10_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 10</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command10</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command11_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command11_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 11</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command11</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command12_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command12_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 12</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command12</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command13_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command13_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 13</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command13</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command14_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command14_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 14</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command14</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command15_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command15_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 15</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command15</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command16_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command16_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 16</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command16</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command17_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command17_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 17</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command17</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command18_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command18_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 18</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command18</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command19_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command19_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 19</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command19</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command20_key</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command20_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Delete</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 20</short>
+        <long>A keybinding that when invoked, will run the shell command identified by command20</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command0_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command0_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 0</short>
+        <long>A button binding that when invoked, will run the shell command identified by command0</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command1_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command1_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 1</short>
+        <long>A button binding that when invoked, will run the shell command identified by command1</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command2_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command2_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 2</short>
+        <long>A button binding that when invoked, will run the shell command identified by command2</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command3_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command3_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 3</short>
+        <long>A button binding that when invoked, will run the shell command identified by command3</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command4_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command4_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 4</short>
+        <long>A button binding that when invoked, will run the shell command identified by command4</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command5_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command5_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 5</short>
+        <long>A button binding that when invoked, will run the shell command identified by command5</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command6_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command6_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 6</short>
+        <long>A button binding that when invoked, will run the shell command identified by command6</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command7_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command7_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 7</short>
+        <long>A button binding that when invoked, will run the shell command identified by command7</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command8_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command8_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 8</short>
+        <long>A button binding that when invoked, will run the shell command identified by command8</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command9_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command9_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 9</short>
+        <long>A button binding that when invoked, will run the shell command identified by command9</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command10_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command10_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 10</short>
+        <long>A button binding that when invoked, will run the shell command identified by command10</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command11_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command11_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 11</short>
+        <long>A button binding that when invoked, will run the shell command identified by command11</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command12_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command12_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 12</short>
+        <long>A button binding that when invoked, will run the shell command identified by command12</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command13_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command13_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 13</short>
+        <long>A button binding that when invoked, will run the shell command identified by command13</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command14_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command14_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 14</short>
+        <long>A button binding that when invoked, will run the shell command identified by command14</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command15_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command15_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 15</short>
+        <long>A button binding that when invoked, will run the shell command identified by command15</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command16_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command16_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 16</short>
+        <long>A button binding that when invoked, will run the shell command identified by command16</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command17_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command17_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 17</short>
+        <long>A button binding that when invoked, will run the shell command identified by command17</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command18_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command18_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 18</short>
+        <long>A button binding that when invoked, will run the shell command identified by command18</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command19_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command19_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 19</short>
+        <long>A button binding that when invoked, will run the shell command identified by command19</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command20_button</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command20_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 20</short>
+        <long>A button binding that when invoked, will run the shell command identified by command20</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command0_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command0_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 0</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command0</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command1_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command1_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 1</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command1</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command2_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command2_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 2</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command2</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command3_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command3_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 3</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command3</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command4_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command4_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 4</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command4</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command5_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command5_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 5</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command5</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command6_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command6_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 6</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command6</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command7_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command7_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 7</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command7</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command8_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command8_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 8</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command8</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command9_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command9_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 9</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command9</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command10_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command10_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 10</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command10</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command11_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command11_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 11</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command11</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command12_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command12_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 12</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command12</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command13_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command13_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 13</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command13</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command14_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command14_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 14</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command14</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command15_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command15_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 15</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command15</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command16_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command16_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 16</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command16</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command17_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command17_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 17</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command17</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command18_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command18_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 18</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command18</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command19_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command19_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 19</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command19</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/commands/screen0/options/run_command20_edge</key>
+      <applyto>/apps/compiz-1/plugins/commands/screen0/options/run_command20_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <gettext_domain>compiz</gettext_domain>
+      <locale name="C">
+        <short>Run command 20</short>
+        <long>An edge binding that when invoked, will run the shell command identified by command20</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>
