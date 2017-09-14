@@ -1,7 +1,7 @@
 <project>
     <shortName>Aegis</shortName>
     <fullName>Aegis Workstation Agent</fullName>
-    <version>2.4.1</version>
+    <version>2.4.4</version>
     <componentList>
         <component>
             <name>default</name>
@@ -156,81 +156,9 @@
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/ie</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/logs</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
                         </distributionDirectory>
                     </distributionFileList>
-                </folder>
-                <folder>
-                    <description>Program Files</description>
-                    <destination>${installdir}</destination>
-                    <name>programfilesosx</name>
-                    <platforms>osx</platforms>
-                    <distributionFileList>
-                        <distributionFile>
-                            <origin>files-mac/Safari Extension/AEGIS.safariextz</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-mac/usr-local.zip</origin>
-                        </distributionFile>
-                    </distributionFileList>
-                </folder>
-                <folder>
-                    <description>/Library/Application Support/Google/Chrome/External Extensions/</description>
-                    <destination>/Library/Application Support/Google/Chrome/External Extensions/</destination>
-                    <name>GoogleChromeExtension</name>
-                    <platforms>osx</platforms>
-                    <distributionFileList>
-                        <distributionFile>
-                            <origin>files-mac/Google Chrome Extension/ljggkhkdbndekocjhnhnebkilnmaeopj.json</origin>
-                        </distributionFile>
-                    </distributionFileList>
-                </folder>
-                <folder>
-                    <description>ProgramData</description>
-                    <destination>C:/ProgramData</destination>
-                    <name>ProgramData</name>
-                    <platforms>windows</platforms>
-                    <distributionFileList>
-                        <distributionDirectory>
-                            <origin>files-win/ProgramData/Aegis</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-win/ProgramData/AEGIS Extension</origin>
-                        </distributionDirectory>
-                    </distributionFileList>
-                </folder>
-                <folder>
-                    <description>Program Files</description>
-                    <destination>C:/Program Files/</destination>
-                    <name>CProgramFiles</name>
-                    <platforms>windows</platforms>
-                    <distributionFileList>
-                        <distributionDirectory>
-                            <origin>files-win/Program Files/Win10Pcap</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-win/Program Files/Mozilla Firefox</origin>
-                        </distributionDirectory>
-                    </distributionFileList>
-                </folder>
-                <folder>
-                    <description>Firefox Extension</description>
-                    <destination>/Applications/Firefox.app/Contents/Resources/browser/extensions/</destination>
-                    <name>FirefoxExtension</name>
-                    <platforms>osx</platforms>
-                    <distributionFileList>
-                        <distributionFile>
-                            <origin>files-mac/Firefox Extension/sageaxcess@sageaxcess.com.xpi</origin>
-                        </distributionFile>
-                    </distributionFileList>
-                    <ruleList>
-                        <fileExists>
-                            <path>/Applications/Firefox.app/Contents/Resources/browser</path>
-                        </fileExists>
-                    </ruleList>
                 </folder>
                 <folder>
                     <description>ubuntu_14-15</description>
@@ -337,6 +265,20 @@
                         </ruleGroup>
                     </ruleList>
                 </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>osxinstalldir</name>
+                    <platforms>osx</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>Content/aegis-2.4.4_x86_64.tar.gz</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>Content/AEGIS.safariextz</origin>
+                        </distributionFile>
+                    </distributionFileList>
+                </folder>
             </folderList>
             <startMenuShortcutList>
                 <startMenuShortcut>
@@ -352,10 +294,86 @@
             </startMenuShortcutList>
         </component>
     </componentList>
+    <preBuildActionList>
+        <iniFileGet>
+            <file>${build_project_directory}/installer.ini</file>
+            <key>Online</key>
+            <section>InstallMode</section>
+            <variable>install_online</variable>
+        </iniFileGet>
+    </preBuildActionList>
+    <initializationActionList>
+        <setInstallerVariable>
+            <name>${installdir}</name>
+            <ruleEvaluationLogic>or</ruleEvaluationLogic>
+            <value>/usr/local/aegis</value>
+            <ruleList>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </setInstallerVariable>
+    </initializationActionList>
+    <readyToInstallActionList>
+        <httpGet>
+            <explanation>Downloading install files</explanation>
+            <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
+            <progressText>Downloading install files</progressText>
+            <url>https://aegis-osx.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.tar.gz</url>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${install_online}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+        <httpGet>
+            <filename>${installdir}/AEGIS.safariextz</filename>
+            <url>https://aegis-osx.s3.amazonaws.com/AEGIS.safariextz</url>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${install_online}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+        <httpGet>
+            <explanation>Downloading Firefox extension</explanation>
+            <filename>/Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</filename>
+            <progressText>Downloading Firefox extension</progressText>
+            <url>https://aegis-osx.s3.amazonaws.com/sageaxcess-1.0.1-fx.xpi</url>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <fileExists>
+                    <path>/Applications/Firefox.app</path>
+                </fileExists>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${install_online}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+    </readyToInstallActionList>
     <postInstallationActionList>
         <unzip>
-            <destinationDirectory>/usr/local/</destinationDirectory>
-            <zipFile>${installdir}/usr-local.zip</zipFile>
+            <destinationDirectory>${installdir}</destinationDirectory>
+            <explanation>Extracting files</explanation>
+            <progressText>Extracting files</progressText>
+            <zipFile>${installdir}/aegis_2.4.4-x86_64.tar.gz</zipFile>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -363,28 +381,24 @@
             </ruleList>
         </unzip>
         <deleteFile>
-            <path>${installdir}/usr-local.zip</path>
+            <path>${installdir}/aegis_2.4.4-x86_64.tar.gz</path>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
                 </platformTest>
             </ruleList>
         </deleteFile>
+        <runProgram>
+            <program>cp</program>
+            <programArguments>-rfv ${installdir}/aegis/2.4.4/* /usr/local/aegis</programArguments>
+        </runProgram>
         <deleteFile>
-            <path>/usr/local/__MACOSX</path>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-                <fileExists>
-                    <path>/usr/local/__MACOSX</path>
-                </fileExists>
-            </ruleList>
+            <path>${installdir}/aegis</path>
         </deleteFile>
         <writeFile>
             <encoding>utf-8</encoding>
             <explanation>Update Aegis configuration file</explanation>
-            <path>/usr/local/Cellar/aegis/2.4.1/conf/aegis.conf</path>
+            <path>/usr/local/Cellar/aegis/2.4.4/conf/aegis.conf</path>
             <text>############################
 # Aegis config file
 ############################
@@ -460,7 +474,7 @@ disk.usage.absolute=500</text>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>cp</program>
-            <programArguments>-fv /usr/local/opt/aegis/*.plist /Library/LaunchDaemons</programArguments>
+            <programArguments>-fv /usr/local/aegis/conf/*.plist /Library/LaunchDaemons</programArguments>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -470,7 +484,7 @@ disk.usage.absolute=500</text>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>chown</program>
-            <programArguments>root /Library/LaunchDaemons/homebrew.mxcl.aegis.plist</programArguments>
+            <programArguments>root /Library/LaunchDaemons/aegis.plist</programArguments>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -480,7 +494,7 @@ disk.usage.absolute=500</text>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>launchctl</program>
-            <programArguments>load /Library/LaunchDaemons/homebrew.mxcl.aegis.plist</programArguments>
+            <programArguments>load /Library/LaunchDaemons/aegis.plist</programArguments>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -559,6 +573,21 @@ disk.usage.absolute=500</text>
                 <platformTest>
                     <type>windows</type>
                 </platformTest>
+            </ruleList>
+        </writeFile>
+        <writeFile>
+            <path>/Library/Application Support/Google/Chrome/External Extensions/ljggkhkdbndekocjhnhnebkilnmaeopj.json</path>
+            <text>{
+    "external_update_url": "https://clients2.google.com/service/update2/crx"
+}
+</text>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <fileExists>
+                    <path>/Library/Application Support/Google/Chrome</path>
+                </fileExists>
             </ruleList>
         </writeFile>
         <runProgram>
@@ -1039,7 +1068,7 @@ disk.usage.absolute=500</text>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>launchctl</program>
-            <programArguments>unload /Library/LaunchDaemons/homebrew.mxcl.aegis.plist</programArguments>
+            <programArguments>unload /Library/LaunchDaemons/aegis.plist</programArguments>
             <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
@@ -1049,7 +1078,7 @@ disk.usage.absolute=500</text>
         </runProgram>
         <deleteFile>
             <abortOnError>0</abortOnError>
-            <path>/Library/LaunchDaemons/homebrew.mxcl.aegis.plist</path>
+            <path>/Library/LaunchDaemons/aegis.plist</path>
             <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
@@ -1079,17 +1108,7 @@ disk.usage.absolute=500</text>
         </deleteFile>
         <deleteFile>
             <abortOnError>0</abortOnError>
-            <path>/usr/local/Cellar/aegis</path>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>/usr/local/Cellar/aegis-plugins</path>
+            <path>/usr/local/aegis</path>
             <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
@@ -1100,16 +1119,6 @@ disk.usage.absolute=500</text>
         <deleteFile>
             <abortOnError>0</abortOnError>
             <path>/usr/local/opt/aegis</path>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>/usr/local/opt/aegis-plugins</path>
             <showMessageOnError>0</showMessageOnError>
             <ruleList>
                 <platformTest>
@@ -1164,6 +1173,7 @@ disk.usage.absolute=500</text>
     </postUninstallationActionList>
     <disableSplashScreen>1</disableSplashScreen>
     <enableRollback>1</enableRollback>
+    <enableSslSupport>1</enableSslSupport>
     <enableTimestamp>1</enableTimestamp>
     <height>420</height>
     <requireInstallationByRootUser>1</requireInstallationByRootUser>
