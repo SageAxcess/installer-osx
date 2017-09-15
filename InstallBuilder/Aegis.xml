@@ -399,35 +399,27 @@
         </httpGet>
     </readyToInstallActionList>
     <postInstallationActionList>
-        <runProgram>
-            <program>tar</program>
-            <programArguments>xzvf ${installdir}/aegis_2.4.4-x86_64.tar.gz -C ${installdir}</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <deleteFile>
-            <path>${installdir}/aegis_2.4.4-x86_64.tar.gz</path>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <runProgram>
-            <program>cp</program>
-            <programArguments>-rfv ${installdir}/aegis/* ${installdir}</programArguments>
-        </runProgram>
-        <deleteFile>
-            <path>${installdir}/aegis</path>
-        </deleteFile>
-        <writeFile>
-            <encoding>utf-8</encoding>
-            <explanation>Update Aegis configuration file</explanation>
-            <path>${installdir}/conf/aegis.conf</path>
-            <text>############################
+        <actionGroup>
+            <actionList>
+                <runProgram>
+                    <program>tar</program>
+                    <programArguments>xzvf ${installdir}/aegis_2.4.4-x86_64.tar.gz -C ${installdir}</programArguments>
+                </runProgram>
+                <deleteFile>
+                    <path>${installdir}/aegis_2.4.4-x86_64.tar.gz</path>
+                </deleteFile>
+                <runProgram>
+                    <program>cp</program>
+                    <programArguments>-rfv ${installdir}/aegis/* ${installdir}</programArguments>
+                </runProgram>
+                <deleteFile>
+                    <path>${installdir}/aegis</path>
+                </deleteFile>
+                <writeFile>
+                    <encoding>utf-8</encoding>
+                    <explanation>Update Aegis configuration file</explanation>
+                    <path>${installdir}/conf/aegis.conf</path>
+                    <text>############################
 # Aegis config file
 ############################
 
@@ -483,43 +475,45 @@ process.priority=0
 disk.usage.relative=10
 # Maximum disk usage, in Mb. Will be applied if it's lower than value in %
 disk.usage.absolute=500</text>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </writeFile>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <customErrorMessage>Failed to install Safari extension</customErrorMessage>
-            <explanation>Install Safari Extension</explanation>
-            <program>open</program>
-            <programArguments>-a Safari ${installdir}/AEGIS.safariextz</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <customErrorMessage>Failed to install Firefox extension</customErrorMessage>
-            <explanation>Install Firefox extension</explanation>
-            <program>cp</program>
-            <programArguments>-f ${installdir}/sageaxcess-1.0.2-fx.xpi /Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-                <fileExists>
-                    <path>/Applications/Firefox.app</path>
-                </fileExists>
-            </ruleList>
-        </runProgram>
-        <writeFile>
-            <explanation>Installing AEGIS service</explanation>
-            <path>/Library/LaunchDaemons/aegis.plist</path>
-            <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                </writeFile>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <customErrorMessage>Failed to install Safari extension</customErrorMessage>
+                    <explanation>Install Safari Extension</explanation>
+                    <program>open</program>
+                    <programArguments>-a Safari ${installdir}/AEGIS.safariextz</programArguments>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <customErrorMessage>Failed to install Firefox extension</customErrorMessage>
+                    <explanation>Install Firefox extension</explanation>
+                    <program>cp</program>
+                    <programArguments>-f ${installdir}/sageaxcess-1.0.2-fx.xpi /Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</programArguments>
+                    <ruleList>
+                        <fileExists>
+                            <path>/Applications/Firefox.app</path>
+                        </fileExists>
+                    </ruleList>
+                </runProgram>
+                <writeFile>
+                    <path>/Library/Application Support/Google/Chrome/External Extensions/ljggkhkdbndekocjhnhnebkilnmaeopj.json</path>
+                    <text>{
+    "external_update_url": "https://clients2.google.com/service/update2/crx"
+}
+</text>
+                    <ruleList>
+                        <platformTest>
+                            <type>osx</type>
+                        </platformTest>
+                        <fileExists>
+                            <path>/Library/Application Support/Google/Chrome</path>
+                        </fileExists>
+                    </ruleList>
+                </writeFile>
+                <writeFile>
+                    <explanation>Installing AEGIS service</explanation>
+                    <path>/Library/LaunchDaemons/aegis.plist</path>
+                    <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
 &lt;dict&gt;
@@ -534,35 +528,29 @@ disk.usage.absolute=500</text>
 &lt;/dict&gt;
 &lt;/plist&gt;
 </text>
+                </writeFile>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>launchctl</program>
+                    <programArguments>load /Library/LaunchDaemons/aegis.plist</programArguments>
+                </runProgram>
+            </actionList>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
                 </platformTest>
             </ruleList>
-        </writeFile>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>launchctl</program>
-            <programArguments>load /Library/LaunchDaemons/aegis.plist</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <program>C:/Program Files/Win10Pcap/Win32/Installer.exe</program>
-            <programArguments></programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <writeFile>
-            <explanation>Update Aegis configuration file</explanation>
-            <path>${installdir}/aegis.conf</path>
-            <text>############################
+        </actionGroup>
+        <actionGroup>
+            <actionList>
+                <runProgram>
+                    <program>C:/Program Files/Win10Pcap/Win32/Installer.exe</program>
+                    <programArguments></programArguments>
+                </runProgram>
+                <writeFile>
+                    <explanation>Update Aegis configuration file</explanation>
+                    <path>${installdir}/aegis.conf</path>
+                    <text>############################
 # Aegis config file
 ############################
 
@@ -618,122 +606,71 @@ process.priority=0
 disk.usage.relative=10
 # Maximum disk usage, in Mb. Will be applied if it's lower than value in %
 disk.usage.absolute=500</text>
+                </writeFile>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <explanation>Add Aegis Extension to Google Chrome x32</explanation>
+                    <program>reg</program>
+                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <explanation>Add Aegis Extension to Google Chrome x64</explanation>
+                    <program>reg</program>
+                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>sc</program>
+                    <programArguments>create Aegis displayname= "AEGIS service" binPath= "${installdir}\aegis.exe" start= auto</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>sc</program>
+                    <programArguments>description Aegis "Collects and analyzes network packets, transmits data to the cloud"</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>sc</program>
+                    <programArguments>failure Aegis reset= 86400 actions= restart/1000</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>sc</program>
+                    <programArguments>start Aegis</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>regsvr32</program>
+                    <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>regsvr32</program>
+                    <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+            </actionList>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
                 </platformTest>
             </ruleList>
-        </writeFile>
-        <writeFile>
-            <path>/Library/Application Support/Google/Chrome/External Extensions/ljggkhkdbndekocjhnhnebkilnmaeopj.json</path>
-            <text>{
-    "external_update_url": "https://clients2.google.com/service/update2/crx"
-}
-</text>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-                <fileExists>
-                    <path>/Library/Application Support/Google/Chrome</path>
-                </fileExists>
-            </ruleList>
-        </writeFile>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <explanation>Add Aegis Extension to Google Chrome x32</explanation>
-            <program>reg</program>
-            <programArguments>add HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <explanation>Add Aegis Extension to Google Chrome x64</explanation>
-            <program>reg</program>
-            <programArguments>add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>sc</program>
-            <programArguments>create Aegis displayname= "AEGIS service" binPath= "${installdir}\aegis.exe" start= auto</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>sc</program>
-            <programArguments>description Aegis "Collects and analyzes network packets, transmits data to the cloud"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>sc</program>
-            <programArguments>failure Aegis reset= 86400 actions= restart/1000</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>sc</program>
-            <programArguments>start Aegis</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>regsvr32</program>
-            <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>regsvr32</program>
-            <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <writeFile>
-            <abortOnError>0</abortOnError>
-            <explanation>Update Aegis configuration file</explanation>
-            <path>/usr/local/aegis/conf/aegis.conf</path>
-            <text>############################
+        </actionGroup>
+        <actionGroup>
+            <actionList>
+                <writeFile>
+                    <abortOnError>0</abortOnError>
+                    <explanation>Update Aegis configuration file</explanation>
+                    <path>/usr/local/aegis/conf/aegis.conf</path>
+                    <text>############################
 # Aegis config file
 ############################
 
@@ -789,239 +726,216 @@ process.priority=0
 disk.usage.relative=10
 # Maximum disk usage, in Mb. Will be applied if it's lower than value in %
 disk.usage.absolute=500</text>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-            </ruleList>
-        </writeFile>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>chmod</program>
-            <programArguments>-R 775 /usr/local/aegis</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>ln</program>
-            <programArguments>-s /usr/local/aegis/conf/init-script /etc/init.d/aegis</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                </writeFile>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>chmod</program>
+                    <programArguments>-R 775 /usr/local/aegis</programArguments>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>ln</program>
+                    <programArguments>-s /usr/local/aegis/conf/init-script /etc/init.d/aegis</programArguments>
                     <ruleList>
                         <fileContentTest>
                             <encoding>utf-8</encoding>
                             <logic>contains</logic>
                             <path>/etc/lsb-release</path>
-                            <text>16.04</text>
+                            <text>Ubuntu</text>
                         </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>16.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>17.04</text>
-                        </fileContentTest>
+                        <ruleGroup>
+                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                            <ruleList>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>16.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>16.10</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>17.04</text>
+                                </fileContentTest>
+                            </ruleList>
+                        </ruleGroup>
                     </ruleList>
-                </ruleGroup>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>chmod</program>
-            <programArguments>+x /etc/init.d/aegis</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>sysv-rc-conf</program>
-            <programArguments>aegis on</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>chmod</program>
+                    <programArguments>+x /etc/init.d/aegis</programArguments>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>sysv-rc-conf</program>
+                    <programArguments>aegis on</programArguments>
                     <ruleList>
                         <fileContentTest>
                             <encoding>utf-8</encoding>
                             <logic>contains</logic>
                             <path>/etc/lsb-release</path>
-                            <text>14.04</text>
+                            <text>Ubuntu</text>
                         </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>14.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>15.04</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>15.10</text>
-                        </fileContentTest>
+                        <ruleGroup>
+                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                            <ruleList>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>14.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>14.10</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>15.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>15.10</text>
+                                </fileContentTest>
+                            </ruleList>
+                        </ruleGroup>
                     </ruleList>
-                </ruleGroup>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>service</program>
-            <programArguments>aegis start</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>service</program>
+                    <programArguments>aegis start</programArguments>
                     <ruleList>
                         <fileContentTest>
                             <encoding>utf-8</encoding>
                             <logic>contains</logic>
                             <path>/etc/lsb-release</path>
-                            <text>14.04</text>
+                            <text>Ubuntu</text>
                         </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>14.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>15.04</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>15.10</text>
-                        </fileContentTest>
+                        <ruleGroup>
+                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                            <ruleList>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>14.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>14.10</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>15.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>15.10</text>
+                                </fileContentTest>
+                            </ruleList>
+                        </ruleGroup>
                     </ruleList>
-                </ruleGroup>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>systemctl</program>
-            <programArguments>enable aegis.service</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>systemctl</program>
+                    <programArguments>enable aegis.service</programArguments>
                     <ruleList>
                         <fileContentTest>
                             <encoding>utf-8</encoding>
                             <logic>contains</logic>
                             <path>/etc/lsb-release</path>
-                            <text>16.04</text>
+                            <text>Ubuntu</text>
                         </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>16.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>17.04</text>
-                        </fileContentTest>
+                        <ruleGroup>
+                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                            <ruleList>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>16.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>16.10</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>17.04</text>
+                                </fileContentTest>
+                            </ruleList>
+                        </ruleGroup>
                     </ruleList>
-                </ruleGroup>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>systemctl</program>
-            <programArguments>start aegis.service</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>linux-x64</type>
-                </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>systemctl</program>
+                    <programArguments>start aegis.service</programArguments>
                     <ruleList>
                         <fileContentTest>
                             <encoding>utf-8</encoding>
                             <logic>contains</logic>
                             <path>/etc/lsb-release</path>
-                            <text>16.04</text>
+                            <text>Ubuntu</text>
                         </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>16.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>17.04</text>
-                        </fileContentTest>
+                        <ruleGroup>
+                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                            <ruleList>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>16.04</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>16.10</text>
+                                </fileContentTest>
+                                <fileContentTest>
+                                    <encoding>utf-8</encoding>
+                                    <logic>contains</logic>
+                                    <path>/etc/lsb-release</path>
+                                    <text>17.04</text>
+                                </fileContentTest>
+                            </ruleList>
+                        </ruleGroup>
                     </ruleList>
-                </ruleGroup>
+                </runProgram>
+            </actionList>
+            <ruleList>
+                <platformTest>
+                    <type>linux-x64</type>
+                </platformTest>
             </ruleList>
-        </runProgram>
+        </actionGroup>
     </postInstallationActionList>
     <preUninstallationActionList>
         <deleteWindowsService>
