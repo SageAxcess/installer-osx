@@ -346,6 +346,76 @@
                 </platformTest>
             </ruleList>
         </setInstallerVariable>
+        <locate>
+            <command>chkconfig</command>
+            <variable>cmd_chkconfig</variable>
+            <ruleList>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
+            </ruleList>
+        </locate>
+        <locate>
+            <command>sysv-rc-conf</command>
+            <variable>cmd_sysv</variable>
+            <ruleList>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
+            </ruleList>
+        </locate>
+        <locate>
+            <command>systemctl</command>
+            <variable>cmd_systemctl</variable>
+            <ruleList>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
+            </ruleList>
+        </locate>
+        <if>
+            <actionList>
+                <setInstallerVariable>
+                    <name>service_engine</name>
+                    <value>systemctl</value>
+                </setInstallerVariable>
+            </actionList>
+            <conditionRuleList>
+                <compareTextLength>
+                    <length>0</length>
+                    <logic>greater</logic>
+                    <text>${cmd_systemctl}</text>
+                </compareTextLength>
+            </conditionRuleList>
+            <elseActionList>
+                <if>
+                    <actionList>
+                        <setInstallerVariable>
+                            <name>service_engine</name>
+                            <value>sysv-rc-conf</value>
+                        </setInstallerVariable>
+                    </actionList>
+                    <conditionRuleList>
+                        <compareTextLength>
+                            <length>0</length>
+                            <logic>greater</logic>
+                            <text>${cmd_sysv}</text>
+                        </compareTextLength>
+                    </conditionRuleList>
+                    <elseActionList>
+                        <setInstallerVariable>
+                            <name>service_engine</name>
+                            <value>initd</value>
+                        </setInstallerVariable>
+                    </elseActionList>
+                </if>
+            </elseActionList>
+            <ruleList>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
+            </ruleList>
+        </if>
     </initializationActionList>
     <readyToInstallActionList>
         <httpGet>
@@ -735,126 +805,100 @@ disk.usage.absolute=500</text>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <program>ln</program>
-                    <programArguments>-s /usr/local/aegis/conf/init-script /etc/init.d/aegis</programArguments>
+                    <programArguments>-s ${installdir}/conf/init-script /etc/init.d/aegis</programArguments>
+                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
                     <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>Ubuntu</text>
-                        </fileContentTest>
-                        <ruleGroup>
-                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                            <ruleList>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>16.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>16.10</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>17.04</text>
-                                </fileContentTest>
-                            </ruleList>
-                        </ruleGroup>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>initd</value>
+                        </compareText>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>sysv-rc-conf</value>
+                        </compareText>
                     </ruleList>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <program>chmod</program>
                     <programArguments>+x /etc/init.d/aegis</programArguments>
+                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                    <ruleList>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>initd</value>
+                        </compareText>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>sysv-rc-conf</value>
+                        </compareText>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <program>cp</program>
+                    <programArguments>-r ${installdir}/conf/aegis.service /usr/lib/systemd/system/</programArguments>
+                    <ruleList>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>systemctl</value>
+                        </compareText>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <program>chkconfig</program>
+                    <programArguments>--add aegis</programArguments>
+                    <ruleList>
+                        <compareTextLength>
+                            <length>0</length>
+                            <logic>greater</logic>
+                            <text>${cmd_chkconfig}</text>
+                        </compareTextLength>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <program>chkconfig</program>
+                    <programArguments>aegis on</programArguments>
+                    <ruleList>
+                        <compareTextLength>
+                            <length>0</length>
+                            <logic>greater</logic>
+                            <text>${cmd_chkconfig}</text>
+                        </compareTextLength>
+                    </ruleList>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <program>sysv-rc-conf</program>
                     <programArguments>aegis on</programArguments>
                     <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>Ubuntu</text>
-                        </fileContentTest>
-                        <ruleGroup>
-                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                            <ruleList>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>14.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>14.10</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>15.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>15.10</text>
-                                </fileContentTest>
-                            </ruleList>
-                        </ruleGroup>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>sysv-rc-conf</value>
+                        </compareText>
                     </ruleList>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <program>service</program>
                     <programArguments>aegis start</programArguments>
+                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
                     <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>Ubuntu</text>
-                        </fileContentTest>
-                        <ruleGroup>
-                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                            <ruleList>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>14.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>14.10</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>15.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>15.10</text>
-                                </fileContentTest>
-                            </ruleList>
-                        </ruleGroup>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>initd</value>
+                        </compareText>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>sysv-rc-conf</value>
+                        </compareText>
                     </ruleList>
                 </runProgram>
                 <runProgram>
@@ -862,35 +906,11 @@ disk.usage.absolute=500</text>
                     <program>systemctl</program>
                     <programArguments>enable aegis.service</programArguments>
                     <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>Ubuntu</text>
-                        </fileContentTest>
-                        <ruleGroup>
-                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                            <ruleList>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>16.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>16.10</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>17.04</text>
-                                </fileContentTest>
-                            </ruleList>
-                        </ruleGroup>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>systemctl</value>
+                        </compareText>
                     </ruleList>
                 </runProgram>
                 <runProgram>
@@ -898,35 +918,11 @@ disk.usage.absolute=500</text>
                     <program>systemctl</program>
                     <programArguments>start aegis.service</programArguments>
                     <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>Ubuntu</text>
-                        </fileContentTest>
-                        <ruleGroup>
-                            <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                            <ruleList>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>16.04</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>16.10</text>
-                                </fileContentTest>
-                                <fileContentTest>
-                                    <encoding>utf-8</encoding>
-                                    <logic>contains</logic>
-                                    <path>/etc/lsb-release</path>
-                                    <text>17.04</text>
-                                </fileContentTest>
-                            </ruleList>
-                        </ruleGroup>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>systemctl</value>
+                        </compareText>
                     </ruleList>
                 </runProgram>
             </actionList>
