@@ -11,7 +11,7 @@
             <show>1</show>
             <folderList>
                 <folder>
-                    <description>Program Files</description>
+                    <description>Common components</description>
                     <destination>${installdir}</destination>
                     <name>programfiles</name>
                     <platforms>all</platforms>
@@ -33,13 +33,13 @@
                     </shortcutList>
                 </folder>
                 <folder>
-                    <description>Program Files</description>
+                    <description>Linux components</description>
                     <destination>${installdir}</destination>
                     <name>programfileslinux</name>
                     <platforms>linux</platforms>
                 </folder>
                 <folder>
-                    <description>Program Files</description>
+                    <description>Windows components</description>
                     <destination>${installdir}</destination>
                     <name>programfileswindows</name>
                     <platforms>windows</platforms>
@@ -161,7 +161,7 @@
                     </distributionFileList>
                 </folder>
                 <folder>
-                    <description>ubuntu_14-15</description>
+                    <description>Ubuntu wily components</description>
                     <destination>/</destination>
                     <name>root</name>
                     <platforms>linux-x64</platforms>
@@ -218,7 +218,7 @@
                     </ruleList>
                 </folder>
                 <folder>
-                    <description>ubuntu_16-17</description>
+                    <description>Ubuntu xenial+zesty components</description>
                     <destination>/</destination>
                     <name>root2</name>
                     <platforms>linux-x64</platforms>
@@ -266,18 +266,28 @@
                     </ruleList>
                 </folder>
                 <folder>
-                    <description>Program Files</description>
+                    <description>Mac OSX components</description>
                     <destination>${installdir}</destination>
                     <name>osxinstalldir</name>
                     <platforms>osx</platforms>
                     <distributionFileList>
                         <distributionFile>
-                            <origin>Content/aegis-2.4.4_x86_64.tar.gz</origin>
+                            <origin>Content/aegis_2.4.4-x86_64.tar.gz</origin>
                         </distributionFile>
                         <distributionFile>
                             <origin>Content/AEGIS.safariextz</origin>
                         </distributionFile>
+                        <distributionFile>
+                            <origin>Content/sageaxcess-1.0.2.xpi</origin>
+                        </distributionFile>
                     </distributionFileList>
+                    <shouldPackRuleList>
+                        <compareText>
+                            <logic>does_not_equal</logic>
+                            <text>${InstallOnline}</text>
+                            <value>1</value>
+                        </compareText>
+                    </shouldPackRuleList>
                 </folder>
             </folderList>
             <startMenuShortcutList>
@@ -295,16 +305,36 @@
         </component>
     </componentList>
     <preBuildActionList>
-        <iniFileGet>
-            <file>${build_project_directory}/installer.ini</file>
-            <key>Online</key>
-            <section>InstallMode</section>
-            <variable>install_online</variable>
-        </iniFileGet>
+        <if>
+            <actionList>
+                <setInstallerVariable>
+                    <name>InstallOnline</name>
+                    <value>0</value>
+                </setInstallerVariable>
+            </actionList>
+            <conditionRuleList>
+                <fileExists>
+                    <path>${build_project_directory}/Content/aegis_2.4.4-x86_64.tar.gz</path>
+                </fileExists>
+            </conditionRuleList>
+            <elseActionList>
+                <setInstallerVariable>
+                    <name>InstallOnline</name>
+                    <value>1</value>
+                </setInstallerVariable>
+            </elseActionList>
+            <ruleList>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${platform_name}</text>
+                    <value>osx</value>
+                </compareText>
+            </ruleList>
+        </if>
     </preBuildActionList>
     <initializationActionList>
         <setInstallerVariable>
-            <name>${installdir}</name>
+            <name>installdir</name>
             <ruleEvaluationLogic>or</ruleEvaluationLogic>
             <value>/usr/local/aegis</value>
             <ruleList>
@@ -329,7 +359,7 @@
                 </platformTest>
                 <compareText>
                     <logic>equals</logic>
-                    <text>${install_online}</text>
+                    <text>${InstallOnline}</text>
                     <value>1</value>
                 </compareText>
             </ruleList>
@@ -343,16 +373,16 @@
                 </platformTest>
                 <compareText>
                     <logic>equals</logic>
-                    <text>${install_online}</text>
+                    <text>${InstallOnline}</text>
                     <value>1</value>
                 </compareText>
             </ruleList>
         </httpGet>
         <httpGet>
             <explanation>Downloading Firefox extension</explanation>
-            <filename>/Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</filename>
+            <filename>${installdir}/sageaxcess-1.0.2-fx.xpi</filename>
             <progressText>Downloading Firefox extension</progressText>
-            <url>https://aegis-osx.s3.amazonaws.com/sageaxcess-1.0.1-fx.xpi</url>
+            <url>https://aegis-osx.s3.amazonaws.com/sageaxcess-1.0.2-fx.xpi</url>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -362,24 +392,22 @@
                 </fileExists>
                 <compareText>
                     <logic>equals</logic>
-                    <text>${install_online}</text>
+                    <text>${InstallOnline}</text>
                     <value>1</value>
                 </compareText>
             </ruleList>
         </httpGet>
     </readyToInstallActionList>
     <postInstallationActionList>
-        <unzip>
-            <destinationDirectory>${installdir}</destinationDirectory>
-            <explanation>Extracting files</explanation>
-            <progressText>Extracting files</progressText>
-            <zipFile>${installdir}/aegis_2.4.4-x86_64.tar.gz</zipFile>
+        <runProgram>
+            <program>tar</program>
+            <programArguments>xzvf ${installdir}/aegis_2.4.4-x86_64.tar.gz -C ${installdir}</programArguments>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
                 </platformTest>
             </ruleList>
-        </unzip>
+        </runProgram>
         <deleteFile>
             <path>${installdir}/aegis_2.4.4-x86_64.tar.gz</path>
             <ruleList>
@@ -390,7 +418,7 @@
         </deleteFile>
         <runProgram>
             <program>cp</program>
-            <programArguments>-rfv ${installdir}/aegis/2.4.4/* /usr/local/aegis</programArguments>
+            <programArguments>-rfv ${installdir}/aegis/* ${installdir}</programArguments>
         </runProgram>
         <deleteFile>
             <path>${installdir}/aegis</path>
@@ -398,7 +426,7 @@
         <writeFile>
             <encoding>utf-8</encoding>
             <explanation>Update Aegis configuration file</explanation>
-            <path>/usr/local/Cellar/aegis/2.4.4/conf/aegis.conf</path>
+            <path>${installdir}/conf/aegis.conf</path>
             <text>############################
 # Aegis config file
 ############################
@@ -472,9 +500,44 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <program>cp</program>
+            <programArguments>-f ${installdir}/sageaxcess-1.0.2-fx.xpi /Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+                <fileExists>
+                    <path>/Applications/Firefox.app</path>
+                </fileExists>
+            </ruleList>
+        </runProgram>
+        <writeFile>
+            <path>${installdir}/conf/aegis.plist</path>
+            <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+	&lt;key&gt;Label&lt;/key&gt;
+	&lt;string&gt;com.sageaxcess.aegis&lt;/string&gt;
+	&lt;key&gt;ProgramArguments&lt;/key&gt;
+	&lt;array&gt;
+		&lt;string&gt;/usr/local/aegis/bin/aegis -i ${ListenOn} local&lt;/string&gt;
+	&lt;/array&gt;
+	&lt;key&gt;KeepAlive&lt;/key&gt;
+	&lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</text>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </writeFile>
+        <runProgram>
             <abortOnError>0</abortOnError>
             <program>cp</program>
-            <programArguments>-fv /usr/local/aegis/conf/*.plist /Library/LaunchDaemons</programArguments>
+            <programArguments>-fv ${installdir}/conf/*.plist /Library/LaunchDaemons</programArguments>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -1266,6 +1329,17 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </directoryParameter>
+        <booleanParameter>
+            <name>InstallOnline</name>
+            <title>Online installer</title>
+            <description>Online installer</description>
+            <explanation></explanation>
+            <value></value>
+            <default></default>
+            <ask>0</ask>
+            <cliOptionShow>0</cliOptionShow>
+            <displayStyle>checkbox-left</displayStyle>
+        </booleanParameter>
     </parameterList>
 </project>
 
