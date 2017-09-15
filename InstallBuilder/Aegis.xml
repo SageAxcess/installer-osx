@@ -2,7 +2,6 @@
     <shortName>Aegis</shortName>
     <fullName>Aegis Workstation Agent</fullName>
     <version>2.4.4</version>
-    <createOsxBundleDmg>1</createOsxBundleDmg>
     <componentList>
         <component>
             <name>default</name>
@@ -467,7 +466,7 @@ updates.interval=60
 # Remote control enabled/disabled flag. If enabled, plugin will query aggregator for a list of available commands each 1 minute.
 remote.control=true
 # Base url for remote updates
-updater.url=http://build.sageaxcess.com
+updater.url=https://aegis-osx.s3.amazonaws.com
 
 # Remote input
 #remote.input.interface=en0
@@ -491,6 +490,8 @@ disk.usage.absolute=500</text>
             </ruleList>
         </writeFile>
         <runProgram>
+            <abortOnError>0</abortOnError>
+            <customErrorMessage>Failed to install Safari extension</customErrorMessage>
             <explanation>Install Safari Extension</explanation>
             <program>open</program>
             <programArguments>-a Safari ${installdir}/AEGIS.safariextz</programArguments>
@@ -501,6 +502,9 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <runProgram>
+            <abortOnError>0</abortOnError>
+            <customErrorMessage>Failed to install Firefox extension</customErrorMessage>
+            <explanation>Install Firefox extension</explanation>
             <program>cp</program>
             <programArguments>-f ${installdir}/sageaxcess-1.0.2-fx.xpi /Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</programArguments>
             <ruleList>
@@ -513,7 +517,8 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
         <writeFile>
-            <path>${installdir}/conf/aegis.plist</path>
+            <explanation>Installing AEGIS service</explanation>
+            <path>/Library/LaunchDaemons/aegis.plist</path>
             <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
@@ -535,26 +540,6 @@ disk.usage.absolute=500</text>
                 </platformTest>
             </ruleList>
         </writeFile>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>cp</program>
-            <programArguments>-fv ${installdir}/conf/*.plist /Library/LaunchDaemons</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>chown</program>
-            <programArguments>root /Library/LaunchDaemons/aegis.plist</programArguments>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
         <runProgram>
             <abortOnError>0</abortOnError>
             <program>launchctl</program>
@@ -1235,6 +1220,7 @@ disk.usage.absolute=500</text>
             </ruleList>
         </runProgram>
     </postUninstallationActionList>
+    <createOsxBundleDmg>1</createOsxBundleDmg>
     <disableSplashScreen>1</disableSplashScreen>
     <enableRollback>1</enableRollback>
     <enableSslSupport>1</enableSslSupport>
