@@ -4,9 +4,9 @@
     <version>2.4.4</version>
     <componentList>
         <component>
-            <name>default</name>
-            <description>Default Component</description>
-            <canBeEdited>1</canBeEdited>
+            <name>networkmonitor</name>
+            <description>AEGIS Network Monitor</description>
+            <canBeEdited>0</canBeEdited>
             <selected>1</selected>
             <show>1</show>
             <folderList>
@@ -288,6 +288,29 @@
                             <value>1</value>
                         </compareText>
                     </shouldPackRuleList>
+                </folder>
+                <folder>
+                    <description>Mac OSX library dependencies</description>
+                    <destination>/usr/local/opt</destination>
+                    <name>osxlibs</name>
+                    <platforms>osx</platforms>
+                    <distributionFileList>
+                        <distributionDirectory>
+                            <origin>Content/osx/libs/libgnutls</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>Content/osx/libs/libmicrohttpd</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>Content/osx/libs/libsodium</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>Content/osx/libs/msgpack</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>Content/osx/libs/zeromq</origin>
+                        </distributionDirectory>
+                    </distributionFileList>
                 </folder>
             </folderList>
             <startMenuShortcutList>
@@ -946,41 +969,11 @@ disk.usage.absolute=500</text>
                 <platformTest>
                     <type>linux-x64</type>
                 </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                    <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>14.04</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>14.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>15.04</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>15.10</text>
-                        </fileContentTest>
-                    </ruleList>
-                </ruleGroup>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${service_engine}</text>
+                    <value>initd</value>
+                </compareText>
             </ruleList>
         </runProgram>
         <runProgram>
@@ -991,35 +984,11 @@ disk.usage.absolute=500</text>
                 <platformTest>
                     <type>linux-x64</type>
                 </platformTest>
-                <fileContentTest>
-                    <encoding>utf-8</encoding>
-                    <logic>contains</logic>
-                    <path>/etc/lsb-release</path>
-                    <text>Ubuntu</text>
-                </fileContentTest>
-                <ruleGroup>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                    <ruleList>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>16.04</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>16.10</text>
-                        </fileContentTest>
-                        <fileContentTest>
-                            <encoding>utf-8</encoding>
-                            <logic>contains</logic>
-                            <path>/etc/lsb-release</path>
-                            <text>17.04</text>
-                        </fileContentTest>
-                    </ruleList>
-                </ruleGroup>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${service_engine}</text>
+                    <value>systemctl</value>
+                </compareText>
             </ruleList>
         </runProgram>
     </preUninstallationActionList>
