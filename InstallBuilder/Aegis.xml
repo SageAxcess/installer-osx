@@ -441,6 +441,16 @@
         </if>
     </initializationActionList>
     <readyToInstallActionList>
+        <createDirectory>
+            <path>${installdir}</path>
+            <ruleList>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </createDirectory>
         <httpGet>
             <explanation>Downloading install files</explanation>
             <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
@@ -483,6 +493,21 @@
                 <fileExists>
                     <path>/Applications/Firefox.app</path>
                 </fileExists>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+        <httpGet>
+            <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
+            <url>https://aegis-centos-7.s3.amazonaws.com/aegis-2.4.4-manual_x86_64.tar.gz</url>
+        </httpGet>
+        <httpGet>
+            <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
+            <url>https://aegis-apt-wily.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.tar.gz</url>
+            <ruleList>
                 <compareText>
                     <logic>equals</logic>
                     <text>${InstallOnline}</text>
