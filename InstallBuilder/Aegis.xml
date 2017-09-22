@@ -503,6 +503,16 @@
         <httpGet>
             <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
             <url>https://aegis-centos-7.s3.amazonaws.com/aegis-2.4.4-manual_x86_64.tar.gz</url>
+            <ruleList>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
         </httpGet>
         <httpGet>
             <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
@@ -513,6 +523,9 @@
                     <text>${InstallOnline}</text>
                     <value>1</value>
                 </compareText>
+                <platformTest>
+                    <type>linux</type>
+                </platformTest>
             </ruleList>
         </httpGet>
     </readyToInstallActionList>
