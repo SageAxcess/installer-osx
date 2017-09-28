@@ -33,12 +33,6 @@
                     </shortcutList>
                 </folder>
                 <folder>
-                    <description>Linux components</description>
-                    <destination>${installdir}</destination>
-                    <name>programfileslinux</name>
-                    <platforms>linux</platforms>
-                </folder>
-                <folder>
                     <description>Windows components</description>
                     <destination>${installdir}</destination>
                     <name>programfileswindows</name>
@@ -311,6 +305,28 @@
                             <origin>Content/osx/libs/zeromq</origin>
                         </distributionDirectory>
                     </distributionFileList>
+                </folder>
+                <folder>
+                    <description>CentOS 7 components</description>
+                    <destination>/</destination>
+                    <name>CentOS7</name>
+                    <platforms>linux-x64</platforms>
+                    <distributionFileList>
+                        <distributionDirectory>
+                            <origin>files-linux/centos7/opt</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>files-linux/centos7/usr</origin>
+                        </distributionDirectory>
+                    </distributionFileList>
+                    <ruleList>
+                        <fileContentTest>
+                            <encoding>utf-8</encoding>
+                            <logic>contains</logic>
+                            <path>/etc/centos-release</path>
+                            <text>CentOS Linux release 7</text>
+                        </fileContentTest>
+                    </ruleList>
                 </folder>
             </folderList>
             <startMenuShortcutList>
@@ -862,30 +878,14 @@ disk.usage.absolute=500</text>
                     <abortOnError>0</abortOnError>
                     <program>chmod</program>
                     <programArguments>-R 775 /usr/local/aegis</programArguments>
-                </runProgram>
-                <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>ln</program>
-                    <programArguments>-s ${installdir}/conf/init-script /etc/init.d/aegis</programArguments>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                    <ruleList>
-                        <compareText>
-                            <logic>equals</logic>
-                            <text>${service_engine}</text>
-                            <value>initd</value>
-                        </compareText>
-                        <compareText>
-                            <logic>equals</logic>
-                            <text>${service_engine}</text>
-                            <value>sysv-rc-conf</value>
-                        </compareText>
-                    </ruleList>
+                    <showMessageOnError>0</showMessageOnError>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <program>chmod</program>
                     <programArguments>+x /etc/init.d/aegis</programArguments>
                     <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                    <showMessageOnError>0</showMessageOnError>
                     <ruleList>
                         <compareText>
                             <logic>equals</logic>
@@ -900,43 +900,34 @@ disk.usage.absolute=500</text>
                     </ruleList>
                 </runProgram>
                 <runProgram>
+                    <abortOnError>0</abortOnError>
                     <program>cp</program>
                     <programArguments>-r ${installdir}/conf/aegis.service /usr/lib/systemd/system/</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
                     <ruleList>
                         <compareText>
                             <logic>equals</logic>
                             <text>${service_engine}</text>
-                            <value>systemctl</value>
+                            <value>initd</value>
                         </compareText>
-                    </ruleList>
-                </runProgram>
-                <runProgram>
-                    <program>chkconfig</program>
-                    <programArguments>--add aegis</programArguments>
-                    <ruleList>
-                        <compareTextLength>
-                            <length>0</length>
-                            <logic>greater</logic>
-                            <text>${cmd_chkconfig}</text>
-                        </compareTextLength>
-                    </ruleList>
-                </runProgram>
-                <runProgram>
-                    <program>chkconfig</program>
-                    <programArguments>aegis on</programArguments>
-                    <ruleList>
-                        <compareTextLength>
-                            <length>0</length>
-                            <logic>greater</logic>
-                            <text>${cmd_chkconfig}</text>
-                        </compareTextLength>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>sysv-rc-conf</value>
+                        </compareText>
                     </ruleList>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <program>sysv-rc-conf</program>
                     <programArguments>aegis on</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
                     <ruleList>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>initd</value>
+                        </compareText>
                         <compareText>
                             <logic>equals</logic>
                             <text>${service_engine}</text>
@@ -949,6 +940,7 @@ disk.usage.absolute=500</text>
                     <program>service</program>
                     <programArguments>aegis start</programArguments>
                     <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                    <showMessageOnError>0</showMessageOnError>
                     <ruleList>
                         <compareText>
                             <logic>equals</logic>
@@ -964,8 +956,49 @@ disk.usage.absolute=500</text>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
+                    <program>chkconfig</program>
+                    <programArguments>--add aegis</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <compareTextLength>
+                            <length>0</length>
+                            <logic>greater</logic>
+                            <text>${cmd_chkconfig}</text>
+                        </compareTextLength>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>chkconfig</program>
+                    <programArguments>aegis on</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <compareTextLength>
+                            <length>0</length>
+                            <logic>greater</logic>
+                            <text>${cmd_chkconfig}</text>
+                        </compareTextLength>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>ln</program>
+                    <programArguments>-s ${installdir}/conf/init-script /etc/init.d/aegis</programArguments>
+                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <compareText>
+                            <logic>equals</logic>
+                            <text>${service_engine}</text>
+                            <value>systemctl</value>
+                        </compareText>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
                     <program>systemctl</program>
                     <programArguments>enable aegis.service</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
                     <ruleList>
                         <compareText>
                             <logic>equals</logic>
@@ -978,6 +1011,7 @@ disk.usage.absolute=500</text>
                     <abortOnError>0</abortOnError>
                     <program>systemctl</program>
                     <programArguments>start aegis.service</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
                     <ruleList>
                         <compareText>
                             <logic>equals</logic>
@@ -1142,10 +1176,11 @@ disk.usage.absolute=500</text>
     <enableRollback>1</enableRollback>
     <enableSslSupport>1</enableSslSupport>
     <enableTimestamp>1</enableTimestamp>
-    <height>420</height>
+    <height>550</height>
     <requireInstallationByRootUser>1</requireInstallationByRootUser>
     <saveRelativePaths>1</saveRelativePaths>
     <vendor>Change Dynamix, Inc.</vendor>
+    <width>600</width>
     <parameterList>
         <parameterGroup>
             <name>Advanced</name>
@@ -1160,7 +1195,7 @@ disk.usage.absolute=500</text>
                     <value></value>
                     <default>*</default>
                     <allowEmptyValue>0</allowEmptyValue>
-                    <width>40</width>
+                    <width>60</width>
                 </stringParameter>
                 <booleanParameter>
                     <name>EnableAutomaticUpdates</name>
@@ -1183,7 +1218,7 @@ disk.usage.absolute=500</text>
                     <value></value>
                     <default>localhost</default>
                     <allowEmptyValue>0</allowEmptyValue>
-                    <width>40</width>
+                    <width>60</width>
                 </stringParameter>
                 <stringParameter>
                     <name>AggregatorPort</name>
@@ -1192,7 +1227,7 @@ disk.usage.absolute=500</text>
                     <value></value>
                     <default>5555</default>
                     <allowEmptyValue>0</allowEmptyValue>
-                    <width>10</width>
+                    <width>20</width>
                 </stringParameter>
                 <stringParameter>
                     <name>PublicKey</name>
@@ -1201,7 +1236,7 @@ disk.usage.absolute=500</text>
                     <value></value>
                     <default>5A5832576F434D2D57367D667148464865326E3C4B74586B733C574C7A624E6355642D5239282E7200</default>
                     <allowEmptyValue>0</allowEmptyValue>
-                    <width>40</width>
+                    <width>60</width>
                 </stringParameter>
                 <stringParameter>
                     <name>ExtensionPort</name>
@@ -1210,7 +1245,7 @@ disk.usage.absolute=500</text>
                     <value></value>
                     <default>8111</default>
                     <allowEmptyValue>0</allowEmptyValue>
-                    <width>10</width>
+                    <width>20</width>
                 </stringParameter>
             </parameterList>
         </parameterGroup>

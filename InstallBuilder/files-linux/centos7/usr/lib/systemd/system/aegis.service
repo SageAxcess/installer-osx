@@ -1,0 +1,13 @@
+[Unit]
+Description = Aegis service
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/usr/local/aegis
+ExecStart=/usr/local/aegis/bin/aegis
+PIDFile=/usr/local/aegis/aegis.pid
+Environment=LD_LIBRARY_PATH=/usr/local/lib
+
+[Install]
+WantedBy=multi-user.target
