@@ -39,15 +39,6 @@
                     <platforms>windows</platforms>
                     <distributionFileList>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins000.dat</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins001.dat</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/uninstall.dat</origin>
-                        </distributionFile>
-                        <distributionFile>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.conf</origin>
                         </distributionFile>
                         <distributionFile>
@@ -123,31 +114,10 @@
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/zlib1.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/Uninstall Aegis Workstation Agent.lnk</origin>
-                        </distributionFile>
-                        <distributionFile>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.exe</origin>
                         </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins000.exe</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/unins001.exe</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/uninstall.exe</origin>
-                        </distributionFile>
-                        <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/browser</origin>
-                        </distributionDirectory>
                         <distributionDirectory>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/deploy</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/extensions</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/ie</origin>
                         </distributionDirectory>
                         <distributionDirectory>
                             <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
@@ -484,7 +454,9 @@
             </ruleList>
         </httpGet>
         <httpGet>
+            <explanation>Downloading Safari extension</explanation>
             <filename>${installdir}/AEGIS.safariextz</filename>
+            <progressText>Downloading Safari extension</progressText>
             <url>https://aegis-osx.s3.amazonaws.com/AEGIS.safariextz</url>
             <ruleList>
                 <platformTest>
@@ -517,7 +489,9 @@
             </ruleList>
         </httpGet>
         <httpGet>
+            <explanation>Downloading install files</explanation>
             <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
+            <progressText>Downloading install files</progressText>
             <url>https://aegis-centos-7.s3.amazonaws.com/aegis-2.4.4-manual_x86_64.tar.gz</url>
             <ruleList>
                 <platformTest>
@@ -531,7 +505,9 @@
             </ruleList>
         </httpGet>
         <httpGet>
+            <explanation>Downloading install files</explanation>
             <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
+            <progressText>Downloading install files</progressText>
             <url>https://aegis-apt-wily.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.tar.gz</url>
             <ruleList>
                 <compareText>
@@ -544,6 +520,38 @@
                 </platformTest>
             </ruleList>
         </httpGet>
+        <httpGet>
+            <explanation>Downloading install files</explanation>
+            <filename>${installdir}/aegis_2.4.4-manual_x86_64.zip</filename>
+            <progressText>Downloading install files</progressText>
+            <url>https://aegis-win.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.zip</url>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+        <unzip>
+            <destinationDirectory>${installdir}</destinationDirectory>
+            <explanation>Unpacking install files</explanation>
+            <progressText>Unpacking install files</progressText>
+            <zipFile>${installdir}/aegis_2.4.4-manual_x86_64.zip</zipFile>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </unzip>
     </readyToInstallActionList>
     <postInstallationActionList>
         <actionGroup>
@@ -691,8 +699,17 @@ disk.usage.absolute=500</text>
         <actionGroup>
             <actionList>
                 <runProgram>
-                    <program>C:/Program Files/Win10Pcap/Win32/Installer.exe</program>
-                    <programArguments></programArguments>
+                    <explanation>Installing packet filter driver</explanation>
+                    <program>msiexec.exe</program>
+                    <programArguments>/i ${installdir}\deploy\aegis-pcap-x86_64.msi /qn /L*V c:\aegis-pcap-install.log</programArguments>
+                    <progressText>Installing packet filter driver</progressText>
+                    <show>0</show>
+                    <ruleList>
+                        <fileExists>
+                            <negate>1</negate>
+                            <path>${windows_folder_program_files}\AegisPcap\x86\packet-ndis6.dll</path>
+                        </fileExists>
+                    </ruleList>
                 </runProgram>
                 <writeFile>
                     <explanation>Update Aegis configuration file</explanation>
@@ -769,40 +786,31 @@ disk.usage.absolute=500</text>
                     <showMessageOnError>0</showMessageOnError>
                 </runProgram>
                 <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>sc</program>
-                    <programArguments>create Aegis displayname= "AEGIS service" binPath= "${installdir}\aegis.exe" start= auto</programArguments>
-                    <showMessageOnError>0</showMessageOnError>
+                    <explanation>Installing Visual C++ 2008 Runtime</explanation>
+                    <program>${installdir}/vcredist_x86.exe</program>
+                    <programArguments>/q</programArguments>
+                    <progressText>Installing Visual C++ 2008 Runtime</progressText>
+                    <show>0</show>
+                    <ruleList>
+                        <registryTest>
+                            <key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{FF66E9F6-83E7-3A3E-AF14-8DE9A809A6A4}</key>
+                            <logic>exists</logic>
+                            <name></name>
+                            <wowMode>32</wowMode>
+                        </registryTest>
+                    </ruleList>
                 </runProgram>
                 <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>sc</program>
-                    <programArguments>description Aegis "Collects and analyzes network packets, transmits data to the cloud"</programArguments>
-                    <showMessageOnError>0</showMessageOnError>
+                    <explanation>Installing Aegis service</explanation>
+                    <program>${installdir}/aegis.exe</program>
+                    <programArguments>-install</programArguments>
+                    <progressText>Installing Aegis service</progressText>
+                    <show>0</show>
                 </runProgram>
                 <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>sc</program>
-                    <programArguments>failure Aegis reset= 86400 actions= restart/1000</programArguments>
-                    <showMessageOnError>0</showMessageOnError>
-                </runProgram>
-                <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>sc</program>
-                    <programArguments>start Aegis</programArguments>
-                    <showMessageOnError>0</showMessageOnError>
-                </runProgram>
-                <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>regsvr32</program>
-                    <programArguments>/s "${installdir}/ie/CommonInterface.dll"</programArguments>
-                    <showMessageOnError>0</showMessageOnError>
-                </runProgram>
-                <runProgram>
-                    <abortOnError>0</abortOnError>
-                    <program>regsvr32</program>
-                    <programArguments>/s "${installdir}/ie/Content.dll"</programArguments>
-                    <showMessageOnError>0</showMessageOnError>
+                    <program>${installdir}/aegis.exe</program>
+                    <programArguments>-run</programArguments>
+                    <show>0</show>
                 </runProgram>
             </actionList>
             <ruleList>
@@ -1065,111 +1073,115 @@ disk.usage.absolute=500</text>
         </runProgram>
     </preUninstallationActionList>
     <postUninstallationActionList>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>launchctl</program>
-            <programArguments>unload /Library/LaunchDaemons/aegis.plist</programArguments>
-            <showMessageOnError>0</showMessageOnError>
+        <actionGroup>
+            <actionList>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>launchctl</program>
+                    <programArguments>unload /Library/LaunchDaemons/aegis.plist</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                </runProgram>
+                <deleteFile>
+                    <abortOnError>0</abortOnError>
+                    <path>/Library/LaunchDaemons/aegis.plist</path>
+                    <showMessageOnError>0</showMessageOnError>
+                </deleteFile>
+                <deleteFile>
+                    <abortOnError>0</abortOnError>
+                    <path>~/Library/Safari/Extensions/AEGIS.safariextz</path>
+                    <showMessageOnError>0</showMessageOnError>
+                </deleteFile>
+                <deleteFile>
+                    <abortOnError>0</abortOnError>
+                    <path>/usr/local/bin/aegis</path>
+                    <showMessageOnError>0</showMessageOnError>
+                </deleteFile>
+                <deleteFile>
+                    <abortOnError>0</abortOnError>
+                    <path>/usr/local/aegis</path>
+                    <showMessageOnError>0</showMessageOnError>
+                </deleteFile>
+                <deleteFile>
+                    <abortOnError>0</abortOnError>
+                    <path>/usr/local/opt/aegis</path>
+                    <showMessageOnError>0</showMessageOnError>
+                </deleteFile>
+            </actionList>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
                 </platformTest>
             </ruleList>
-        </runProgram>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>/Library/LaunchDaemons/aegis.plist</path>
-            <showMessageOnError>0</showMessageOnError>
+        </actionGroup>
+        <actionGroup>
+            <actionList>
+                <deleteFile>
+                    <abortOnError>0</abortOnError>
+                    <path>/usr/local/aegis</path>
+                    <showMessageOnError>0</showMessageOnError>
+                </deleteFile>
+            </actionList>
             <ruleList>
                 <platformTest>
-                    <type>osx</type>
+                    <type>linux</type>
                 </platformTest>
             </ruleList>
-        </deleteFile>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>~/Library/Safari/Extensions/AEGIS.safariextz</path>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>/usr/local/bin/aegis</path>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>/usr/local/aegis</path>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <deleteFile>
-            <abortOnError>0</abortOnError>
-            <path>/usr/local/opt/aegis</path>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-            </ruleList>
-        </deleteFile>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>reg</program>
-            <programArguments>delete HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /f</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows-x86</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>reg</program>
-            <programArguments>delete HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /f</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows-x64</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>regsvr32</program>
-            <programArguments>/s /u "${installdir}/ie/CommonInterface.dll"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
+        </actionGroup>
+        <actionGroup>
+            <actionList>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>reg</program>
+                    <programArguments>delete HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /f</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <platformTest>
+                            <type>windows-x86</type>
+                        </platformTest>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>reg</program>
+                    <programArguments>delete HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /f</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <platformTest>
+                            <type>windows-x64</type>
+                        </platformTest>
+                    </ruleList>
+                </runProgram>
+                <registryGet>
+                    <key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SageAxcess</key>
+                    <name>UninstallString</name>
+                    <variable>ie_uninstall</variable>
+                    <ruleList>
+                        <platformTest>
+                            <type>windows-x86</type>
+                        </platformTest>
+                    </ruleList>
+                </registryGet>
+                <registryGet>
+                    <key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SageAxcess</key>
+                    <name>UninstallString</name>
+                    <variable>ie_uninstall</variable>
+                    <ruleList>
+                        <platformTest>
+                            <type>windows-x64</type>
+                        </platformTest>
+                    </ruleList>
+                </registryGet>
+                <runProgram>
+                    <program>${ie_uninstall}</program>
+                    <programArguments>/S</programArguments>
+                </runProgram>
+            </actionList>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
                 </platformTest>
             </ruleList>
-        </runProgram>
-        <runProgram>
-            <abortOnError>0</abortOnError>
-            <program>regsvr32</program>
-            <programArguments>/s /u "${installdir}/ie/Content.dll"</programArguments>
-            <showMessageOnError>0</showMessageOnError>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-            </ruleList>
-        </runProgram>
+        </actionGroup>
     </postUninstallationActionList>
     <createOsxBundleDmg>1</createOsxBundleDmg>
     <disableSplashScreen>1</disableSplashScreen>
