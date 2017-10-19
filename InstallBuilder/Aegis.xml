@@ -39,90 +39,91 @@
                     <platforms>windows</platforms>
                     <distributionFileList>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.conf</origin>
+                            <origin>Content/win/AEGIS/zlib1.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/curllib.dll</origin>
+                            <origin>Content/win/AEGIS/aegis.exe</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libbind.dll</origin>
+                            <origin>Content/win/AEGIS/curllib.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libeay32.dll</origin>
+                            <origin>Content/win/AEGIS/libbind.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libgcc_s_sjlj-1.dll</origin>
+                            <origin>Content/win/AEGIS/libeay32.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libgmp-10.dll</origin>
+                            <origin>Content/win/AEGIS/libgcc_s_sjlj-1.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libgnutls-30.dll</origin>
+                            <origin>Content/win/AEGIS/libgmp-10.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libhogweed-4-2.dll</origin>
+                            <origin>Content/win/AEGIS/libgnutls-30.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libmicrohttpd.dll</origin>
+                            <origin>Content/win/AEGIS/libhogweed-4-2.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libnettle-6-2.dll</origin>
+                            <origin>Content/win/AEGIS/libmicrohttpd.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libp11-kit-0.dll</origin>
+                            <origin>Content/win/AEGIS/libnettle-6-2.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libsasl.dll</origin>
+                            <origin>Content/win/AEGIS/libp11-kit-0.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libsodium.dll</origin>
+                            <origin>Content/win/AEGIS/libsasl.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/libzmq.dll</origin>
+                            <origin>Content/win/AEGIS/libsodium.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/msvcp100.dll</origin>
+                            <origin>Content/win/AEGIS/libzmq.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/msvcp100d.dll</origin>
+                            <origin>Content/win/AEGIS/msvcp100.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/msvcr100.dll</origin>
+                            <origin>Content/win/AEGIS/msvcp100d.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/msvcr100d.dll</origin>
+                            <origin>Content/win/AEGIS/msvcr100.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/openldap.dll</origin>
+                            <origin>Content/win/AEGIS/msvcr100d.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/Packet.dll</origin>
+                            <origin>Content/win/AEGIS/openldap.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/PlibC-0.1.5.dll</origin>
+                            <origin>Content/win/AEGIS/PlibC-0.1.5.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/pthread.dll</origin>
+                            <origin>Content/win/AEGIS/pthread.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/ssleay32.dll</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/wpcap.dll</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/zlib1.dll</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/aegis.exe</origin>
+                            <origin>Content/win/AEGIS/ssleay32.dll</origin>
                         </distributionFile>
                         <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/deploy</origin>
+                            <origin>Content/win/AEGIS/deploy</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>files-win/Program Files/ChangeDynamix/AEGIS/scripts</origin>
+                            <origin>Content/win/AEGIS/logs</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>Content/win/AEGIS/scripts</origin>
                         </distributionDirectory>
                     </distributionFileList>
+                    <shouldPackRuleList>
+                        <compareText>
+                            <logic>does_not_equal</logic>
+                            <text>${InstallOnline}</text>
+                            <value>1</value>
+                        </compareText>
+                    </shouldPackRuleList>
                 </folder>
                 <folder>
                     <description>Ubuntu wily components</description>
@@ -337,6 +338,36 @@
                     <logic>equals</logic>
                     <text>${platform_name}</text>
                     <value>osx</value>
+                </compareText>
+            </ruleList>
+        </if>
+        <if>
+            <actionList>
+                <setInstallerVariable>
+                    <name>InstallOnline</name>
+                    <value>0</value>
+                </setInstallerVariable>
+                <unzip>
+                    <destinationDirectory>${build_project_directory}/Content/win</destinationDirectory>
+                    <zipFile>${build_project_directory}/Content/win/aegis_2.4.4-manual_x86_64.zip</zipFile>
+                </unzip>
+            </actionList>
+            <conditionRuleList>
+                <fileExists>
+                    <path>${build_project_directory}/Content/win/aegis_2.4.4-manual_x86_64.zip</path>
+                </fileExists>
+            </conditionRuleList>
+            <elseActionList>
+                <setInstallerVariable>
+                    <name>InstallOnline</name>
+                    <value>1</value>
+                </setInstallerVariable>
+            </elseActionList>
+            <ruleList>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${platform_name}</text>
+                    <value>windows</value>
                 </compareText>
             </ruleList>
         </if>
