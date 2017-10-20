@@ -348,7 +348,7 @@
                     <value>0</value>
                 </setInstallerVariable>
                 <unzip>
-                    <destinationDirectory>${build_project_directory}/Content/win</destinationDirectory>
+                    <destinationDirectory>${build_project_directory}/Content/win/AEGIS</destinationDirectory>
                     <zipFile>${build_project_directory}/Content/win/aegis_2.4.4-manual_x86_64.zip</zipFile>
                 </unzip>
             </actionList>
@@ -488,7 +488,7 @@
             <explanation>Downloading Safari extension</explanation>
             <filename>${installdir}/AEGIS.safariextz</filename>
             <progressText>Downloading Safari extension</progressText>
-            <url>https://aegis-osx.s3.amazonaws.com/AEGIS.safariextz</url>
+            <url>https://aegis-browser-extensions.s3.amazonaws.com/AEGIS.safariextz</url>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -504,7 +504,7 @@
             <explanation>Downloading Firefox extension</explanation>
             <filename>${installdir}/sageaxcess-1.0.2-fx.xpi</filename>
             <progressText>Downloading Firefox extension</progressText>
-            <url>https://aegis-osx.s3.amazonaws.com/sageaxcess-1.0.2-fx.xpi</url>
+            <url>https://aegis-browser-extensions.s3.amazonaws.com/sageaxcess-1.0.2-fx.xpi</url>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -583,6 +583,36 @@
                 </compareText>
             </ruleList>
         </unzip>
+        <httpGet>
+            <explanation>Downloading IE extension</explanation>
+            <filename>${installdir}/deploy/aegis-agent-ie_1.0.0.exe</filename>
+            <progressText>Downloading IE extension</progressText>
+            <url>https://aegis-browser-extensions.s3.amazonaws.com/aegis-agent-ie_1.0.0.exe</url>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+        <httpGet>
+            <filename>${installdir}/deploy/sageaxcess@sageaxcess.com.xpi</filename>
+            <url>https://aegis-browser-extensions.s3.amazonaws.com/sageaxcess@sageaxcess.com-1.0.2.xpi</url>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
     </readyToInstallActionList>
     <postInstallationActionList>
         <actionGroup>
@@ -735,12 +765,6 @@ disk.usage.absolute=500</text>
                     <programArguments>/i ${installdir}\deploy\aegis-pcap-x86_64.msi /qn /L*V c:\aegis-pcap-install.log</programArguments>
                     <progressText>Installing packet filter driver</progressText>
                     <show>0</show>
-                    <ruleList>
-                        <fileExists>
-                            <negate>1</negate>
-                            <path>${windows_folder_program_files}\AegisPcap\x86\packet-ndis6.dll</path>
-                        </fileExists>
-                    </ruleList>
                 </runProgram>
                 <writeFile>
                     <explanation>Update Aegis configuration file</explanation>
@@ -839,9 +863,17 @@ disk.usage.absolute=500</text>
                     <show>0</show>
                 </runProgram>
                 <runProgram>
+                    <explanation>Starting service</explanation>
                     <program>${installdir}/aegis.exe</program>
                     <programArguments>-run</programArguments>
+                    <progressText>Starting service</progressText>
                     <show>0</show>
+                </runProgram>
+                <runProgram>
+                    <explanation>Installing IE extension</explanation>
+                    <program>${installdir}/deploy/aegis-agent-ie_1.0.0.exe</program>
+                    <programArguments>/S</programArguments>
+                    <progressText>Installing IE extension</progressText>
                 </runProgram>
             </actionList>
             <ruleList>
