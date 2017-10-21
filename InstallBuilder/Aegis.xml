@@ -347,14 +347,17 @@
                     <name>InstallOnline</name>
                     <value>0</value>
                 </setInstallerVariable>
+                <createDirectory>
+                    <path>${build_project_directory}/Content/win/AEGIS</path>
+                </createDirectory>
                 <unzip>
                     <destinationDirectory>${build_project_directory}/Content/win/AEGIS</destinationDirectory>
-                    <zipFile>${build_project_directory}/Content/win/aegis_2.4.4-manual_x86_64.zip</zipFile>
+                    <zipFile>${build_project_directory}/Content/win/aegis-2.4.4-manual_x86_64.zip</zipFile>
                 </unzip>
             </actionList>
             <conditionRuleList>
                 <fileExists>
-                    <path>${build_project_directory}/Content/win/aegis_2.4.4-manual_x86_64.zip</path>
+                    <path>${build_project_directory}/Content/win/aegis-2.4.4-manual_x86_64.zip</path>
                 </fileExists>
             </conditionRuleList>
             <elseActionList>
@@ -553,9 +556,9 @@
         </httpGet>
         <httpGet>
             <explanation>Downloading install files</explanation>
-            <filename>${installdir}/aegis_2.4.4-manual_x86_64.zip</filename>
+            <filename>${installdir}/aegis-2.4.4-manual_x86_64.zip</filename>
             <progressText>Downloading install files</progressText>
-            <url>https://aegis-win.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.zip</url>
+            <url>https://aegis-win.s3.amazonaws.com/aegis-2.4.4-manual_x86_64.zip</url>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -571,7 +574,7 @@
             <destinationDirectory>${installdir}</destinationDirectory>
             <explanation>Unpacking install files</explanation>
             <progressText>Unpacking install files</progressText>
-            <zipFile>${installdir}/aegis_2.4.4-manual_x86_64.zip</zipFile>
+            <zipFile>${installdir}/aegis-2.4.4-manual_x86_64.zip</zipFile>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -602,6 +605,20 @@
         <httpGet>
             <filename>${installdir}/deploy/sageaxcess@sageaxcess.com.xpi</filename>
             <url>https://aegis-browser-extensions.s3.amazonaws.com/sageaxcess@sageaxcess.com-1.0.2.xpi</url>
+            <ruleList>
+                <platformTest>
+                    <type>windows</type>
+                </platformTest>
+                <compareText>
+                    <logic>equals</logic>
+                    <text>${InstallOnline}</text>
+                    <value>1</value>
+                </compareText>
+            </ruleList>
+        </httpGet>
+        <httpGet>
+            <filename>${installdir}/deploy/aegis-pcap-x86_64.msi</filename>
+            <url>https://aegis-win.s3.amazonaws.com/aegis-pcap-x86_64.msi</url>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -760,6 +777,23 @@ disk.usage.absolute=500</text>
         <actionGroup>
             <actionList>
                 <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <explanation>Reinstalling packet driver</explanation>
+                    <program>msiexec.exe</program>
+                    <programArguments>/X{7F3ADE9E-D317-47f2-9DC8-754887CD242A} /qn /norestart /L*V aegis-pcap-uninstall.log</programArguments>
+                    <progressText>Reinstalling packet driver</progressText>
+                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                    <show>0</show>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <registryTest>
+                            <key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F3ADE9E-D317-47f2-9DC8-754887CD242A}</key>
+                            <logic>exists</logic>
+                            <name></name>
+                        </registryTest>
+                    </ruleList>
+                </runProgram>
+                <runProgram>
                     <explanation>Installing packet filter driver</explanation>
                     <program>msiexec.exe</program>
                     <programArguments>/i ${installdir}\deploy\aegis-pcap-x86_64.msi /qn /L*V c:\aegis-pcap-install.log</programArguments>
@@ -832,6 +866,13 @@ disk.usage.absolute=500</text>
                     <program>reg</program>
                     <programArguments>add HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
                     <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <registryTest>
+                            <key>HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions</key>
+                            <logic>exists</logic>
+                            <name></name>
+                        </registryTest>
+                    </ruleList>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
@@ -1237,6 +1278,16 @@ disk.usage.absolute=500</text>
                 <runProgram>
                     <program>${ie_uninstall}</program>
                     <programArguments>/S</programArguments>
+                </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <explanation>Reinstalling packet driver</explanation>
+                    <program>msiexec.exe</program>
+                    <programArguments>/X{7F3ADE9E-D317-47f2-9DC8-754887CD242A} /qn /norestart /L*V aegis-pcap-uninstall.log</programArguments>
+                    <progressText>Reinstalling packet driver</progressText>
+                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
+                    <show>0</show>
+                    <showMessageOnError>0</showMessageOnError>
                 </runProgram>
             </actionList>
             <ruleList>
