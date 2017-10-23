@@ -111,9 +111,6 @@
                             <origin>Content/win/AEGIS/deploy</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>Content/win/AEGIS/logs</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
                             <origin>Content/win/AEGIS/scripts</origin>
                         </distributionDirectory>
                     </distributionFileList>
@@ -351,7 +348,7 @@
                     <path>${build_project_directory}/Content/win/AEGIS</path>
                 </createDirectory>
                 <unzip>
-                    <destinationDirectory>${build_project_directory}/Content/win/AEGIS</destinationDirectory>
+                    <destinationDirectory>${build_project_directory}/Content/win</destinationDirectory>
                     <zipFile>${build_project_directory}/Content/win/aegis-2.4.4-manual_x86_64.zip</zipFile>
                 </unzip>
             </actionList>
@@ -776,6 +773,9 @@ disk.usage.absolute=500</text>
         </actionGroup>
         <actionGroup>
             <actionList>
+                <createDirectory>
+                    <path>${installdir}/logs</path>
+                </createDirectory>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <explanation>Reinstalling packet driver</explanation>
@@ -796,7 +796,7 @@ disk.usage.absolute=500</text>
                 <runProgram>
                     <explanation>Installing packet filter driver</explanation>
                     <program>msiexec.exe</program>
-                    <programArguments>/i ${installdir}\deploy\aegis-pcap-x86_64.msi /qn /L*V c:\aegis-pcap-install.log</programArguments>
+                    <programArguments>/i "${installdir}\deploy\aegis-pcap-x86_64.msi" /qn /L*V c:\aegis-pcap-install.log</programArguments>
                     <progressText>Installing packet filter driver</progressText>
                     <show>0</show>
                 </runProgram>
