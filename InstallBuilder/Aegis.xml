@@ -469,26 +469,10 @@
             </ruleList>
         </createDirectory>
         <httpGet>
-            <explanation>Downloading install files</explanation>
-            <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
-            <progressText>Downloading install files</progressText>
-            <url>https://aegis-osx.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.tar.gz</url>
-            <ruleList>
-                <platformTest>
-                    <type>osx</type>
-                </platformTest>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-            </ruleList>
-        </httpGet>
-        <httpGet>
             <explanation>Downloading Safari extension</explanation>
             <filename>${installdir}/AEGIS.safariextz</filename>
             <progressText>Downloading Safari extension</progressText>
-            <url>https://aegis-browser-extensions.s3.amazonaws.com/AEGIS.safariextz</url>
+            <url>https://aegis-osx.s3.amazonaws.com/AEGIS.safariextz</url>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -502,9 +486,9 @@
         </httpGet>
         <httpGet>
             <explanation>Downloading Firefox extension</explanation>
-            <filename>${installdir}/sageaxcess-1.0.2-fx.xpi</filename>
+            <filename>${installdir}/aegis.xpi</filename>
             <progressText>Downloading Firefox extension</progressText>
-            <url>https://aegis-browser-extensions.s3.amazonaws.com/sageaxcess-1.0.2-fx.xpi</url>
+            <url>https://aegis-osx.s3.amazonaws.com/aegis.xpi</url>
             <ruleList>
                 <platformTest>
                     <type>osx</type>
@@ -520,74 +504,8 @@
             </ruleList>
         </httpGet>
         <httpGet>
-            <explanation>Downloading install files</explanation>
-            <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
-            <progressText>Downloading install files</progressText>
-            <url>https://aegis-centos-7.s3.amazonaws.com/aegis-2.4.4-manual_x86_64.tar.gz</url>
-            <ruleList>
-                <platformTest>
-                    <type>linux</type>
-                </platformTest>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-            </ruleList>
-        </httpGet>
-        <httpGet>
-            <explanation>Downloading install files</explanation>
-            <filename>${installdir}/aegis_2.4.4-x86_64.tar.gz</filename>
-            <progressText>Downloading install files</progressText>
-            <url>https://aegis-apt-wily.s3.amazonaws.com/aegis_2.4.4-manual_x86_64.tar.gz</url>
-            <ruleList>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-                <platformTest>
-                    <type>linux</type>
-                </platformTest>
-            </ruleList>
-        </httpGet>
-        <httpGet>
-            <explanation>Downloading install files</explanation>
-            <filename>${installdir}/aegis-2.4.4-manual_x86_64.zip</filename>
-            <progressText>Downloading install files</progressText>
-            <url>https://aegis-win.s3.amazonaws.com/aegis-2.4.4-manual_x86_64.zip</url>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-            </ruleList>
-        </httpGet>
-        <unzip>
-            <destinationDirectory>${installdir}</destinationDirectory>
-            <explanation>Unpacking install files</explanation>
-            <progressText>Unpacking install files</progressText>
-            <zipFile>${installdir}/aegis-2.4.4-manual_x86_64.zip</zipFile>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-            </ruleList>
-        </unzip>
-        <httpGet>
-            <explanation>Downloading IE extension</explanation>
-            <filename>${installdir}/deploy/aegis-agent-ie_1.0.0.exe</filename>
-            <progressText>Downloading IE extension</progressText>
-            <url>https://aegis-browser-extensions.s3.amazonaws.com/aegis-agent-ie_1.0.0.exe</url>
+            <filename>${installdir}/aegis.xpi</filename>
+            <url>https://aegis-osx.s3.amazonaws.com/aegis.xpi</url>
             <ruleList>
                 <platformTest>
                     <type>windows</type>
@@ -600,32 +518,8 @@
             </ruleList>
         </httpGet>
         <httpGet>
-            <filename>${installdir}/deploy/sageaxcess@sageaxcess.com.xpi</filename>
-            <url>https://aegis-browser-extensions.s3.amazonaws.com/sageaxcess@sageaxcess.com-1.0.2.xpi</url>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-            </ruleList>
-        </httpGet>
-        <httpGet>
-            <filename>${installdir}/deploy/aegis-pcap-x86_64.msi</filename>
-            <url>https://aegis-win.s3.amazonaws.com/aegis-pcap-x86_64.msi</url>
-            <ruleList>
-                <platformTest>
-                    <type>windows</type>
-                </platformTest>
-                <compareText>
-                    <logic>equals</logic>
-                    <text>${InstallOnline}</text>
-                    <value>1</value>
-                </compareText>
-            </ruleList>
+            <filename>${installdir}/aegis.appx</filename>
+            <url>https://aegis-osx.s3.amazonaws.com/aegis.appx</url>
         </httpGet>
     </readyToInstallActionList>
     <postInstallationActionList>
@@ -718,15 +612,18 @@ disk.usage.absolute=500</text>
                     <customErrorMessage>Failed to install Firefox extension</customErrorMessage>
                     <explanation>Install Firefox extension</explanation>
                     <program>cp</program>
-                    <programArguments>-f ${installdir}/sageaxcess-1.0.2-fx.xpi /Applications/Firefox.app/Contents/Resources/browser/extensions/sageaxcess@sageaxcess.com.xpi</programArguments>
+                    <programArguments>-f ${installdir}/aegis.xpi /Applications/Firefox.app/Contents/Resources/browser/extensions/aegis.xpi</programArguments>
                     <ruleList>
                         <fileExists>
                             <path>/Applications/Firefox.app</path>
                         </fileExists>
                     </ruleList>
                 </runProgram>
+                <createDirectory>
+                    <path>/Library/Application Support/Google/Chrome/External Extensions</path>
+                </createDirectory>
                 <writeFile>
-                    <path>/Library/Application Support/Google/Chrome/External Extensions/ljggkhkdbndekocjhnhnebkilnmaeopj.json</path>
+                    <path>/Library/Application Support/Google/Chrome/External Extensions/aegis_chrome_id.json</path>
                     <text>{
     "external_update_url": "https://clients2.google.com/service/update2/crx"
 }
@@ -778,93 +675,9 @@ disk.usage.absolute=500</text>
                 </createDirectory>
                 <runProgram>
                     <abortOnError>0</abortOnError>
-                    <explanation>Reinstalling packet driver</explanation>
-                    <program>msiexec.exe</program>
-                    <programArguments>/X{7F3ADE9E-D317-47f2-9DC8-754887CD242A} /qn /norestart /L*V aegis-pcap-uninstall.log</programArguments>
-                    <progressText>Reinstalling packet driver</progressText>
-                    <ruleEvaluationLogic>or</ruleEvaluationLogic>
-                    <show>0</show>
-                    <showMessageOnError>0</showMessageOnError>
-                    <ruleList>
-                        <registryTest>
-                            <key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F3ADE9E-D317-47f2-9DC8-754887CD242A}</key>
-                            <logic>exists</logic>
-                            <name></name>
-                        </registryTest>
-                    </ruleList>
-                </runProgram>
-                <runProgram>
-                    <explanation>Installing packet filter driver</explanation>
-                    <program>msiexec.exe</program>
-                    <programArguments>/i "${installdir}\deploy\aegis-pcap-x86_64.msi" /qn /L*V c:\aegis-pcap-install.log</programArguments>
-                    <progressText>Installing packet filter driver</progressText>
-                    <show>0</show>
-                </runProgram>
-                <writeFile>
-                    <explanation>Update Aegis configuration file</explanation>
-                    <path>${installdir}/aegis.conf</path>
-                    <text>############################
-# Aegis config file
-############################
-
-# Aegis settings
-
-# Specify interface name to listen on. For Windows - it will be something like \Device\NPF_{F53438F5-79C7-4A78-8254-B10D3CA50225}
-# For Linux/OSX - en0 or eth0
-# Use aegis --print-interfaces to see all available interfaces.
-# Value of "*" means listen on all interfaces.
-listen.interface=${ListenOn}
-# Default policy to use. Cannot be applied without service restart. Defines scripts/features to be loaded.
-default.policy=local
-
-# Aggregator settings
-
-# Main aggregator address. You can omit tcp:// and :port if it is default (5555)
-zmq.server=tcp://${AggregatorHost}:${AggregatorPort}
-# Comma-separated list of secondary aggregators. You can omit tcp:// and :port if it is default (5555)
-#zmq.server.secondary=localhost,tcp://192.168.1.15:5556,tcp://data.sageaxcess.com
-# Aggregator public key
-zmq.public_key=${PublicKey}
-
-# Local agent settings
-
-# Plain http port
-agent.port=${ExtensionPort}
-# Https port
-agent.port.ssl=8112
-
-# Updater settings
-
-# Automatic updates enabled/disabled flag. If enabled, updater will periodically check if there's a new version available
-updates.enabled=${EnableAutomaticUpdates}
-# Interval for automatic updates check, in minutes
-updates.interval=60
-# Remote control enabled/disabled flag. If enabled, plugin will query aggregator for a list of available commands each 1 minute.
-remote.control=true
-# Base url for remote updates
-updater.url=http://build.sageaxcess.com
-
-# Remote input
-#remote.input.interface=en0
-#remote.input.key_file=
-#remote.input.hostname=192.168.1.1
-#remote.input.username=root
-#remote.input.exec=tcpdump
-
-# usage limits
-
-# Process priority. 0 = normal, -20 = highest, 19 = lowest. Use any values in between
-process.priority=0
-# Maximum disk usage, percent. Will be applied if it's lower than value in Mb.
-disk.usage.relative=10
-# Maximum disk usage, in Mb. Will be applied if it's lower than value in %
-disk.usage.absolute=500</text>
-                </writeFile>
-                <runProgram>
-                    <abortOnError>0</abortOnError>
                     <explanation>Add Aegis Extension to Google Chrome x32</explanation>
                     <program>reg</program>
-                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions\aegix_chrome_id /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
                     <showMessageOnError>0</showMessageOnError>
                     <ruleList>
                         <registryTest>
@@ -878,43 +691,19 @@ disk.usage.absolute=500</text>
                     <abortOnError>0</abortOnError>
                     <explanation>Add Aegis Extension to Google Chrome x64</explanation>
                     <program>reg</program>
-                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\ljggkhkdbndekocjhnhnebkilnmaeopj /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\aegis_chrome_id /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
                     <showMessageOnError>0</showMessageOnError>
                 </runProgram>
+                <createDirectory>
+                    <path>${user_home_directory}\AppData\Roaming\Mozilla\Extensions\{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</path>
+                </createDirectory>
+                <copyFile>
+                    <destination>${user_home_directory}\AppData\Roaming\Mozilla\Extensions\{ec8030f7-c20a-464f-9b0e-13a3a9e97384}\aegis.xpi</destination>
+                    <origin>${installdir}\aegis.xpi</origin>
+                </copyFile>
                 <runProgram>
-                    <explanation>Installing Visual C++ 2008 Runtime</explanation>
-                    <program>${installdir}/vcredist_x86.exe</program>
-                    <programArguments>/q</programArguments>
-                    <progressText>Installing Visual C++ 2008 Runtime</progressText>
-                    <show>0</show>
-                    <ruleList>
-                        <registryTest>
-                            <key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{FF66E9F6-83E7-3A3E-AF14-8DE9A809A6A4}</key>
-                            <logic>exists</logic>
-                            <name></name>
-                            <wowMode>32</wowMode>
-                        </registryTest>
-                    </ruleList>
-                </runProgram>
-                <runProgram>
-                    <explanation>Installing Aegis service</explanation>
-                    <program>${installdir}/aegis.exe</program>
-                    <programArguments>-install</programArguments>
-                    <progressText>Installing Aegis service</progressText>
-                    <show>0</show>
-                </runProgram>
-                <runProgram>
-                    <explanation>Starting service</explanation>
-                    <program>${installdir}/aegis.exe</program>
-                    <programArguments>-run</programArguments>
-                    <progressText>Starting service</progressText>
-                    <show>0</show>
-                </runProgram>
-                <runProgram>
-                    <explanation>Installing IE extension</explanation>
-                    <program>${installdir}/deploy/aegis-agent-ie_1.0.0.exe</program>
-                    <programArguments>/S</programArguments>
-                    <progressText>Installing IE extension</progressText>
+                    <program>cmd.exe</program>
+                    <programArguments>/C powershell -command "&amp; {&amp;'Add-AppxPackage' '${installdir}\aegis.appx'}"</programArguments>
                 </runProgram>
             </actionList>
             <ruleList>
