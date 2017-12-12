@@ -31,7 +31,9 @@ WINDOWS:
 
     Aegis files must be installed in "Program Files (Windows)" and "ProgramData (Windows)"
 
-    "Aegis Mozilla Firefox extension" file must be installed in /Program Files/Mozilla Firefox/browser/extensions
+    "Aegis Mozilla Firefox extension" file must be installed in %APPDATA%\Mozilla\Extensions
+    
+    "Aegis Edge extension" must be installed in "Program Files (Windows)" and "ProgramData (Windows)"
 
 LINUX:
     
@@ -58,6 +60,8 @@ Select "Post-installation Actions" to edit the installer scripts. There are:
     - script to install Aegis Google Chrome extension (Windows)
 
     - script to install Aegis Internet Explorer extension (Windows)    
+    
+    - script to install Aegis Edge extension (Windows)    
 
     - script to create and run Aegis service (Windows)
 
