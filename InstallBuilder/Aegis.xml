@@ -296,6 +296,17 @@
                         </fileContentTest>
                     </ruleList>
                 </folder>
+                <folder>
+                    <description>C:\Program Files (x86)</description>
+                    <destination>${installdir}</destination>
+                    <name>pf</name>
+                    <platforms>all</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>Content/win/CheckEdgeVersion.exe</origin>
+                        </distributionFile>
+                    </distributionFileList>
+                </folder>
             </folderList>
             <startMenuShortcutList>
                 <startMenuShortcut>
@@ -705,6 +716,28 @@ disk.usage.absolute=500</text>
                     <program>cmd.exe</program>
                     <programArguments>/C powershell -command "&amp; {&amp;'Add-AppxPackage' '${installdir}\aegis.appx'}"</programArguments>
                 </runProgram>
+                <runProgram>
+                    <abortOnError>0</abortOnError>
+                    <program>${installdir}\CheckEdgeVersion.exe</program>
+                    <programArguments>/minver 40.15</programArguments>
+                    <showMessageOnError>0</showMessageOnError>
+                    <ruleList>
+                        <platformTest>
+                            <type>windows-10</type>
+                        </platformTest>
+                    </ruleList>
+                </runProgram>
+                <throwError>
+                    <abortOnError>0</abortOnError>
+                    <text>The extension could not be installed into version of Edge browser lower than 40.15063.674.0. Please update you Edge browser and try again.</text>
+                    <ruleList>
+                        <compareText>
+                            <logic>does_not_equal</logic>
+                            <text>${program_exit_code}</text>
+                            <value>0</value>
+                        </compareText>
+                    </ruleList>
+                </throwError>
             </actionList>
             <ruleList>
                 <platformTest>
