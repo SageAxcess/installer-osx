@@ -702,7 +702,7 @@ disk.usage.absolute=500</text>
                     <abortOnError>0</abortOnError>
                     <explanation>Add Aegis Extension to Google Chrome x64</explanation>
                     <program>cmd.exe</program>
-                    <programArguments>/C reg -command add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\gighmmpiobklfepjocnamgkkbiglidom /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+                    <programArguments>/C reg -command add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\aegix_chrome_id /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
                     <showMessageOnError>0</showMessageOnError>
                 </runProgram>
                 <createDirectory>
