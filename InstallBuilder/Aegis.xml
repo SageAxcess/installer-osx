@@ -701,8 +701,8 @@ disk.usage.absolute=500</text>
                 <runProgram>
                     <abortOnError>0</abortOnError>
                     <explanation>Add Aegis Extension to Google Chrome x64</explanation>
-                    <program>reg</program>
-                    <programArguments>add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\aegis_chrome_id /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
+                    <program>cmd.exe</program>
+                    <programArguments>/C reg -command add HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\gighmmpiobklfepjocnamgkkbiglidom /v update_url /d https://clients2.google.com/service/update2/crx /f</programArguments>
                     <showMessageOnError>0</showMessageOnError>
                 </runProgram>
                 <createDirectory>
@@ -715,6 +715,11 @@ disk.usage.absolute=500</text>
                 <runProgram>
                     <program>cmd.exe</program>
                     <programArguments>/C powershell -command "&amp; {&amp;'Add-AppxPackage' '${installdir}\aegis.appx'}"</programArguments>
+                    <ruleList>
+                        <platformTest>
+                            <type>windows-10</type>
+                        </platformTest>
+                    </ruleList>
                 </runProgram>
                 <runProgram>
                     <abortOnError>0</abortOnError>
