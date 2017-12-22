@@ -536,20 +536,6 @@
     <postInstallationActionList>
         <actionGroup>
             <actionList>
-                <runProgram>
-                    <program>tar</program>
-                    <programArguments>xzvf ${installdir}/aegis_2.4.4-x86_64.tar.gz -C ${installdir}</programArguments>
-                </runProgram>
-                <deleteFile>
-                    <path>${installdir}/aegis_2.4.4-x86_64.tar.gz</path>
-                </deleteFile>
-                <runProgram>
-                    <program>cp</program>
-                    <programArguments>-rfv ${installdir}/aegis/* ${installdir}</programArguments>
-                </runProgram>
-                <deleteFile>
-                    <path>${installdir}/aegis</path>
-                </deleteFile>
                 <writeFile>
                     <encoding>utf-8</encoding>
                     <explanation>Update Aegis configuration file</explanation>
