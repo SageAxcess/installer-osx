@@ -2,6 +2,9 @@
 #include <atlutil.h>
 #include "CheckEdgeVersion.h"
 
+#define CMD_PATH L"/path"
+#define CMD_INSTALL L"/install"
+#define CMD_MINVER L"/minver"
 
 
 enum {
@@ -21,7 +24,7 @@ typedef struct _command {
 
 command cmd[] = {
 	{ STRING_TYPE, L"/minver", FALSE },
-	
+	{ BOOL_STRING2_TYPE, L"/install", FALSE },
 	{}
 };
 
@@ -147,30 +150,80 @@ CString ExecAndGetOutput(CString strExePath, CString strParams) {
 
 
 
+
+//////////////////////////////////////////////////////set DWORD value to regystry/////////////////////////////////////////////////////////////////////////////////////
+BOOL RegSetDWORDValue(HKEY hKey, CString strRegPath, CString strName, DWORD dwValue) {
+	CRegKey key;
+	BOOL bRetVal = FALSE;
+
+	if (strName.IsEmpty()) return FALSE;
+
+	if (key.Create(hKey, strRegPath) != ERROR_SUCCESS) {
+		return bRetVal;
+	}
+
+	if (key.SetDWORDValue(strName, dwValue) == ERROR_SUCCESS) {
+		bRetVal = TRUE;
+	}
+
+	key.Close();
+	return bRetVal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////set DWORD value to HKEY_LOCAL_MACHINE///////////////////////////////////////////////////////////////////////////////
+BOOL RegSetLMDWORDValue(CString strRegPath, CString strName, DWORD dwValue) {
+	return RegSetDWORDValue(HKEY_LOCAL_MACHINE, strRegPath, strName, dwValue);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR  lpCmdLine, int nCmdShow) {
 	
 	ParceArgs();
 
 	CString strMinVer;
-	if (cmdMap[L"/minver"]->strVal[0] == L"") {
-		return 2;
-	}
 
 	strMinVer = cmdMap[L"/minver"]->strVal[0];
-
-	CString str =  ExecAndGetOutput(L"C:\\Windows\\system32\\cmd.exe", L"/C powershell -command \"& {&'get-appxpackage' '*edge*'}\"");
-	int nPos = str.Find(L"Version", 0);
-	if (nPos != -1) {
-		int nEnd = str.Find(L"\r\n", nPos);
-		str = str.Mid(nPos, nEnd - nPos);
-		if ((nPos = str.Find(L":", 0)) != -1) {
-			str = str.Mid(++nPos, str.GetLength());
-			str = str.Trim();
-			if (str < strMinVer) {
-				return 1;
+	if (strMinVer != "") {
+		CString str = ExecAndGetOutput(L"C:\\Windows\\system32\\cmd.exe", L"/C powershell -command \"& {&'get-appxpackage' '*edge*'}\"");
+		int nPos = str.Find(L"Version", 0);
+		if (nPos != -1) {
+			int nEnd = str.Find(L"\r\n", nPos);
+			str = str.Mid(nPos, nEnd - nPos);
+			if ((nPos = str.Find(L":", 0)) != -1) {
+				str = str.Mid(++nPos, str.GetLength());
+				str = str.Trim();
+				if (str < strMinVer) {
+					return 1;
+				}
 			}
 		}
+	} else {
+		RegSetLMDWORDValue(L"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock", L"AllowAllTrustedApps", 1);
+		OutputDebugString(cmdMap[CMD_INSTALL]->strVal[0]);
+		OutputDebugString(cmdMap[CMD_INSTALL]->strVal[1]);
+
+
+
+		CString strParam;
+		strParam.Format(L"/C certutil.exe -addstore TrustedPeople \"%s\"", cmdMap[CMD_INSTALL]->strVal[0]);
+		CString str = ExecAndGetOutput(L"C:\\Windows\\system32\\cmd.exe", strParam);
+		OutputDebugString(str);
+
+
+		strParam.Format(L"/C powershell -command \"& {&'Add-AppxPackage' -Path '%s' -ForceApplicationShutdown -Verbose}\"", cmdMap[CMD_INSTALL]->strVal[1]);
+		str = ExecAndGetOutput(L"C:\\Windows\\system32\\cmd.exe", strParam);
+
+		OutputDebugString(str);
 	}
+
+
+
 
 	return 0;
 }

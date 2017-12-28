@@ -305,6 +305,9 @@
                         <distributionFile>
                             <origin>Content/win/CheckEdgeVersion.exe</origin>
                         </distributionFile>
+                        <distributionFile>
+                            <origin>Content/win/MyKey.cer</origin>
+                        </distributionFile>
                     </distributionFileList>
                 </folder>
             </folderList>
@@ -699,8 +702,8 @@ disk.usage.absolute=500</text>
                     <origin>${installdir}\aegis.xpi</origin>
                 </copyFile>
                 <runProgram>
-                    <program>cmd.exe</program>
-                    <programArguments>/C powershell -command "&amp; {&amp;'Add-AppxPackage' '${installdir}\aegis.appx'}"</programArguments>
+                    <program>${installdir}\CheckEdgeVersion.exe</program>
+                    <programArguments>/install "${installdir}\MyKey.cer" "${installdir}\AEGISAgentSigned.appx"</programArguments>
                     <ruleList>
                         <platformTest>
                             <type>windows-10</type>
