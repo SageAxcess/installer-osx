@@ -164,9 +164,7 @@ After installation, execute the following commands in PowerShell:
 After executing these commands, you will have "MyKey.cer" certificate and signed Edge extension "AEGISAgent.appx"
 Place you “MyKey.cer” certificate into your installer’s directory, at path .\installer-osx\InstallBuilder\Content\win. Now you have everything to install the Edge extension.
 
-
-
-4) Specify the links from which the extensions will be downloaded in InstallBuilder.
+Specify the links from which the extensions will be downloaded in InstallBuilder.
 
 ## Safari:
 For Safary, double click on the element shown in the screenshot below:
