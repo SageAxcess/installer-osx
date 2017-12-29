@@ -153,45 +153,18 @@ Now, you have everything for the installation of Firefox “extension”.
 
 Edge
 
-In order to download the plugin, you will need to download the program named Fiddler.
-To start, download Fiddler (https://www.telerik.com/fiddler) from its official site and install it like any other Windows Software.
-By default, Windows won’t allow apps to send network traffic to the local computer, so we first need to remove this restriction. To do that, open Fiddler by searching for it in the Start menu.
-Once opened, click on the “WinConfig” button appearing on the top of the navigation bar.
+In order to install an Edge extension, it must first be signed with a certificate. Then, the certificate is installed on a user computer.
+To generate certificate that will be used to sing <your extension>.appx, you need to install relevant utilities. They are included into Windows SDK, which can be downloaded from here https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk
 
-![alt text](files-github/screenshot5.jpg)
+After installation, execute the following commands in PowerShell:
+"C:\Program Files (x86)\Windows Kits\8.1\bin\x64\MakeCert" /n "CN=1DB4D603-BFD1-4FAB-8D9F-F048340841C0" /r /h 0 /eku "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.13" /e "12/31/2018" /sv MyKey.pvk MyKey.cer
+"C:\Program Files (x86)\Windows Kits\8.1\bin\x64\Pvk2Pfx" /pvk MyKey.pvk /pi "123qwe" /spc MyKey.cer /pfx MyKey.pfx /po "123qwe"
+"C:\Program Files (x86)\Windows Kits\8.1\bin\x64\signtool.exe" sign /fd sha256  /f MyKey.pfx /p 123qwe AEGISAgent.appx
 
-The above action will open the “AppContainer Loopback Exemption Utility” window. Here, click on the button “Exempt All,” and then click on the “Save Changes” button. Once you are done, close this window.
+After executing these commands, you will have "MyKey.cer" certificate and signed Edge extension "AEGISAgent.appx"
+Place you “MyKey.cer” certificate into your installer’s directory, at path .\installer-osx\InstallBuilder\Content\win. Now you have everything to install the Edge extension.
 
-![alt text](files-github/screenshot6.jpg)
 
-On the main window, click on the “Remove” icon and select the option “Remove all” from the drop-down menu. This action will clear the capture screen.
-
-![alt text](files-github/screenshot7.jpg)
-
-Now open the Windows Store, find the app you want to download and click on the “Get” button. In my case, I’m trying to download the adblock app. This is a win32 application converted to a UWP app.
-
-![alt text](files-github/screenshot8.png)
-
-Once Windows acquires the license and starts the download process, this is how it looks in the Windows Store. Once you see this, proceed to the next step.
-
-![alt text](files-github/screenshot9.png)
-
-Since Fiddler is running in the background, all the traffic is being monitored by it. From the monitoring results we can find and copy the URL to download the appx package. To do that, click on the “Find” button appearing in the top navigation bar.
-
-![alt text](files-github/screenshot10.jpg)
-
-In the Find window type “appx” in the empty field, and press the Enter button.
-
-![alt text](files-github/screenshot11.jpg)
-
-The above action will highlight all the URLs that are responsible for downloading the appx package. From the highlighted URLs, find and right-click on the first URL and select the option “Copy > Just URL.” While doing this, make sure that highlighted URL has the status code 200.
-
-![alt text](files-github/screenshot12.jpg)
-
-Once the URL has been copied, simply paste it into your favorite browser’s address bar, and press the Enter button. The appx package should be downloaded automatically. Depending on the download size, it may take some time, but you should have the file in your Downloads folder as soon as the download is complete.
-
-After you have finished downloading the plugin (in our case, EyeoGmbH.AdblockPlus_0.9.9.0_neutral__d55gg7py3s0m0.Appx), the file "<your extension>.appx" must be place on your server at https://aegis-osx.s3.amazonaws.com/<your extension>.appx (In the adblock example, it will be https://aegis-osx.s3.amazonaws.com/ EyeoGmbH.AdblockPlus_0.9.9.0_neutral__d55gg7py3s0m0.Appx) 
-Now you have everything to install the Edge “extension”.
 
 4) Specify the links from which the extensions will be downloaded in InstallBuilder.
 
@@ -349,15 +322,12 @@ The following dialog window will open:
 
 “Program Arguments” field, outlined with the red rectangle, needs to be edited. The following string in it needs to be changed:
 :
-/C powershell -command "& {&'Add-AppxPackage' '${installdir}\aegis.appx'}"
+/install "${installdir}\MyKey.cer" "${installdir}\AEGISAgentSigned.appx"
 
-
-Change aegis.appx substring to the name of Edge extension download previously.
-
-The example of such string for adblock
-/C powershell -command "& {&'Add-AppxPackage' '${installdir}\EyeoGmbH.AdblockPlus_0.9.9.0_neutral__d55gg7py3s0m0.Appx'}"
+Change AEGISAgentSigned.appx substring to the name of Edge extension download previously.
 
 Click “OK” once done.
+
 
 
 6) To build the installer, click on the “Build” button as shown on the screenshot
