@@ -166,6 +166,8 @@ Place you “MyKey.cer” certificate into your installer’s directory, at path
 
 Specify the links from which the extensions will be downloaded in InstallBuilder.
 
+You can read get more info about the approach and research here: https://github.com/SageAxcess/installer-osx/blob/dev_2017/InstallBuilder/Edge%20research.md
+
 ## Safari:
 For Safary, double click on the element shown in the screenshot below:
 
