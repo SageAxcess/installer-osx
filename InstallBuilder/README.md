@@ -90,7 +90,7 @@ After a successful build the installation package will be located in "/Applicati
 
 
 
-
+##
 
 
 Below is the instructions on how to modify the source code of installer for installation of plugins. Screenshot are provided.
@@ -117,7 +117,7 @@ Tree elements that need to be edited are outlined with the red rectangle.
 
 Prior to editing, download the published extensions from the stores.
 
-Safari
+## Safari
 
 In your case, there is no need to download safari extension, because you already have it. (The one we provided earlier). You will need to have it on the server at 
 https://aegis-osx.s3.amazonaws.com/AEGIS.safariextz
@@ -132,7 +132,7 @@ Search for the “extension” in the store and select it. You should be able to
 
 Next, in the address bar, copy your extension’s guid (in this example it is underlined with a red line, gighmmpiobklfepjocnamgkkbiglidom). Now you have everything for installing Chrome “extension”.
 
-Firefox
+## Firefox
 Prior to downloading the “extension” for Firefox, open the following folder:
 
  C:\Users\<your username>\AppData\Roaming\Mozilla\Firefox\Profiles\<random name>\extensions
@@ -151,7 +151,7 @@ You will need to place this file "<your extension>.xpi" to your server here: htt
 Now, you have everything for the installation of Firefox “extension”.
 
 
-Edge
+## Edge
 
 In order to install an Edge extension, it must first be signed with a certificate. Then, the certificate is installed on a user computer.
 To generate certificate that will be used to sing <your extension>.appx, you need to install relevant utilities. They are included into Windows SDK, which can be downloaded from here https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk
@@ -168,7 +168,7 @@ Place you “MyKey.cer” certificate into your installer’s directory, at path
 
 4) Specify the links from which the extensions will be downloaded in InstallBuilder.
 
-Safari:
+## Safari:
 For Safary, double click on the element shown in the screenshot below:
 
 ![alt text](files-github/screenshot13.png)
@@ -179,7 +179,7 @@ The following dialog box will open.
 
 Enter the link to your safari extension, which you have uploaded to the server earlier, into the field outlined with the red rectangle and click “OK”. 
 
-Firefox:
+## Firefox:
 
 For Firefox, double click on the element shown in the screenshot below
 
@@ -223,7 +223,7 @@ Click “OK” once done.
 
 ![alt text](files-github/screenshot21.png)
 
-OSX
+## OSX
 
 First, edit installation section for OSX, this section is outlined with the red rectangle on the screenshot below.
 
@@ -268,7 +268,7 @@ In our adblock example, guid looks like this “gighmmpiobklfepjocnamgkkbiglidom
 
 Click “OK” once done.
 
-Windows
+## Windows
 
 Double click on the field shown on the screenshot below
 
